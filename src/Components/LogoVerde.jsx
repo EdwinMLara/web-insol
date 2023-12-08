@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 // Importa tus imágenes dinámicamente
-import image1 from "../imgCarrusel/01.jpg";
+import image1 from "../imgCarrusel/06.png";
 
 function LogoVerde() {
   return (
