@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 
 // Importa tus imágenes dinámicamente
-import image1 from "../imgCarrusel/01.jpg";
-import image2 from "../imgCarrusel/02.jpg";
-import image3 from "../imgCarrusel/03.jpg";
-import image4 from "../imgCarrusel/04.jpg";
-import image5 from "../imgCarrusel/05.jpg";
+import image1 from "../imgCarrusel/31.png";
+import image2 from "../imgCarrusel/02.png";
+import image3 from "../imgCarrusel/03.png";
+import image4 from "../imgCarrusel/11.png";
+import image5 from "../imgCarrusel/05.png";
 
 // Crea un array de rutas de imágenes
 const imagePaths = [image1, image2, image3, image4, image5];

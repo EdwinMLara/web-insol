@@ -34,7 +34,7 @@ const Navbar = () => {
         } ${activeInfo === "clientes"  ? "text-black" : "text-black"}
          p-4 absolute top-0 left-0 right-0 z-10`}
       >
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           <div>
             {activeInfo === "proyectos" ? (
               <img className="h-16" src={LogoVerde} alt="Logo para proyectos" />
@@ -55,7 +55,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <div className="hidden lg:flex space-x-4 relative mx-auto pr-5">
+          <div className="hidden lg:flex space-x-14 relative mx-auto pr-44 text-xl">
             <div
               className={` cursor-pointer  ${
                 activeInfo === "proyectos"
