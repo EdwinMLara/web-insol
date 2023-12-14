@@ -1,9 +1,14 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React from "react";
+import Navbar from "./Navbar";
+
 // Importa tus imágenes dinámicamente
 import image1 from "../imgCarrusel/06.png";
+import { Link } from "react-router-dom";
+import { useInsoel } from "../Context/InsoelContext";
 
 function LogoVerde() {
+ const {setLogoColor} = useInsoel();
+ setLogoColor('verdeBlanco')
   return (
     <div>
         <Navbar />
@@ -14,7 +19,7 @@ function LogoVerde() {
           >
              {/* Agregar el título encima de la imagen */}
              <div className="absolute top-2/3 left-16">
-                <h3 className=" text-black text-2xl top-1/3 transform ">PROYECTO VERDE</h3>
+                <h3 className="font-bold text-black  top-1/3 transform ">PROYECTO VERDE</h3>
                 <h1 className="text-2xl font-bold text-black transform lg:text-3xl xl:text-4xl">
                   AUTOMATIZACION DE <br class="lg:hidden xl:block" />{" "}
                   INVERNADEROS
@@ -28,7 +33,7 @@ function LogoVerde() {
           </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default LogoVerde
+export default LogoVerde;

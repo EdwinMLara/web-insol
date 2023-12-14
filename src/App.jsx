@@ -7,15 +7,12 @@ import TecnologiasPage from "./pages/TecnologiasPage";
 import Carrusel from "./Components/Carrusel"
 import LogoVerde from "./Components/LogoVerde"
 import Navbar from "./Components/Navbar"
-import Footer from "./Components/Footer";
 
 function App() {
-  const notify = () => toast("Wow so easy !");
   return (
     <BrowserRouter>
       <main>
-      <Carrusel />
-      <Footer />
+      <LogoVerde />
       <div>
       <p className="text-9xl"></p>
      

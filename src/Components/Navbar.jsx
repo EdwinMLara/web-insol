@@ -3,11 +3,6 @@ import React, { useState } from "react";
 import Logo from "../img/Logo.png";
 import LogoVerde from "../img/LogoVerde.png";
 import image from "../imgCarrusel/prueba.png";
-import Formulario from "./Formulario";
-import LogoAmarilloBlanco from "../img/LogoAmarilloBlanco.png";
-import LogoAmarillo from "../img/LogoAmarillo.png"
-import Nosotros from "./Nosotros";
-import Clientes from "./Clientes";
 
 const Navbar = () => {
   const [activeInfo, setActiveInfo] = useState(null);
@@ -36,23 +31,8 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between ">
           <div>
-            {activeInfo === "proyectos" ? (
-              <img className="h-16" src={LogoVerde} alt="Logo para proyectos" />
-            ) : activeInfo === "contactanos" || activeInfo === "nosotros" ? (
-              <img
-                className="h-16"
-                src={LogoAmarilloBlanco}
-                alt="Otro Logo para contactanos"
-              />
-            ) : activeInfo === "clientes" ? (
-              <img
-                className="h-16"
-                src={LogoAmarillo}
-                alt="Otro Logo para contactanos"
-              />
-            ) :(
-              <img className="h-16 " src={LogoVerde} alt="Logo para proyectos" />
-            )}
+            {/*<img className="h-8" src={Logo} alt="Logo" /> */}
+            <img className="h-16" src={LogoVerde} alt="Logo" />
           </div>
 
           <div className="hidden lg:flex space-x-14 relative mx-auto pr-44 text-xl">
@@ -82,7 +62,8 @@ const Navbar = () => {
               }`}
               onClick={() => handleInfoToggle("tecnologias")}
             >
-              Tecnologias
+              <Link to="/tecnologias">Tecnologias</Link>
+              
             </div>
             <div
               className={` cursor-pointer ${
@@ -115,7 +96,7 @@ const Navbar = () => {
           >
             {activeInfo === "proyectos" && (
               <div className="flex items-center">
-                <p className="font-serif text-right text-2xl mr-5 w-1/3">
+                <p className="text-right text-2xl mr-5 w-1/3">
                   Biorreactor <br /> <br />
                   Banco UAT <br /> <br />
                   Sistema de Consultas <br /> <br />
