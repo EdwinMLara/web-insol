@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Logo from "../img/Logo.png";
 import LogoAmarillo from "../img/Logos/AmarilloBlanco.png";
-import image from "../imgCarrusel/prueba.jpg";
 import { Link } from "react-router-dom";
 
 const Navbar_BlancoAmarrillo = () => {

@@ -1,8 +1,12 @@
 import { useEffect } from "react";
 import imgInvernadero from "../img/Proyectos/49.png";
 import Navbar_BlancoAmarrillo from "../components/Navbar_BlancoAmarillo";
+import { useInsoel } from "../Context/InsoelContext";
 
 function InvernaderoPage() {
+  const{setLogoColor, setTxtColor} = useInsoel()
+  setLogoColor('verdeBlanco')
+  setTxtColor('white')
   useEffect(() => {
     document.title = "INVERNADERO | INSOEL";
     return () => {

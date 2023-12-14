@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Logo from "../img/Logo.png";
 import LogoVerde from "../img/LogoVerde.png";
-import image from "../imgCarrusel/prueba.jpg";
+import image from "../imgCarrusel/prueba.png";
 
 const Navbar = () => {
   const [activeInfo, setActiveInfo] = useState(null);

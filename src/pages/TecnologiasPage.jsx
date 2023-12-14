@@ -6,8 +6,9 @@ import Navbar_BlancoAmarrillo from "../components/Navbar_BlancoAmarillo";
 import { useInsoel } from "../Context/InsoelContext";
 
 function TecnologiasPage() {
-  const {setLogoColor} = useInsoel();
+  const {setLogoColor, setTxtColor} = useInsoel();
   setLogoColor('azulBlanco')
+  setTxtColor('white')
   useEffect(() => {
     document.title = "Tecnologías | INSOEL";
     return () => {

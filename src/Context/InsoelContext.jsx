@@ -12,11 +12,14 @@ export const useInsoel = () =>{
 
 export function InsoelProvider({children}) {
   const [logoColor, setLogoColor] = useState('amarilloNegro');
+  const [txtColor, setTxtColor] = useState('white')
 
   return (
     <InsoelContext.Provider value = {{
       logoColor,
-      setLogoColor
+      setLogoColor,
+      txtColor,
+      setTxtColor
     }}>
       {children}
     </InsoelContext.Provider>

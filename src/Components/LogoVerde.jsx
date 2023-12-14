@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 
 // Importa tus imágenes dinámicamente
-import image1 from "../imgCarrusel/06.jpg";
+import image1 from "../imgCarrusel/06.png";
 import { Link } from "react-router-dom";
 import { useInsoel } from "../Context/InsoelContext";
 
