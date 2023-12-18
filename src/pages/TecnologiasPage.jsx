@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import ProgramacionPLC from "../img/Tecnologias/39.png";
 import LOT from "../img/Tecnologias/46.png";
 import imgReact from "../img/Tecnologias/41.png";
-import Navbar_BlancoAmarrillo from "../components/Navbar_BlancoAmarillo";
 import { useInsoel } from "../Context/InsoelContext";
 
 function TecnologiasPage() {
