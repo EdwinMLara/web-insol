@@ -42,7 +42,7 @@ const Navbar_Context = () => {
       >
         <div className="flex items-center justify-between ">
           <div className="bg-transparent">
-            <Link to={"/"}  onClick={handleLogoClick}>
+            <Link to={"/web-insol"}  onClick={handleLogoClick}>
               {logoColor === "amarilloNegro" ? (
                 <img className="h-16" src={LogoAmarilloNegro} alt="Logo" />
               ) : logoColor === "amarilloBlanco" ? (
