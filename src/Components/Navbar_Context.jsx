@@ -23,20 +23,26 @@ const Navbar_Context = () => {
   const handleInfoToggle = (info) => {
     setActiveInfo(activeInfo === info ? null : info);
   };
+
+  const handleLogoClick = () => {
+    // Restablecer la sección activa al valor predeterminado al hacer clic en el logo
+    setActiveInfo("");
+  };
+
   return (
     <div>
       <nav
         className={`${
           activeInfo === "proyectos"
-            ? "bg-white bg-opacity-75"
+            ? "bg-gray-500 bg-opacity-75 "
             : activeInfo === "nosotros"
-            ? "bg-black"
-            : activeInfo === "contactanos" ? "bg-black": "bg-transparent"
-        }  p-4 absolute top-0 left-0 right-0 z-10 `}
+            ? ""
+            : activeInfo === "contactanos" ? "": "bg-opacity-75 bg-gradient-to-b from-azul bottom-96"
+        }  p-4 absolute top-0 left-0 right-0  z-10`}
       >
-        <div className="flex items-center justify-between">
-          <div>
-            <Link to={"/"}>
+        <div className="flex items-center justify-between ">
+          <div className="bg-transparent">
+            <Link to={"/"}  onClick={handleLogoClick}>
               {logoColor === "amarilloNegro" ? (
                 <img className="h-16" src={LogoAmarilloNegro} alt="Logo" />
               ) : logoColor === "amarilloBlanco" ? (
@@ -55,11 +61,11 @@ const Navbar_Context = () => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex space-x-4 relative mx-auto text-2xl">
+          <div className="hidden lg:flex space-x-20 relative mx-auto text-2xl">
             <div
               className={`text-${txtColor} cursor-pointer  ${
                 activeInfo === "proyectos"
-                  ? " p-2 border-dashed border-2 bg-gray-400 border-gray-600 rounded-lg "
+                  ? " p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
                   : ""
               }`}
               onClick={() => handleInfoToggle("proyectos")}
@@ -67,18 +73,9 @@ const Navbar_Context = () => {
               Proyectos
             </div>
             <div
-              className={`text-${txtColor} cursor-pointer  ${
-                activeInfo === "contactanos" &&
-                "p-2 bg-yellow-500 rounded-lg opacity-60"
-              }`}
-              onClick={() => handleInfoToggle("contactanos")}
-            >
-              <Link to="/contactanos">Contáctanos</Link>
-            </div>
-            <div
               className={`text-${txtColor} cursor-pointer ${
                 activeInfo === "tecnologias" &&
-                "p-2 bg-yellow-500 rounded-lg opacity-60"
+                "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg"
               }`}
               onClick={() => {
                 handleInfoToggle("tecnologias");
@@ -88,21 +85,31 @@ const Navbar_Context = () => {
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${
+                activeInfo === "nosotros" &&
+                "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
+              }`}
+              onClick={() => handleInfoToggle("nosotros")}
+            >
+              <Link to="/nosotros">Nosotros</Link>
+            </div>
+            <div
+              className={`text-${txtColor} cursor-pointer ${
                 activeInfo === "clientes" &&
-                "p-2 bg-yellow-500 rounded-lg opacity-60"
+                "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
               }`}
               onClick={() => handleInfoToggle("clientes")}
             >
               <Link to="/clientes">Clientes</Link>
             </div>
             <div
-              className={`text-${txtColor} cursor-pointer ${
-                activeInfo === "nosotros" &&
-                "p-2 bg-yellow-500 rounded-lg opacity-60"
+              className={`text-${txtColor} cursor-pointer  ${
+                activeInfo === "contactanos" 
+                ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg"
+                : ""
               }`}
-              onClick={() => handleInfoToggle("nosotros")}
+              onClick={() => handleInfoToggle("contactanos")}
             >
-              <Link to="/nosotros">Nosotros</Link>
+              <Link to="/contactanos">Contáctanos</Link>
             </div>
           </div>
         </div>

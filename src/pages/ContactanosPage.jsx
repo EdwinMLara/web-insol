@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import Formulario from "../components/Formulario";
 import { useInsoel } from "../Context/InsoelContext";
+import Formulario from "../Components/Formulario";
 function ContactanosPage() {
   const { setLogoColor, setTxtColor } = useInsoel();
   setLogoColor("amarilloBlanco");
@@ -12,9 +12,11 @@ function ContactanosPage() {
     };
   }, []);
   return (
-    <div className="mt-20">
+    <div className="min-h-screen bg-black">
+    <div className="">
       <Formulario />
     </div>
+  </div>
   );
 }
 

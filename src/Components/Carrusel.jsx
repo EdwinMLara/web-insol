@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 // Importa tus imágenes dinámicamente
 import image1 from "../imgCarrusel/31.png";
@@ -27,7 +28,6 @@ function Carrusel() {
 
   return (
     <div>
-      <Navbar />
       <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
         {imagePaths.map((path, index) => (
           <div
@@ -45,8 +45,8 @@ function Carrusel() {
                   AUTOMATIZACION DE <br class="lg:hidden xl:block" />{" "}
                   INVERNADEROS
                 </h1>
-                <button className="bg-white bg-opacity-25 text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 ">
-                CONOCE MÁS
+                <button className="bg-primary bg-opacity-75 text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 ">
+                <Link to= "/invernadero">CONOCE MÁS</Link>
               </button>
               </div> 
               

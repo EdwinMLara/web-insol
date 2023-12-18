@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useInsoel } from '../Context/InsoelContext'
-import Clientes from '../components/Clientes'
-import Nosotros from '../components/Nosotros'
+import Nosotros from '../Components/Nosotros';
+
 function NosotrosPage() {
   const {setLogoColor, setTxtColor} = useInsoel();
   setLogoColor('amarilloBlanco')
@@ -13,8 +13,9 @@ function NosotrosPage() {
     };
   }, []);
   return (
-    <div className='mt-20'>
-        <Nosotros/>
+    // color del navbar bg-black
+    <div className='min-h-screen bg-black'>
+        <Nosotros />
     </div>
   )
 }

@@ -9,8 +9,8 @@ const persona = {
 
 function Nosotros() {
   return (
-    <div className="absolute left-0 right-0 bg-black h-screen ">
-      <div className="w-5/5 pt-[2rem] pb-[9rem] ">
+    <div className="absolute left-0 right-0 mt-24 ">
+      <div className="w-5/5 pt-[2rem] pb-[9rem] bg-black">
         <NosotrosInformacion />
       </div>
       <div className=" flex absolute left-0 right-0 bg-black pb-14">
@@ -19,7 +19,7 @@ function Nosotros() {
           <img
             src={Persona}
             alt="Foto de la persona"
-            className=" w-[25rem] h-[27rem]"
+            className=" w-[20rem] h-[27rem]"
           />
         </div>
         <div className="w-4/5 text-left text-white pt-16">
