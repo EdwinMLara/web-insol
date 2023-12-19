@@ -28,7 +28,7 @@ const Navbar_Context = () => {
       <nav
         className={`${
           activeInfo === "proyectos"
-            ? "bg-white bg-opacity-75"
+            ? "bg-slate-400 bg-opacity-75"
             : activeInfo === "nosotros"
             ? "bg-black"
             : activeInfo === "contactanos" ? "bg-black": "bg-transparent"
@@ -116,7 +116,7 @@ const Navbar_Context = () => {
             {activeInfo === "proyectos" && (
               <div className="flex items-center">
                 <p className="text-right text-2xl mr-5 w-1/3">
-                  Biorreactor <br /> <br />
+                  <Link to={'/proyectos/biorreactor'}>Biorreactor</Link><br /> <br />
                   Banco UAT <br /> <br />
                   Sistema de Consultas <br /> <br />
                   Apk Lectora QR <br /> <br />

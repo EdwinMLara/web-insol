@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Logo from "../img/Logo.png";
 import LogoVerde from "../img/LogoVerde.png";
 import image from "../imgCarrusel/prueba.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [activeInfo, setActiveInfo] = useState(null);

@@ -7,11 +7,15 @@ import image2 from "../imgCarrusel/02.png";
 import image3 from "../imgCarrusel/03.png";
 import image4 from "../imgCarrusel/11.png";
 import image5 from "../imgCarrusel/05.png";
+import { useInsoel } from "../Context/InsoelContext";
 
 // Crea un array de rutas de imágenes
 const imagePaths = [image1, image2, image3, image4, image5];
 
 function Carrusel() {
+  const {setTxtColor, setLogoColor} = useInsoel()
+  setTxtColor('black')
+  setLogoColor('amarilloBlanco')
   const [imagenActiva, setImagenActiva] = useState(0);
 
   useEffect(() => {
@@ -27,7 +31,6 @@ function Carrusel() {
 
   return (
     <div>
-      <Navbar />
       <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
         {imagePaths.map((path, index) => (
           <div
