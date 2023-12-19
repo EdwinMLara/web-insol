@@ -4,6 +4,11 @@ import Logo from "../img/Logo.png";
 import LogoVerde from "../img/LogoVerde.png";
 import image from "../imgCarrusel/prueba.png";
 import { Link } from "react-router-dom";
+import Clientes from "./Clientes";
+import Nosotros from "./Nosotros";
+import Formulario from "./Formulario";
+
+<Formulario/>
 
 const Navbar = () => {
   const [activeInfo, setActiveInfo] = useState(null);

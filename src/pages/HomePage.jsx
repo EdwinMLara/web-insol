@@ -1,6 +1,6 @@
-import Carrusel from "../components/Carrusel";
-import Clientes from "../components/Clientes";
-import Nosotros from "../components/Nosotros";
+import Carrusel from "../Components/Carrusel";
+import Clientes from "../Components/Clientes";
+import Nosotros from "../Components/Nosotros";
 
 function HomePage() {
   return (

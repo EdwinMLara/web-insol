@@ -3,8 +3,8 @@ import LogoAmarilloBlanco from "../img/LogoAmarilloBlanco.png";
 
 function Formulario() {
   return (
-    <div className="bg-black h-screen">
-      <div className="flex bg-gradient-to-r from-blue-500 via-blue-950 to-black absolute left-0 right-0 mt-10">
+    <div className="pt-32 ">
+      <div className="flex bg-gradient-to-r from-blue-500 via-blue-950 to-black ">
         <div className="w-1/2 p-8 ">
           <h1 className="text-4xl font-bold mb-4 text-white text-left pt-32">
             AUTOMATIZACIÓN <br />
@@ -12,8 +12,8 @@ function Formulario() {
             <h2 className="pl-24 text-3xl">Contáctanos.</h2>
           </h1>
         </div>
-        <div className="w-1/2 p-5 ">
-          <form className="pr-28">
+        <div className="w-1/2 p-5">
+          <form className="pr-28 ">
             <div className="mb-4 border-b border-white py-2 ">
               <input
                 className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
@@ -73,13 +73,13 @@ function Formulario() {
               />
             </div>
             <button
-              className="bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline"
+              className="bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline "
               type="submit"
             >
               Contacta a
               <img
                 src={LogoAmarilloBlanco}
-                className="inline-block h-6 w-20 mr-2 pl-2"
+                className="inline-block h-6 w-20 mr-2 pl-2 "
               />
             </button>
           </form>
