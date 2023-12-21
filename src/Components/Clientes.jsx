@@ -1,3 +1,5 @@
+import React from "react";
+import Ug from "../imgCarrusel/ug.png";
 import TecM from "../imgCarrusel/tec.png";
 import Ing from "../imgCarrusel/ingenieria.png";
 import Uat from "../imgCarrusel/uat.png";

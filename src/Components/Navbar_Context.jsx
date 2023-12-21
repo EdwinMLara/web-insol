@@ -61,9 +61,7 @@ const Navbar_Context = () => {
             ? "bg-tertiary bg-opacity-75 "
             : activeInfo === ""
             ? ""
-            : activeInfo === "contactanos"
-            ? ""
-            : "bg-opacity-75 bg-gradient-to-b from-azul bottom-96"
+            : activeInfo === "" ? "": "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
         }  p-4 absolute top-0 left-0 right-0  z-10`}
       >
         <div className="flex items-center justify-between ">
