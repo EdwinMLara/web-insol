@@ -27,7 +27,7 @@ function App() {
             <Route path="/contactanos" element={<ContactanosPage/>} />
             <Route path="/proyectos/biorreactor" element={<BiorreactorPage/>} />
           </Routes>
-          
+        <Footer />
         </main>
       </BrowserRouter>
     </InsoelProvider>

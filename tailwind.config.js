@@ -4,11 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#fcd424", // Color primario dorado
-        secondary: "#fafafa", // Color secundario
-        purple: '#7e5bef',
-        fondo: '#f6e09d',
-        azul: '#04547c',
+        primary: "#fcd424", // Color primario dorado amarillo
+        secondary: "#04547c", // Color secundario azul rey
+        tertiary: '#367696', // color tercioario azul claro
+        quaternary: '#b09419', // color cuaternario dorado amarillo oscuro 
+       
         claro: '#64acbc',
         bajo: '#d0e5e5'
       },

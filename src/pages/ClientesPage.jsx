@@ -3,7 +3,7 @@ import { useInsoel } from '../Context/InsoelContext'
 
 function ClientesPage() {
     const {setTxtColor} = useInsoel()
-    setTxtColor('black')
+    setTxtColor('white')
   return (
     <div className='mt-20'>
         <Clientes />
