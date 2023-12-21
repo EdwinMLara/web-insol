@@ -143,7 +143,7 @@ const Navbar_Context = () => {
             {activeInfo === "proyectos" && (
               <div className="flex items-center">
                 <p className="text-right text-2xl mr-5 w-1/3">
-                  Biorreactor <br /> <br />
+                  <Link to={'/proyectos/biorreactor'}>Biorreactor</Link><br /> <br />
                   Banco UAT <br /> <br />
                   Sistema de Consultas <br /> <br />
                   Apk Lectora QR <br /> <br />
