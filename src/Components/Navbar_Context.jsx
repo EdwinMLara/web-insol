@@ -1,5 +1,5 @@
 // Navbar.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "../img/Logo.png";
 import LogoVerde from "../img/LogoVerde.png";
 
@@ -15,6 +15,12 @@ import image from "../imgCarrusel/prueba.png";
 import { Link } from "react-router-dom";
 import { useInsoel } from "../Context/InsoelContext";
 
+// Importa tus imágenes dinámicamente
+import image1 from "../imgCarrusel/15.jpg";
+import image2 from "../imgCarrusel/16.jpg";
+import image3 from "../imgCarrusel/17.jpg";
+
+
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
   const [activeInfo, setActiveInfo] = useState(null);
@@ -26,22 +32,36 @@ const Navbar_Context = () => {
 
   const handleLogoClick = () => {
     // Restablecer la sección activa al valor predeterminado al hacer clic en el logo
-    setActiveInfo("");
+    setActiveInfo("bg-gradient-to-b from-secondary ");
   };
+
+  const imagePaths = [image1, image2, image3];
+
+  const [imagen, setImagen] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      // Cambia a la siguiente imagen
+      setImagen((prevImagen) => (prevImagen + 1) % imagePaths.length);
+    }, 1000);
+
+    // Limpia el intervalo cuando el componente se desmonta
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div>
       <nav
         className={`${
           activeInfo === "proyectos"
-            ? "bg-gray-500 bg-opacity-75 "
-            : activeInfo === "nosotros"
+            ? "bg-tertiary bg-opacity-75 "
+            : activeInfo === ""
             ? ""
-            : activeInfo === "contactanos" ? "": "bg-opacity-75 bg-gradient-to-b from-azul bottom-96"
+            : activeInfo === "" ? "": "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
         }  p-4 absolute top-0 left-0 right-0  z-10`}
       >
-        <div className="flex items-center justify-between ">
-          <div className="bg-transparent">
+        <div className="flex items-center justify-between">
+          <div className="">
             <Link to={"/web-insol"}  onClick={handleLogoClick}>
               {logoColor === "amarilloNegro" ? (
                 <img className="h-16" src={LogoAmarilloNegro} alt="Logo" />
@@ -61,7 +81,7 @@ const Navbar_Context = () => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex space-x-20 relative mx-auto text-2xl">
+          <div className="hidden lg:flex space-x-20 relative mx-auto text-[22px] mr-10">
             <div
               className={`text-${txtColor} cursor-pointer  ${
                 activeInfo === "proyectos"
@@ -129,11 +149,20 @@ const Navbar_Context = () => {
                   Apk Lectora QR <br /> <br />
                 </p>
                 <div className="border-r-2 border-yellow-500 h-[20rem]"></div>
-                <img
-                  src={image}
-                  alt="Descripción de la imagen"
-                  className="ml-32 w-1/3"
-                />
+                <div className="ml-32 w-1/3">
+        {imagePaths.map((path, index) => (
+          <div
+          key={index}
+          className={`relative ${
+            index === imagen ? "block" : "hidden"
+          }`}
+          data-te-carousel-item
+          data-te-carousel-active={index === imagen}
+        >
+            <img src={path} alt={`Slide ${index + 1}`} className="w-full" />
+          </div>
+        ))}
+      </div>
               </div>
             )}
           </div>

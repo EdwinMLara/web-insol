@@ -17,8 +17,8 @@ function NosotrosInformacion() {
         </React.Fragment>
       ));
   return (
-    <div className='text-center'>
-        <div className='text-white p-5'> "En INSOEL, somos arquitectos del progreso, pioneros en el ámbito de la automatización, donde la innovación se une a la eficiencia. Con un compromiso inquebrantable de dar forma al futuro, aprovechamos el poder de la tecnología de vanguardia para automatizar máquinas y programas, trascendiendo límites y redefinir lo que es posible. Nuestra incesante búsqueda de la excelencia permite a las industrias evolucionar, integrando perfectamente la automatización en el latido del progreso.  Donde cada línea de código y cada máquina revoluciona la forma en que funciona el mundo <br /><br />
+    <div className='text-center mt-24'>
+        <div className='text-black p-5'> "En INSOEL, somos arquitectos del progreso, pioneros en el ámbito de la automatización, donde la innovación se une a la eficiencia. Con un compromiso inquebrantable de dar forma al futuro, aprovechamos el poder de la tecnología de vanguardia para automatizar máquinas y programas, trascendiendo límites y redefinir lo que es posible. Nuestra incesante búsqueda de la excelencia permite a las industrias evolucionar, integrando perfectamente la automatización en el latido del progreso.  Donde cada línea de código y cada máquina revoluciona la forma en que funciona el mundo <br /><br />
         INSOEL — Automatización redefinida".
         <div className="flex items-end pt-[2rem]">
         {verticalLines}

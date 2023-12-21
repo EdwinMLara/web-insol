@@ -12,11 +12,10 @@ function ContactanosPage() {
     };
   }, []);
   return (
-    <div className="min-h-screen bg-black">
-    <div className="">
+    <div className="min-h-screen">
       <Formulario />
     </div>
-  </div>
+
   );
 }
 

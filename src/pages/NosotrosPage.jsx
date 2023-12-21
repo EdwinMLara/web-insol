@@ -14,7 +14,7 @@ function NosotrosPage() {
   }, []);
   return (
     // color del navbar bg-black
-    <div className='min-h-screen bg-black'>
+    <div className='min-h-screen'>
         <Nosotros />
     </div>
   )

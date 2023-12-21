@@ -44,7 +44,7 @@ function Carrusel() {
                   AUTOMATIZACION DE <br class="lg:hidden xl:block" />{" "}
                   INVERNADEROS
                 </h1>
-                <button className="bg-primary bg-opacity-75 text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 ">
+                <button className="bg-primary bg-opacity-75 text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary  ">
                 <Link to= "/invernadero">CONOCE MÁS</Link>
               </button>
               </div> 

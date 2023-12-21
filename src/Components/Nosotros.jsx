@@ -1,38 +1,23 @@
 import React from "react";
-import Persona from "../imgCarrusel/persona.jpg";
+
 import NosotrosInformacion from "./NosotrosInformacion";
-const persona = {
-  nombre: "",
-  puesto: "",
-  vision: "",
-};
+import Fundadores from "./Fundadores";
 
 function Nosotros() {
   return (
-    <div className="absolute left-0 right-0 mt-24 ">
-      <div className="w-5/5 pt-[2rem] pb-[9rem] bg-black">
-        <NosotrosInformacion />
-      </div>
-      <div className=" flex absolute left-0 right-0 bg-black pb-14">
-        <div className="w-2/5 p-8 ">
-          {/* Foto de la persona */}
-          <img
-            src={Persona}
-            alt="Foto de la persona"
-            className=" w-[20rem] h-[27rem]"
-          />
-        </div>
-        <div className="w-4/5 text-left text-white pt-16">
-          {/* Información de la persona */}
-          <h2 className="text-3xl font-bold mb-4">Nombre: {persona.nombre}</h2>
-          <h2 className="text-3xl font-bold mb-4">Puesto: {persona.puesto}</h2>
-          <h2 className="text-3xl font-bold mb-4">
-            {" "}
-            Vision de su trabajo: {persona.vision}
-          </h2>
-        </div>
-      </div>
-    </div>
+    <div className="min-h-screen flex flex-col">
+  {/* Section: NosotrosInformacion */}
+  <div className="min-h-screen bg-gradient-to-t from-black via-gray-800 to-white">
+    <NosotrosInformacion />
+  </div>
+
+  {/* Section: Fundadores */}
+  <div className="min-h-screen bg-gradient-to-b from-black via-gray-600 to-white">
+    <Fundadores />
+  </div>
+
+  
+</div>
   );
 }
 

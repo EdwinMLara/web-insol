@@ -30,7 +30,7 @@ function App() {
             <Route path="/nosotros" element={<NosotrosPage/>} />
             <Route path="/contactanos" element={<ContactanosPage/>} />
           </Routes>
-          
+        <Footer />
         </main>
       </BrowserRouter>
     </InsoelProvider>
