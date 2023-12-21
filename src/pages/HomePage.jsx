@@ -1,22 +1,24 @@
 import Carrusel from "../Components/Carrusel";
-import Clientes from "../Components/Clientes";
 import Nosotros from "../Components/Nosotros";
+import Clientes from "../Components/Clientes";
+import Formulario from '../Components/Formulario'
 
 function HomePage() {
   return (
-    <>
-      <div className="h-screen">
+    <div className="flex flex-col h-screen">
+      <div className="flex-grow">
         <Carrusel />
       </div>
-
-      <div className="h-auto">
-        <Nosotros/>
+      
+      <div className="flex-grow">
+        <Formulario />
       </div>
 
-      <div className="h-auto">
-        <Clientes/>
+      <div className="flex-grow">
+        <Nosotros />
       </div>
-    </>
+
+    </div>
   );
 }
 

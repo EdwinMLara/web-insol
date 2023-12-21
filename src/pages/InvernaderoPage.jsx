@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import imgInvernadero from "../img/Proyectos/49.png";
 import { useInsoel } from "../Context/InsoelContext";
+import logo from '../img/Logos/VerdeBlanco.png'
 
 function InvernaderoPage() {
   const{setLogoColor, setTxtColor} = useInsoel()
@@ -29,7 +30,7 @@ function InvernaderoPage() {
           Automatización de invernaderos
         </h1>
         <br />
-        <div className="columns-2 text-justify">
+        <div className="md:columns-2 text-justify">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Exercitationem quibusdam architecto tempore corrupti placeat amet
@@ -40,6 +41,11 @@ function InvernaderoPage() {
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat quis quo adipisci cumque ipsum, possimus cum accusantium. Rerum, numquam, sapiente molestiae quas debitis quidem nulla aliquid, voluptatum voluptatem ut deserunt!</p>
           <br />
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum possimus totam nulla inventore libero id eaque nisi earum iusto maxime! Quaerat, laudantium? Neque ad deleniti velit dolorem vero, tempore quos!</p>
+        </div>
+
+        
+        <div className="mt-10 flex justify-center items-center">
+            <img className="h-8" src={logo} alt="logoInsoel" />
         </div>
       </div>
       

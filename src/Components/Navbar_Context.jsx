@@ -1,9 +1,11 @@
-// Navbar.js
-import React, { useState } from "react";
-import Logo from "../img/Logo.png";
-import LogoVerde from "../img/LogoVerde.png";
+import React, { useEffect, useState } from "react";
+import {
+  motion,
+  AnimatePresence,
+} from "framer-motion";
+import { Link } from "react-router-dom";
+import { useInsoel } from "../Context/InsoelContext";
 
-//Logos
 import LogoAmarilloNegro from "../img/Logos/AmarilloNegro.png";
 import LogoAmarilloBlanco from "../img/Logos/AmarilloBlanco.png";
 import LogoVerdeNegro from "../img/Logos/VerdeNegro.png";
@@ -12,20 +14,21 @@ import LogoAzulNegro from "../img/Logos/AzulNegro.png";
 import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 
 import image from "../imgCarrusel/prueba.png";
-import { Link } from "react-router-dom";
-import { useInsoel } from "../Context/InsoelContext";
 
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
   const [activeInfo, setActiveInfo] = useState(null);
-  console.log(txtColor);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleInfoToggle = (info) => {
     setActiveInfo(activeInfo === info ? null : info);
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
   const handleLogoClick = () => {
-    // Restablecer la sección activa al valor predeterminado al hacer clic en el logo
     setActiveInfo("");
   };
 
@@ -37,28 +40,62 @@ const Navbar_Context = () => {
             ? "bg-gray-500 bg-opacity-75 "
             : activeInfo === "nosotros"
             ? ""
-            : activeInfo === "contactanos" ? "": "bg-opacity-75 bg-gradient-to-b from-azul bottom-96"
+            : activeInfo === "contactanos"
+            ? ""
+            : "bg-opacity-75 bg-gradient-to-b from-azul bottom-96"
         }  p-4 absolute top-0 left-0 right-0  z-10`}
       >
         <div className="flex items-center justify-between ">
           <div className="bg-transparent">
-            <Link to={"/web-insol"}  onClick={handleLogoClick}>
-              {logoColor === "amarilloNegro" ? (
-                <img className="h-16" src={LogoAmarilloNegro} alt="Logo" />
-              ) : logoColor === "amarilloBlanco" ? (
-                <img className="h-16" src={LogoAmarilloBlanco} alt="Logo" />
-              ) : logoColor === "verdeBlanco" ? (
-                <img className="h-16" src={LogoVerdeBlanco} alt="Logo" />
-              ) : logoColor === "verdeNegro" ? (
-                <img className="h-16" src={LogoVerdeNegro} alt="Logo" />
-              ) : logoColor === "azulBlanco" ? (
-                <img className="h-16" src={LogoAzulBlanco} alt="Logo" />
-              ) : logoColor === "azulNegro" ? (
-                <img className="h-16" src={LogoAzulNegro} alt="Logo" />
-              ) : (
-                <img className="h-16" src={LogoAmarilloNegro} alt="Logo" />
-              )}
+            <Link to={"/web-insol/"} onClick={handleLogoClick}>
+              <motion.img
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1.5 }}
+                className="h-16"
+                src={
+                  logoColor === "amarilloNegro"
+                    ? LogoAmarilloNegro
+                    : logoColor === "amarilloBlanco"
+                    ? LogoAmarilloBlanco
+                    : logoColor === "verdeBlanco"
+                    ? LogoVerdeBlanco
+                    : logoColor === "verdeNegro"
+                    ? LogoVerdeNegro
+                    : logoColor === "azulBlanco"
+                    ? LogoAzulBlanco
+                    : logoColor === "azulNegro"
+                    ? LogoAzulNegro
+                    : LogoAmarilloNegro
+                }
+                alt="Logo"
+              />
             </Link>
+          </div>
+
+          
+
+          {/*Navavar con Framer-motion */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-white focus:outline-none"
+            >
+              <svg
+                className="w-10 h-10"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-16 6h16"
+                ></path>
+              </svg>
+            </button>
           </div>
 
           <div className="hidden lg:flex space-x-20 relative mx-auto text-2xl">
@@ -103,9 +140,9 @@ const Navbar_Context = () => {
             </div>
             <div
               className={`text-${txtColor} cursor-pointer  ${
-                activeInfo === "contactanos" 
-                ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg"
-                : ""
+                activeInfo === "contactanos"
+                  ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg"
+                  : ""
               }`}
               onClick={() => handleInfoToggle("contactanos")}
             >
@@ -113,6 +150,45 @@ const Navbar_Context = () => {
             </div>
           </div>
         </div>
+
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              className="bg-black bg-opacity-50 fixed inset-0 z-50"
+              onClick={toggleMenu}
+            >
+              <div className="container mx-auto flex justify-end items-center py-16">
+                <div className="bg-bajo p-4 ">
+                  {/* ... Resto del código ... */}
+                  <div className="container mx-auto flex items-center h-auto">
+                    <div className="bg-white p-4 ">
+                      <ul className="text-xl">
+                        <li className="hover:bg-primary rounded">
+                          <Link to={"/web-insol/"}>Inicio</Link>
+                        </li><br />
+                        <li className="hover:bg-primary rounded">
+                          <Link to={"/tecnologias"}>Tecnologías</Link>
+                        </li><br />
+                        <li className="hover:bg-primary rounded">
+                          <Link to={"/nosotros"}>Nosotros</Link>
+                        </li><br />
+                        <li className="hover:bg-primary rounded">
+                          <Link to={"/Clientes"}>Clientes</Link>
+                        </li><br />
+                        <li className="hover:bg-primary rounded">
+                          <Link to={"/contactanos"}>Contáctanos</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {activeInfo && (
           <div
@@ -123,7 +199,8 @@ const Navbar_Context = () => {
             {activeInfo === "proyectos" && (
               <div className="flex items-center">
                 <p className="text-right text-2xl mr-5 w-1/3">
-                  <Link to={'/proyectos/biorreactor'}>Biorreactor</Link><br /> <br />
+                  <Link to={"/proyectos/biorreactor"}>Biorreactor</Link>
+                  <br /> <br />
                   Banco UAT <br /> <br />
                   Sistema de Consultas <br /> <br />
                   Apk Lectora QR <br /> <br />

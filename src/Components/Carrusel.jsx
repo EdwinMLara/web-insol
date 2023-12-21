@@ -14,7 +14,7 @@ const imagePaths = [image1, image2, image3, image4, image5];
 
 function Carrusel() {
   const {setTxtColor, setLogoColor} = useInsoel()
-  setTxtColor('black')
+  setTxtColor('white')
   setLogoColor('amarilloBlanco')
   const [imagenActiva, setImagenActiva] = useState(0);
 
