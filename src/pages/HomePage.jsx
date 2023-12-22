@@ -9,13 +9,13 @@ function HomePage() {
       <div className="flex-grow">
         <Carrusel />
       </div>
-      
+
       <div className="flex-grow">
         <Formulario />
       </div>
 
       <div className="flex-grow">
-        <Nosotros />
+        <Clientes/>
       </div>
 
     </div>
