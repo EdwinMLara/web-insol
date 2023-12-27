@@ -1,7 +1,7 @@
 import React from "react";
-import Persona1 from "../imgCarrusel/persona.jpg";
-import Persona2 from "../imgCarrusel/persona.jpg";
-import Persona3 from "../imgCarrusel/persona.jpg";
+import Persona1 from "../img/Personas/persona1.jpeg";
+import Persona2 from "../img/Personas/persona2.jpeg";
+import Persona3 from "../img/Personas/persona3.jpeg";
 
 function Fundadores() {
   const persona1 = {
@@ -19,12 +19,12 @@ function Fundadores() {
   const persona3 = {
     nombre: "M.I. David Balcazar",
     puesto: "Ingeniero de Control de Calidad de Software",
-    vision: "Asegura  la excelencia y confiabilidad de los productos de software. Su enfoque se centra en garantizar que las aplicaciones y sistemas cumplan con los más altos estándares de calidad antes de su lanzamiento. Busca identificar y corregir defectos, mejorar la usabilidad y optimizar el rendimiento para proporcionar a los usuarios una experiencia fluida y libre de errores. Contribuye a la entrega de software robusto y de alta calidad, garantizando la satisfacción del usuario  ",
+    vision: "Asegura  la excelencia y confiabilidad de los productos de software. Su enfoque se centra en garantizar que las aplicaciones y sistemas cumplan con los más altos estándares de calidad antes de su lanzamiento. Busca identificar y corregir defectos, mejorar la usabilidad y optimizar el rendimiento para proporcionar a los usuarios una experiencia fluida y libre de errores. Contribuye a la entrega de software robusto y de alta calidad, garantizando la satisfacción del usuario ",
   };
 
   return (
     <div>
-      <h1 className="text-white text-center text-2xl mt-14">FUNDADORES</h1>
+      <h1 className="text-white text-center text-2xl mt-14">CONOCE A NUESTROS FUNDADORES</h1>
       <div className="flex justify-center">
         <div className="flex space-x-40 mt-20">
           {/* Persona 1 */}
@@ -41,7 +41,7 @@ function Fundadores() {
                 <h2 className="text-xl mb-2">{persona1.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">{persona1.vision}</p>
               </div>
-              <h1 className="text-center z-20 relative">ING. LUIS ZENDEJAS</h1>
+              <h1 className="text-center z-20 text-white relative">ING. LUIS ZENDEJAS</h1>
             </div>
           </div>
 
@@ -59,7 +59,7 @@ function Fundadores() {
                 <h2 className="text-xl mb-2">{persona2.puesto}</h2>
                 <h2 className="text-lg text-justify leading-relaxed indent-8">{persona2.vision}</h2>
               </div>
-              <h1 className="text-center">M.I. EDWIN LARA</h1>
+              <h1 className="text-center text-white">M.I. EDWIN LARA</h1>
             </div>
           </div>
 
@@ -77,7 +77,7 @@ function Fundadores() {
                 <h2 className="text-xl mb-2">{persona3.puesto}</h2>
                 <h2 className="text-lg text-justify leading-relaxed indent-8"> {persona3.vision} </h2>
               </div>
-              <h1 className="text-center">M.I. DAVID BALCAZAR</h1>
+              <h1 className="text-center text-white">M.I. DAVID BALCAZAR</h1>
             </div>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 
 import NosotrosInformacion from "./NosotrosInformacion";
 import Fundadores from "./Fundadores";
+import Clientes from "./Clientes";
 
 function Nosotros() {
   return (
@@ -12,8 +13,13 @@ function Nosotros() {
   </div>
 
   {/* Section: Fundadores */}
-  <div className="min-h-screen bg-gradient-to-b from-black via-gray-600 to-white">
+  <div className="min-h-screen bg-gradient-to-b from-black to-quaternary">
     <Fundadores />
+  </div>
+
+  {/* section: Clientes */}
+  <div className="bg-gradient-to-b from-quaternary  to-white">
+    <Clientes />
   </div>
 
   
