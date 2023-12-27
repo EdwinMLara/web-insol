@@ -135,7 +135,7 @@ const Navbar_Context = () => {
                 handleInfoToggle("tecnologias");
               }}
             >
-              <Link to="/tecnologias" 
+              <Link to="/web-insol/tecnologias" 
               style={{
                   color: activeInfo === "tecnologias" ? "black" : txtColor,
                   // Ajusta según sea necesario
@@ -149,7 +149,7 @@ const Navbar_Context = () => {
               onClick={() => handleInfoToggle("nosotros")}
             >
               <Link
-                to="/nosotros"
+                to="/web-insol/nosotros"
                 style={{
                   color: activeInfo === "nosotros" ? "black" : txtColor,
                   // Ajusta según sea necesario
@@ -165,11 +165,12 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("clientes")}
             >
-              <Link to="/clientes"
+              <Link to="/web-insol/tienda"
               style={{
                 color: activeInfo === "clientes" ? "black" : txtColor,
                 // Ajusta según sea necesario
-              }}>Clientes</Link>
+              }}>Tienda</Link>
+              
             </div>
             <div
               className={`text-${txtColor} cursor-pointer  ${
@@ -179,7 +180,7 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("contactanos")}
             >
-              <Link to="/contactanos"
+              <Link to="/web-insol/contactanos"
               style={{
                 color: activeInfo === "contactanos" ? "black" : txtColor,
                 // Ajusta según sea necesario
@@ -204,23 +205,20 @@ const Navbar_Context = () => {
                     <div className="bg-white p-4 ">
                       <ul className="text-xl">
                         <li className="hover:bg-primary rounded">
-                          <Link to={"/web-insol/"}>Inicio</Link>
-                        </li>
                         <br />
+                          <Link to={"/web-insol/web-insol/"}>Inicio</Link>
+                        </li><br />
                         <li className="hover:bg-primary rounded">
-                          <Link to={"/tecnologias"}>Tecnologías</Link>
-                        </li>
-                        <br />
+                          <Link to={"/web-insol/tecnologias"}>Tecnologías</Link>
+                        </li><br />
                         <li className="hover:bg-primary rounded">
-                          <Link to={"/nosotros"}>Nosotros</Link>
-                        </li>
-                        <br />
+                          <Link to={"/web-insol/nosotros"}>Nosotros</Link>
+                        </li><br />
                         <li className="hover:bg-primary rounded">
-                          <Link to={"/Clientes"}>Clientes</Link>
-                        </li>
-                        <br />
+                          <Link to={"/web-insol/tienda"}>Tienda</Link>
+                        </li><br />
                         <li className="hover:bg-primary rounded">
-                          <Link to={"/contactanos"}>Contáctanos</Link>
+                          <Link to={"/web-insol/contactanos"}>Contáctanos</Link>
                         </li>
                       </ul>
                     </div>
