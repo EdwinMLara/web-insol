@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  motion,
-  AnimatePresence,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useInsoel } from "../Context/InsoelContext";
 
@@ -19,7 +16,6 @@ import image from "../imgCarrusel/prueba.png";
 import image1 from "../imgCarrusel/15.jpg";
 import image2 from "../imgCarrusel/16.jpg";
 import image3 from "../imgCarrusel/17.jpg";
-
 
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
@@ -61,11 +57,13 @@ const Navbar_Context = () => {
             ? "bg-tertiary bg-opacity-75 "
             : activeInfo === ""
             ? ""
-            : activeInfo === "" ? "": "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
+            : activeInfo === ""
+            ? ""
+            : "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
         }  p-4 absolute top-0 left-0 right-0  z-10`}
       >
-        <div className="flex items-center justify-between ">
-          <div className="bg-transparent">
+        <div className="flex items-center justify-between">
+          <div className="bg-transparent ">
             <Link to={"/web-insol/"} onClick={handleLogoClick}>
               <motion.img
                 initial={{ opacity: 0, x: -50 }}
@@ -92,8 +90,6 @@ const Navbar_Context = () => {
             </Link>
           </div>
 
-          
-
           {/*Navavar con Framer-motion */}
           <div className="md:hidden">
             <button
@@ -119,9 +115,11 @@ const Navbar_Context = () => {
 
           <div className="hidden lg:flex space-x-20 relative mx-auto text-[22px] mr-10">
             <div
-              className={`text-${txtColor} cursor-pointer  ${
+              className={`text-${
+                activeInfo === "proyectos" ? "black" : "white"
+              } cursor-pointer  ${
                 activeInfo === "proyectos"
-                  ? " p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
+                  ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
                   : ""
               }`}
               onClick={() => handleInfoToggle("proyectos")}
@@ -137,7 +135,11 @@ const Navbar_Context = () => {
                 handleInfoToggle("tecnologias");
               }}
             >
-              <Link to="/tecnologias">Tecnologias</Link>
+              <Link to="/tecnologias" 
+              style={{
+                  color: activeInfo === "tecnologias" ? "black" : txtColor,
+                  // Ajusta según sea necesario
+                }}>Tecnologias</Link>
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${
@@ -146,7 +148,15 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("nosotros")}
             >
-              <Link to="/nosotros">Nosotros</Link>
+              <Link
+                to="/nosotros"
+                style={{
+                  color: activeInfo === "nosotros" ? "black" : txtColor,
+                  // Ajusta según sea necesario
+                }}
+              >
+                Nosotros
+              </Link>
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${
@@ -155,7 +165,11 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("clientes")}
             >
-              <Link to="/clientes">Clientes</Link>
+              <Link to="/clientes"
+              style={{
+                color: activeInfo === "clientes" ? "black" : txtColor,
+                // Ajusta según sea necesario
+              }}>Clientes</Link>
             </div>
             <div
               className={`text-${txtColor} cursor-pointer  ${
@@ -165,7 +179,11 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("contactanos")}
             >
-              <Link to="/contactanos">Contáctanos</Link>
+              <Link to="/contactanos"
+              style={{
+                color: activeInfo === "contactanos" ? "black" : txtColor,
+                // Ajusta según sea necesario
+              }}>Contáctanos</Link>
             </div>
           </div>
         </div>
@@ -187,16 +205,20 @@ const Navbar_Context = () => {
                       <ul className="text-xl">
                         <li className="hover:bg-primary rounded">
                           <Link to={"/web-insol/"}>Inicio</Link>
-                        </li><br />
+                        </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/tecnologias"}>Tecnologías</Link>
-                        </li><br />
+                        </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/nosotros"}>Nosotros</Link>
-                        </li><br />
+                        </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/Clientes"}>Clientes</Link>
-                        </li><br />
+                        </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/contactanos"}>Contáctanos</Link>
                         </li>
@@ -226,19 +248,23 @@ const Navbar_Context = () => {
                 </p>
                 <div className="border-r-2 border-yellow-500 h-[20rem]"></div>
                 <div className="ml-32 w-1/3">
-        {imagePaths.map((path, index) => (
-          <div
-          key={index}
-          className={`relative ${
-            index === imagen ? "block" : "hidden"
-          }`}
-          data-te-carousel-item
-          data-te-carousel-active={index === imagen}
-        >
-            <img src={path} alt={`Slide ${index + 1}`} className="w-full" />
-          </div>
-        ))}
-      </div>
+                  {imagePaths.map((path, index) => (
+                    <div
+                      key={index}
+                      className={`relative ${
+                        index === imagen ? "block" : "hidden"
+                      }`}
+                      data-te-carousel-item
+                      data-te-carousel-active={index === imagen}
+                    >
+                      <img
+                        src={path}
+                        alt={`Slide ${index + 1}`}
+                        className="w-full"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
