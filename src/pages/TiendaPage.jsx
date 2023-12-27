@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ProductList from "../Components/ProductList";
 import ProductDetail from "../Components/ProductoDetail";
 
 function TiendaPage() {
   const [selectedProductId, setSelectedProductId] = useState(null);
+
+  useEffect(() => {
+    document.title = "Tienda | INSOEL";
+    return () => {
+      document.title = "INSOEL";
+    };
+  }, []);
 
   const products = [
     { id: 1, name: 'Producto 1', image: 'ss', price: 50, features: 'Características del Producto 1' },

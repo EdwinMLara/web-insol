@@ -137,7 +137,7 @@ const Navbar_Context = () => {
                 handleInfoToggle("tecnologias");
               }}
             >
-              <Link to="/web-insol/tecnologias">Tecnologias</Link>
+              <Link to="/web-insol/tecnologias">Tecnologías</Link>
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${

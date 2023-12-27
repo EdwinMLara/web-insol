@@ -14,7 +14,7 @@ function BiorreactorPage() {
     };
   }, []);
   return (
-    <div className="bg-blue-300 min-h-screen  flex flex-col">
+    <div className="bg-bajo min-h-screen  flex flex-col">
       <div className="mb-20">
       </div>
       <div>

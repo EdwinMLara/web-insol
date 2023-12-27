@@ -9,7 +9,7 @@ const ProductDetail = () => {
         <img src={detalles} alt="detalles" className="md:w-[50%] h-auto sm:w-full" />
       </div>
       <a
-          href={"https://chat.whatsapp.com/HXk39RhC5XiHfsfO7IAt2i"}
+          href={"https://wa.me/message/WAYW2ZY6BUU6G1?src=qr"}
           className="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 "
         >
           <FaWhatsapp className='mr-2 text-2xl'/> 
