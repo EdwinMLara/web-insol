@@ -13,8 +13,8 @@ function Clientes() {
     <div className=" ">
       <div className=" font-bold text-3xl text-center p-5 ">
         MARCAS QUE CONFÍAN EN NOSOTROS
-        <div className="grid md:grid-cols-5  justify-center text-center pt-10 pb-10 pr-[10rem] pl-[10rem]">
-          <div>
+        <div className="flex flex-wrap justify-center text-center pt-10 pb-10 md:pr-[10rem] md:pl-[10rem]">
+          <div className="md:flex-none w-1/5 ">
             <img src={Ug} alt="Imagen 1" className="w-[5rem] h-[5rem]" />
           </div>
           <div >

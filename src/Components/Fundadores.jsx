@@ -4,6 +4,7 @@ import Persona2 from "../img/Personas/persona2.jpeg";
 import Persona3 from "../img/Personas/persona3.jpeg";
 
 function Fundadores() {
+  
   const persona1 = {
     nombre: "Ing. Luis Alejandro Zendejas",
     puesto: "Ingeniero de Control y Automatización",
@@ -23,12 +24,12 @@ function Fundadores() {
   };
 
   return (
-    <div>
+    <div className="">
       <h1 className="text-white text-center text-2xl mt-14">CONOCE A NUESTROS FUNDADORES</h1>
-      <div className="flex justify-center">
-        <div className="flex space-x-40 mt-20">
+      <div className="sm:flex sm:space-x-40 mt-24 sm:flex-col items-center">
+        <div className="sm:flex sm:space-x-40">
           {/* Persona 1 */}
-          <div className="flex flex-col items-center group">
+          <div className="flex flex-col items-center group mb-8 sm:mb-0">
             <div className="relative">
               <img
                 src={Persona1}
@@ -36,7 +37,7 @@ function Fundadores() {
                 className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
               <div className="hidden group-hover:block absolute top-1/2 left-full transform -translate-y-1/2 p-4 shadow-lg z-10 w-[32rem] h-[24rem] m-3 text-black py-3 px-8 bottom-16 rounded-lg 
-              bg-gradient-to-t from-quaternary to-primary text-black bottom-16 mt-2 transform border-2 border-black/50 ">
+              bg-gradient-to-t from-quaternary to-primary mt-2  border-2 border-black/50 ">
                 <h2 className="text-3xl text-center mb-2"> {persona1.nombre}</h2>
                 <h2 className="text-xl mb-2">{persona1.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">{persona1.vision}</p>
@@ -46,15 +47,15 @@ function Fundadores() {
           </div>
 
           {/* Persona 2 */}
-          <div className="flex flex-col items-center group">
+          <div className="flex flex-col items-center group mb-8 sm:mb-0">
             <div className="relative">
               <img
                 src={Persona2}
                 alt="Foto de la persona 2"
-                className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4"
+                className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
               <div className="hidden group-hover:block absolute top-1/2 left-full transform -translate-y-1/2 p-4 shadow-lg z-10 w-[32rem] h-[24rem] m-3 text-black py-3 px-8 bottom-16 rounded-lg 
-              bg-gradient-to-t from-quaternary to-primary text-black bottom-16 mt-2 transform border-2 border-black/50 ">
+              bg-gradient-to-t from-quaternary to-primary mt-2  border-2 border-black/50 ">
                 <h2 className="text-3xl text-center mb-2"> {persona2.nombre}</h2>
                 <h2 className="text-xl mb-2">{persona2.puesto}</h2>
                 <h2 className="text-lg text-justify leading-relaxed indent-8">{persona2.vision}</h2>
@@ -64,15 +65,15 @@ function Fundadores() {
           </div>
 
           {/* Persona 3 */}
-          <div className="flex flex-col items-center group">
+          <div className="flex flex-col items-center group mb-8 sm:mb-0">
             <div className="relative">
               <img
                 src={Persona3}
                 alt="Foto de la persona 3"
-                className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4"
+                className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
               <div className="hidden group-hover:block absolute top-1/2 right-full transform -translate-y-1/2 p-4 shadow-lg z-10 w-[32rem] h-[24rem] m-3 text-black py-3 px-8 bottom-16 rounded-lg 
-              bg-gradient-to-t from-quaternary to-primary text-black bottom-16 mt-2 transform border-2 border-black/50 ">
+              bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 ">
                 <h2 className="text-3xl text-center mb-2"> {persona3.nombre}</h2>
                 <h2 className="text-xl mb-2">{persona3.puesto}</h2>
                 <h2 className="text-lg text-justify leading-relaxed indent-8"> {persona3.vision} </h2>

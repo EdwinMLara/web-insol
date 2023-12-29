@@ -3,20 +3,20 @@ import LogoAmarilloBlanco from "../img/LogoAmarilloBlanco.png";
 
 function Formulario() {
   return (
-    <div className="pt-32 ">
-      <div className="flex bg-gradient-to-r from-blue-500 via-blue-950 to-black ">
-        <div className="w-1/2 p-8 ">
+    <div className="md:pt-32 ">
+      <div className="md:flex bg-gradient-to-r from-blue-500 via-blue-950 to-black ">
+        <div className="md:w-1/2 p-8 ">
           <h1 className="text-4xl font-bold mb-4 text-white text-left pt-32">
             AUTOMATIZACIÓN <br />
             REDEFINIDA <br />
-            <h2 className="pl-24 text-3xl">Contáctanos.</h2>
+            <h2 className="md:pl-24 text-3xl">Contáctanos.</h2>
           </h1>
         </div>
-        <div className="w-1/2 p-5">
-          <form className="pr-28 ">
-            <div className="mb-4 border-b border-white py-2 ">
+        <div className="md:w-1/2 p-5">
+          <form className="md:pr-28 ">
+            <div className="md:flex mb-4 border-b border-white py-2 ">
               <input
-                className="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
+                className="md:w-2/3 appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none"
                 id="nombre"
                 type="text"
                 placeholder="Nombre y Apellido"
@@ -73,13 +73,13 @@ function Formulario() {
               />
             </div>
             <button
-              className="bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline "
+              className="md:w-auto bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline "
               type="submit"
             >
               Contacta a
               <img
                 src={LogoAmarilloBlanco}
-                className="inline-block h-6 w-20 mr-2 pl-2 "
+                className="md:inline-block h-6 w-20 mr-2 pl-2 "
               />
             </button>
           </form>
