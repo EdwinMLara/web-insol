@@ -17,16 +17,16 @@ function Clientes() {
           <div className="md:flex-none w-1/5 ">
             <img src={Ug} alt="Imagen 1" className="w-[5rem] h-[5rem]" />
           </div>
-          <div >
+          <div className="flex-none w-1/5">
             <img src={TecM} alt="Imagen 2" className="w-[5rem] h-[5rem]" />
           </div>
-          <div >
+          <div className="flex-none w-1/5">
             <img src={Ing} alt="Imagen 3" className="w-[5rem] h-[5rem]" />
           </div>
-          <div >
+          <div className="flex-none w-1/5">
             <img src={Uat} alt="Imagen 4" className="w-[5rem] h-[5rem]" />
           </div>
-          <div >
+          <div className="flex-none w-1/5">
             <img src={Solena} alt="Imagen 5" className="w-[24rem] h-[4rem]" />
           </div>
          
