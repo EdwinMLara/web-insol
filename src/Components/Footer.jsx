@@ -50,7 +50,7 @@ function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="nosotrosSeccion" className="hover:underline">
                     Nuestro Equipos
                   </a>
                 </li>
