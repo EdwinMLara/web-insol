@@ -16,6 +16,7 @@ import HomePage from "./pages/HomePage";
 import Footer from "./Components/Footer";
 import TiendaPage from "./pages/TiendaPage";
 import ProductDetail from "./Components/ProductoDetail";
+import DetalleProducto from "./Components/DetalleProducto";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
             <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />
             <Route path="/web-insol/tienda" element={<TiendaPage />} />
+            <Route path="/web-insol/tienda/DetalleProducto" element={<DetalleProducto />} />
             <Route path="/web-insol/tienda/:productId" element={<ProductDetail/>} />
           </Routes>
         </main>
