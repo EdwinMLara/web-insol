@@ -26,7 +26,7 @@ function App() {
         <main>
           <Navbar_Context />
           <Routes>
-            <Route path="/web-insol/" element={<HomePage/>} />
+            <Route path="/web-insol" element={<HomePage/>} />
             <Route path="/web-insol/tecnologias" element={<TecnologiasPage />} />
             <Route path="/web-insol/invernadero" element={<InvernaderoPage />} />
             <Route path="/web-insol/clientes" element={<ClientesPage />} />

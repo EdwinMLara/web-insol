@@ -18,7 +18,7 @@ function Nosotros() {
   </div>
 
   {/* section: Clientes */}
-  <div className="bg-gradient-to-b from-quaternary  to-white">
+  <div className="bg-gradient-to-b from-quaternary  to-white" >
     <Clientes />
   </div>
 

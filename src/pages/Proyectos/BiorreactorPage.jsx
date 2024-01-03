@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useInsoel } from "../../Context/InsoelContext";
 import imgBiorreactor from '../../img/Proyectos/49.png'
 import logo from '../../img/Logos/AmarilloNegro.png'
+import Footer from "../../Components/Footer";
 
 function BiorreactorPage() {
   const { setLogoColor, setTxtColor } = useInsoel();
@@ -14,6 +15,7 @@ function BiorreactorPage() {
     };
   }, []);
   return (
+    <>
     <div className="bg-bajo min-h-screen  flex flex-col">
       <div className="mb-20">
       </div>
@@ -48,6 +50,10 @@ function BiorreactorPage() {
       </div>
       
     </div>
+    <div>
+      <Footer/>
+    </div>
+    </>
   )
 }
 

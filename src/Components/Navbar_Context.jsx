@@ -107,7 +107,7 @@ const Navbar_Context = () => {
           </div>
 
           {/*Navavar con Framer-motion */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={toggleMenu}
               className="text-white focus:outline-none"
@@ -169,7 +169,11 @@ const Navbar_Context = () => {
               onClick={() => handleInfoToggle("nosotros")}
             >
               <Link
-                to="/web-insol/nosotros"
+                to="nosotrosSeccion"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
                 style={{
                   color: activeInfo === "nosotros" ? "black" : txtColor,
                   // Ajusta según sea necesario
