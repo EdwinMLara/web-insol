@@ -73,13 +73,13 @@ function Formulario() {
               />
             </div>
             <button
-              className="md:w-auto bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline "
+              className=" w-auto bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline "
               type="submit"
             >
               Contacta a
               <img
                 src={LogoAmarilloBlanco}
-                className="md:inline-block h-6 w-20 mr-2 pl-2 "
+                className="inline-block h-6 w-20 mr-2 pl-2 "
               />
             </button>
           </form>
