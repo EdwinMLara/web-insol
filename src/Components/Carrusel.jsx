@@ -43,10 +43,10 @@ function Carrusel() {
           >
              {/* Agregar el título encima de la imagen */}
              <div className="absolute top-2/3 left-16">
-                <h3 className="font-bold text-black  top-1/3 transform ">PROYECTO VERDE</h3>
+                <h3 className="font-bold text-black  top-1/3 transform ">Materializamos tus ideas</h3>
                 <h1 className="text-2xl font-bold text-black transform lg:text-3xl xl:text-4xl">
-                  AUTOMATIZACION DE <br class="lg:hidden xl:block" />{" "}
-                  INVERNADEROS
+                  AUTOMATIZACION Y <br class="lg:hidden xl:block" />{" "}
+                  CONTROL
                 </h1>
                 <button className="bg-primary bg-opacity-75 text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary  ">
                 <Link to= "/invernadero">CONOCE MÁS</Link>

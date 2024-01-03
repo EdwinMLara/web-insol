@@ -14,13 +14,15 @@ import image from "../imgCarrusel/prueba.png";
 
 // Importa tus imágenes dinámicamente
 import image1 from "../imgCarrusel/15.jpg";
-import image2 from "../imgCarrusel/16.jpg";
-import image3 from "../imgCarrusel/17.jpg";
+import image2 from "../imgCarrusel/22.jpg";
+import image3 from "../imgCarrusel/16.jpg";
+import image4 from "../imgCarrusel/17.jpg";
 
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
   const [activeInfo, setActiveInfo] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const handleInfoToggle = (info) => {
     setActiveInfo(activeInfo === info ? null : info);
@@ -35,19 +37,33 @@ const Navbar_Context = () => {
     setActiveInfo("bg-gradient-to-b from-secondary ");
   };
 
-  const imagePaths = [image1, image2, image3];
+  const imagePaths = [
+    image1, 
+    image2, 
+    image3, 
+    image4,
+  ];
+
+  const enlaces = [
+    "/proyectos/biorreactor",
+    "/proyectos/BancoUAT",
+    "/proyectos/Consultas",
+    "/proyectos/ApkLectora",
+  ];
+
+  const descripciones = [
+    "Un biorreactor es un dispositivo diseñado para facilitar y controlar las condiciones óptimas para el crecimiento y actividad de organismos vivos, como células, bacterias o levaduras, en un entorno controlado.",
+    "Descripción de Banco UAT",
+    "Descripción de Consultas",
+    "Descripción de Apk Lectora Qr",
+  ];
 
   const [imagen, setImagen] = useState(0);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      // Cambia a la siguiente imagen
-      setImagen((prevImagen) => (prevImagen + 1) % imagePaths.length);
-    }, 1000);
-
-    // Limpia el intervalo cuando el componente se desmonta
-    return () => clearInterval(intervalId);
-  }, []);
+  const handleClick = (index) => {
+    setImagen(index);
+    setSelectedItem(index);
+  };
 
   return (
     <div>
@@ -113,7 +129,7 @@ const Navbar_Context = () => {
             </button>
           </div>
 
-          <div className="hidden lg:flex space-x-20 relative mx-auto text-[22px] mr-10">
+          <div className="hidden lg:flex space-x-5 relative mx-auto text-[22px] mr-10">
             <div
               className={`text-${
                 activeInfo === "proyectos" ? "black" : "white"
@@ -124,7 +140,7 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("proyectos")}
             >
-              Proyectos
+              ¿Que hacemos?
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${
@@ -135,11 +151,15 @@ const Navbar_Context = () => {
                 handleInfoToggle("tecnologias");
               }}
             >
-              <Link to="/web-insol/tecnologias" 
-              style={{
+              <Link
+                to="/web-insol/tecnologias"
+                style={{
                   color: activeInfo === "tecnologias" ? "black" : txtColor,
                   // Ajusta según sea necesario
-                }}>Tecnologias</Link>
+                }}
+              >
+                
+              </Link>
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${
@@ -159,7 +179,7 @@ const Navbar_Context = () => {
                   // Ajusta según sea necesario
                 }}
               >
-                Nosotros
+                ¿Quienes Somos?
               </Link>
             </div>
             <div
@@ -169,12 +189,15 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("clientes")}
             >
-              <Link to="/web-insol/tienda"
-              style={{
-                color: activeInfo === "clientes" ? "black" : txtColor,
-                // Ajusta según sea necesario
-              }}>Tienda</Link>
-              
+              <Link
+                to="/web-insol/tienda"
+                style={{
+                  color: activeInfo === "clientes" ? "black" : txtColor,
+                  // Ajusta según sea necesario
+                }}
+              >
+                
+              </Link>
             </div>
             <div
               className={`text-${txtColor} cursor-pointer  ${
@@ -184,16 +207,15 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("contactanos")}
             >
-              <Link 
-              to="/web-insol/contactanos"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              style={{
-                color: activeInfo === "contactanos" ? "black" : txtColor,
-                // Ajusta según sea necesario
-              }}>Contáctanos</Link>
+              <Link
+                to="/web-insol/contactanos"
+                style={{
+                  color: activeInfo === "contactanos" ? "black" : txtColor,
+                  // Ajusta según sea necesario
+                }}
+              >
+                Contactarnos
+              </Link>
             </div>
           </div>
         </div>
@@ -214,18 +236,22 @@ const Navbar_Context = () => {
                     <div className="bg-white p-4 ">
                       <ul className="text-xl">
                         <li className="hover:bg-primary rounded">
-                        <br />
+                          <br />
                           <Link to={"/web-insol/web-insol/"}>Inicio</Link>
-                        </li><br />
+                        </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/web-insol/tecnologias"}>Tecnologías</Link>
-                        </li><br />
+                        </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/web-insol/nosotros"}>Nosotros</Link>
-                        </li><br />
+                        </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/web-insol/tienda"}>Tienda</Link>
-                        </li><br />
+                        </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/web-insol/contactanos"}>Contáctanos</Link>
                         </li>
@@ -245,32 +271,67 @@ const Navbar_Context = () => {
             } bg-opacity-75 p-4 mt-2 w-full text-center text-black`}
           >
             {activeInfo === "proyectos" && (
-              <div className="flex items-center">
-                <p className="text-right text-2xl mr-5 w-1/3">
-                  <Link to={"/proyectos/biorreactor"}>Biorreactor</Link>
-                  <br /> <br />
-                  Banco UAT <br /> <br />
-                  Sistema de Consultas <br /> <br />
-                  Apk Lectora QR <br /> <br />
-                </p>
+              <div className="flex items-center ">
+                <div className="text-right text-2xl mr-5 w-1/3">
+                <p
+        className={`cursor-pointer ${selectedItem === 0 ? 'underline decoration-wavy decoration-primary' : ''}`}
+        onClick={() => handleClick(0)}
+      >
+                    Desarrollo Tecnologico <br />
+                    <br />
+                  </p>
+                  <p
+        className={`cursor-pointer ${selectedItem === 1 ? 'underline decoration-wavy decoration-primary' : ''}`}
+        onClick={() => handleClick(1)}
+      >
+                    Soluciones de Integracion <br />
+                    <br />
+                  </p>
+                  <p
+        className={`cursor-pointer ${selectedItem === 2 ? 'underline decoration-wavy decoration-primary' : ''}`}
+        onClick={() => handleClick(2)}
+      >
+                    DevOPs e Infraestructura TI <br />
+                    <br />
+                  </p>
+                  <p
+        className={`cursor-pointer ${selectedItem === 3 ? 'underline decoration-wavy decoration-primary' : ''}`}
+        onClick={() => handleClick(3)}
+      >
+                    Adquisicion de Equipos y Herramientas
+                  </p>
+                </div>
+
                 <div className="border-r-2 border-yellow-500 h-[20rem]"></div>
-                <div className="ml-32 w-1/3">
-                  {imagePaths.map((path, index) => (
-                    <div
-                      key={index}
-                      className={`relative ${
-                        index === imagen ? "block" : "hidden"
-                      }`}
-                      data-te-carousel-item
-                      data-te-carousel-active={index === imagen}
-                    >
-                      <img
-                        src={path}
-                        alt={`Slide ${index + 1}`}
-                        className="w-full"
-                      />
-                    </div>
-                  ))}
+                <div className="ml-24 w-2/3">
+                  <div className="flex">
+                    {imagePaths.map((path, index) => (
+                      <div
+                        key={index}
+                        className={`relative flex ${
+                          index === imagen ? "block" : "hidden"
+                        }`}
+                        data-te-carousel-item
+                        data-te-carousel-active={index === imagen}
+                      >
+                        <img
+                          src={path}
+                          alt={`Slide ${index + 1}`}
+                          className="w-[26rem]"
+                        />
+                        <div className="flex flex-col items-start mt-2 ml-2">
+                          <p className="text-lg text-white text-justify p-3">
+                            {descripciones[index]}
+                          </p>
+                          <Link to={enlaces[index]}>
+                            <button className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg ">
+                              Ver más
+                            </button>
+                          </Link>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
@@ -280,5 +341,7 @@ const Navbar_Context = () => {
     </div>
   );
 };
-
+{
+  /* <Link to={"/proyectos/biorreactor"}>Biorreactor</Link> */
+}
 export default Navbar_Context;

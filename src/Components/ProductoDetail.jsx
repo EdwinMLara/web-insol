@@ -10,7 +10,7 @@ const ProductDetail = () => {
       </div>
       <a
           href={"https://wa.me/message/WAYW2ZY6BUU6G1?src=qr"}
-          className="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 "
+          className="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 " 
         >
           <FaWhatsapp className='mr-2 text-2xl'/> 
           Contáctanos por WhatsApp

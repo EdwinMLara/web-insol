@@ -12,9 +12,7 @@ function NosotrosInformacion() {
         setNumberOfLines(3);
       } else if (screenWidth < 800) {
         setNumberOfLines(4);
-      } else if (screenWidth < 300) {
-        setNumberOfLines(1);
-      }else {
+      } else {
         setNumberOfLines(9);
       }
     };

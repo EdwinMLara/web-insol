@@ -1,8 +1,12 @@
+import DetalleProducto from "../Components/DetalleProducto"
 import ProductDetail from "../Components/ProductoDetail"
 
 function DetallesProductoPage() {
   return (
-    <ProductDetail/>
+    <div className="">
+<DetalleProducto />
+    </div>
+    
   )
 }
 
