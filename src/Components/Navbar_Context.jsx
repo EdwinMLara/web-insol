@@ -149,7 +149,7 @@ const Navbar_Context = () => {
               onClick={() => handleInfoToggle("nosotros")}
             >
               <Link
-                to="nosotrosSeccion"
+                to="/web-insol/nosotros"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -185,7 +185,7 @@ const Navbar_Context = () => {
               onClick={() => handleInfoToggle("contactanos")}
             >
               <Link 
-              to="formularioSeccion"
+              to="/web-insol/contactanos"
               spy={true}
               smooth={true}
               offset={-70}

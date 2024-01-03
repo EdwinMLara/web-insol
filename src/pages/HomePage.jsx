@@ -1,16 +1,33 @@
 import Carrusel from "../Components/Carrusel";
 import Nosotros from "../Components/Nosotros";
-import Formulario from '../Components/Formulario'
+import Formulario from "../Components/Formulario";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
+import Map from "../Components/Map";
+import MapaPage from "./MapaPage";
 
 function HomePage() {
   return (
     <div className="flex flex-col h-screen">
-      <div className="flex-grow" id="inicioSeccion" >
+      <div className="flex-grow" id="inicioSeccion">
         <Carrusel />
       </div>
-      
+      <div className="flex-grow min-h-screen">
+        <h1 className="text-2xl justify-center text-center">
+          Mapa de proyectos en el país
+        </h1>
+        <p className="justify-normal m-16">
+          Te damos la bienvenida a nuestra sección de "Proyectos en el país",
+          donde te invitamos a descubrir las diversas ubicaciones dentro de
+          nuestro país donde hemos dejado nuestra marca. Cada región, cada
+          ciudad es un testimonio de nuestro compromiso con la excelencia y la
+          innovación en el ámbito nacional.
+        </p>
+        <div className="mb-5">
+          <Map />
+        </div>
+      </div>
+
       <div className="flex-grow" id="nosotrosSeccion">
         <Nosotros id="nosotrosSeccion" />
       </div>
@@ -19,10 +36,8 @@ function HomePage() {
         <Formulario />
       </div>
       <div>
-        <Footer/>
+        <Footer />
       </div>
-
-
     </div>
   );
 }

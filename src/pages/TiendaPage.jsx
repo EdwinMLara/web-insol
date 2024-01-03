@@ -24,7 +24,7 @@ function TiendaPage() {
     {
       id: 2,
       name: "Producto 2",
-      image: "url_imagen_2",
+      image: "../",
       price: 75,
       features: "Características del Producto 2",
     },

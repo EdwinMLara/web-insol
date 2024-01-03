@@ -13,6 +13,7 @@ import HomePage from "./pages/HomePage";
 import Footer from "./Components/Footer";
 import TiendaPage from "./pages/TiendaPage";
 import ProductDetail from "./Components/ProductoDetail";
+import MapaPage from "./pages/MapaPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             />
             <Route path="/web-insol/tienda" element={<TiendaPage />} />
             <Route path="/web-insol/tienda/:productId" element={<ProductDetail/>} />
+            <Route path="/web-insol/mapa" element={<MapaPage/>} />
           </Routes>
         </main>
       </BrowserRouter>
