@@ -140,7 +140,7 @@ const Navbar_Context = () => {
               }`}
               onClick={() => handleInfoToggle("proyectos")}
             >
-              ¿Que hacemos?
+              ¿Qué hacemos?
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${
@@ -179,7 +179,7 @@ const Navbar_Context = () => {
                   // Ajusta según sea necesario
                 }}
               >
-                ¿Quienes Somos?
+                ¿Quiénes Somos?
               </Link>
             </div>
             <div
@@ -277,14 +277,14 @@ const Navbar_Context = () => {
         className={`cursor-pointer ${selectedItem === 0 ? 'underline decoration-wavy decoration-primary' : ''}`}
         onClick={() => handleClick(0)}
       >
-                    Desarrollo Tecnologico <br />
+                    Desarrollo Tecnológico <br />
                     <br />
                   </p>
                   <p
         className={`cursor-pointer ${selectedItem === 1 ? 'underline decoration-wavy decoration-primary' : ''}`}
         onClick={() => handleClick(1)}
       >
-                    Soluciones de Integracion <br />
+                    Soluciones de Integración <br />
                     <br />
                   </p>
                   <p
@@ -298,7 +298,7 @@ const Navbar_Context = () => {
         className={`cursor-pointer ${selectedItem === 3 ? 'underline decoration-wavy decoration-primary' : ''}`}
         onClick={() => handleClick(3)}
       >
-                    Adquisicion de Equipos y Herramientas
+                    Adquisición de Equipos y Herramientas
                   </p>
                 </div>
 

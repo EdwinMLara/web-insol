@@ -41,10 +41,12 @@ function Carrusel() {
             data-te-carousel-item
             data-te-carousel-active={index === imagenActiva}
           >
+              
+              <img src={path} className="block w-full" alt={`Slide ${index + 1}`} />
              {/* Agregar el título encima de la imagen */}
-             <div className="absolute top-2/3 left-16">
-                <h3 className="font-bold text-black  top-1/3 transform ">Materializamos tus ideas</h3>
-                <h1 className="text-2xl font-bold text-black transform lg:text-3xl xl:text-4xl">
+             <div className="absolute md:top-2/3 left-16">
+                <h3 className="font-bold text-black md:top-1/3 transform ">Materializamos tus ideas</h3>
+                <h1 className="text-2xl font-bold text-black transform md:text-2xl lg:text-3xl xl:text-4xl">
                   AUTOMATIZACION Y <br class="lg:hidden xl:block" />{" "}
                   CONTROL
                 </h1>
@@ -52,8 +54,7 @@ function Carrusel() {
                 <Link to= "/invernadero">CONOCE MÁS</Link>
               </button>
               </div> 
-              
-            <img src={path} className="block w-full" alt={`Slide ${index + 1}`} />
+            
           </div>
         ))}
       </div>
