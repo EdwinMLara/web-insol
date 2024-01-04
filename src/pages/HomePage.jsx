@@ -12,11 +12,11 @@ function HomePage() {
       <div className="flex-grow" id="inicioSeccion">
         <Carrusel />
       </div>
-      <div className="flex-grow min-h-screen">
-        <h1 className="text-2xl justify-center text-center">
+      <div className="flex-grow bg-gradient-to-b from-white via-tertiary to-white">
+        <h1 className="text-2xl justify-center text-center mt-5">
           Mapa de proyectos en el país
         </h1>
-        <p className="justify-normal m-16">
+        <p className="justify-normal m-10">
           Te damos la bienvenida a nuestra sección de "Proyectos en el país",
           donde te invitamos a descubrir las diversas ubicaciones dentro de
           nuestro país donde hemos dejado nuestra marca. Cada región, cada

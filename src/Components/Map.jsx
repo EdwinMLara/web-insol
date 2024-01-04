@@ -2,6 +2,7 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css'; // Importa los estilos de Leaflet
+import { color } from 'framer-motion';
 
 const Map = () => {
   const position = [20.140833, -101.190961];
@@ -10,13 +11,13 @@ const Map = () => {
 
   return (
     <div style={{ width: '1000px', height: '500px', margin: 'auto' }}>
-      <MapContainer center={position} zoom={10} style={{ height: '100%', width: '100%' }}>
+      <MapContainer center={position} zoom={8} style={{ height: '100%', width: '100%' }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position}>
-          <Popup>
+        <Marker position={position} style={{ backgroundColor: 'lightblue' }}>
+          <Popup >
             INSOEL
           </Popup>
         </Marker>
