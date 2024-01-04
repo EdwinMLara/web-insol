@@ -8,7 +8,7 @@ import MapaPage from "./MapaPage";
 
 function HomePage() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen ">
       <div className="flex-grow" id="inicioSeccion">
         <Carrusel />
       </div>

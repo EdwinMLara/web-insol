@@ -30,12 +30,12 @@ function Carrusel() {
 
 
   return (
-    <div>
+    <div className="">
       <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
         {imagePaths.map((path, index) => (
           <div
             key={index}
-            className={`relative w-full h-screen flex items-center justify-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
+            className={`relative  w-full h-auto md:h-screen md:h-full flex items-center justify-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
               index === imagenActiva ? "block" : "hidden"
             }`}
             data-te-carousel-item
