@@ -3,8 +3,9 @@ import LogoAmarilloBlanco from "../img/LogoAmarilloBlanco.png";
 
 function Formulario() {
   return (
-    <div className="md:pt-32 ">
-      <div className="md:flex bg-gradient-to-r from-blue-500 via-blue-950 to-black ">
+    <div className="bg-gradient-to-t from-quaternary to-quaternary">
+      <div className="md:pt-32 md:pb-16">
+      <div className="md:flex bg-gradient-to-r from-secondary from-10% via-secondary via-30% to-black t0-90% ">
         <div className="md:w-1/2 p-8 ">
           <h1 className="text-4xl font-bold mb-4 text-white text-left pt-32">
             AUTOMATIZACIÓN <br />
@@ -85,6 +86,7 @@ function Formulario() {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 }

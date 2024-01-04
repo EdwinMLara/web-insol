@@ -12,7 +12,7 @@ function HomePage() {
       <div className="flex-grow" id="inicioSeccion">
         <Carrusel />
       </div>
-      <div className="flex-grow bg-gradient-to-b from-white via-tertiary to-white">
+      <div className="flex-grow bg-gradient-to-b from-tertiary via-tertiary to-black ">
         <h1 className="text-2xl justify-center text-center mt-5">
           Mapa de proyectos en el país
         </h1>
@@ -32,7 +32,7 @@ function HomePage() {
         <Nosotros id="nosotrosSeccion" />
       </div>
 
-      <div className="flex-grow mb-5" id="formularioSeccion">
+      <div className="flex-grow mb-5 " id="formularioSeccion">
         <Formulario />
       </div>
       <div>

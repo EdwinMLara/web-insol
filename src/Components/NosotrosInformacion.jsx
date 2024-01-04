@@ -52,7 +52,8 @@ function NosotrosInformacion() {
   );
   // animate-pulse
   return (
-    <div className="text-center mt-24">
+    <div className="text-center mt-20">
+      <h1 className="mb-5 text-2xl font-bold text-white">¿Quiénes Somos?</h1>
       <div className="text-white pt-5 p-5 z-10 relative">
         {" "}
         "En INSOEL, somos arquitectos del progreso, pioneros en el ámbito de la

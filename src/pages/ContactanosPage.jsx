@@ -12,7 +12,7 @@ function ContactanosPage() {
     };
   }, []);
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <Formulario />
     </div>
 
