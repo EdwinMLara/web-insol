@@ -10,13 +10,11 @@ import LogoVerdeBlanco from "../img/Logos/VerdeBlanco.png";
 import LogoAzulNegro from "../img/Logos/AzulNegro.png";
 import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 
-import image from "../imgCarrusel/prueba.png";
-
-// Importa tus imágenes dinámicamente
-import image1 from "../imgCarrusel/15.jpg";
-import image2 from "../imgCarrusel/22.jpg";
-import image3 from "../imgCarrusel/16.jpg";
-import image4 from "../imgCarrusel/17.jpg";
+// Importa tus imágenes dinámicamente para seccion de ¿que hacemos?
+import image1 from "../img/Proyectos/Bio_Reactor/06.jpg";
+import image2 from "../img/Proyectos/Banco_Uat/01.jpg";
+import image3 from "../img/Proyectos/Banco_Uat/01.jpg";
+import image4 from "../img/Proyectos/Banco_Uat/01.jpg";
 
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
@@ -45,7 +43,7 @@ const Navbar_Context = () => {
   ];
 
   const enlaces = [
-    "/proyectos/biorreactor",
+    "/proyectos/Biorreactor",
     "/proyectos/BancoUAT",
     "/proyectos/Consultas",
     "/proyectos/ApkLectora",
@@ -324,7 +322,7 @@ const Navbar_Context = () => {
                             {descripciones[index]}
                           </p>
                           <Link to={enlaces[index]}>
-                            <button className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg ">
+                            <button className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "onClick={() => handleInfoToggle("proyectos")}>
                               Ver más
                             </button>
                           </Link>

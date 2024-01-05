@@ -32,7 +32,7 @@ function App() {
             <Route path="/web-insol/clientes" element={<ClientesPage />} />
             <Route path="/web-insol/nosotros" element={<NosotrosPage />} />
             <Route path="/web-insol/contactanos" element={<ContactanosPage />} />
-            <Route path="/proyectos/biorreactor" element={<BiorreactorPage />} />
+            <Route path="/proyectos/Biorreactor" element={<BiorreactorPage />} />
             <Route path="/proyectos/BancoUAT" element={<BancoUatPage />} />
             <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
             <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />

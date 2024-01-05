@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Importa tus imágenes dinámicamente
-import image1 from "../imgCarrusel/31.png";
-import image2 from "../imgCarrusel/02.png";
-import image3 from "../imgCarrusel/03.png";
-import image4 from "../imgCarrusel/11.png";
-import image5 from "../imgCarrusel/05.png";
+import image1 from "../img/Carrusel/1.png";
+import image2 from "../img/Carrusel/2.png";
+import image3 from "../img/Carrusel/3.png";
+import image4 from "../img/Carrusel/4.png";
+import image5 from "../img/Carrusel/5.png"; 
 import { useInsoel } from "../Context/InsoelContext";
 
 // Crea un array de rutas de imágenes
@@ -35,7 +35,7 @@ function Carrusel() {
         {imagePaths.map((path, index) => (
           <div
             key={index}
-            className={`relative  w-full h-auto md:h-screen md:h-full flex items-center justify-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
+            className={`relative  w-full h-auto  md:h-screen flex items-center justify-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
               index === imagenActiva ? "block" : "hidden"
             }`}
             data-te-carousel-item
@@ -44,19 +44,30 @@ function Carrusel() {
               
               <img src={path} className="block w-full" alt={`Slide ${index + 1}`} />
              {/* Agregar el título encima de la imagen */}
-             <div className="absolute top-2/3 left-16 ">
-                <h3 className="font-bold text-black md:top-1/3 transform ">Materializamos tus ideas</h3>
-                <h1 className="text-2xl font-bold text-black transform md:text-2xl lg:text-3xl xl:text-4xl">
-                  AUTOMATIZACION Y <br class="lg:hidden xl:block" />{" "}
-                  CONTROL
-                </h1>
-                <button className="bg-primary bg-opacity-75 text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary  ">
-                <Link to= "/invernadero">CONOCE MÁS</Link>
+             {index === imagenActiva && (
+              <div className={`hidden md:block absolute w-full md:top-2/3 md:bottom-1/3 md:left-16`}>
+              <h3 className="font-bold text-black md:mb-1 transform md:mt-0 ">Materializamos tus ideas</h3>
+              <h1 className="text-2xl font-bold text-black transform md:text-2xl lg:text-3xl xl:text-4xl">
+                AUTOMATIZACION Y <br className="lg:hidden xl:block" /> CONTROL
+              </h1>
+              <button className="bg-primary bg-opacity-75 text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary">
+                <Link to="/web-insol/invernadero">CONOCE MÁS</Link>
               </button>
-              </div> 
-            
+            </div> 
+             )}
           </div>
+          
         ))}
+        {/* Contenido para pantallas pequeñas */}
+  <div className="md:hidden bg-white p-4 text-center">
+    <h3 className="font-bold text-black mb-1">Materializamos tus ideas</h3>
+    <h1 className="text-2xl font-bold text-black">
+      AUTOMATIZACION Y <br className="lg:hidden xl:block" /> CONTROL
+    </h1>
+    <button className="bg-primary bg-opacity-75 text-black py-3 px-8 mt-2 border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary">
+      <Link to="/invernadero">CONOCE MÁS</Link>
+    </button>
+  </div>
       </div>
       </div>
   

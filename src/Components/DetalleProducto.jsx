@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import foset from "../imgCarrusel/DetalleProducto/Foset_logo.png";
+import foset from "../img/DetalleProducto/Foset_logo.png";
 
 // Importa tus imágenes dinámicamente
-import image1 from "../imgCarrusel/DetalleProducto/000.jpg";
-import image2 from "../imgCarrusel/DetalleProducto/001.jpg";
-import image3 from "../imgCarrusel/DetalleProducto/002.jpg";
+import image1 from "../img/DetalleProducto/000.jpg";
+import image2 from "../img/DetalleProducto/001.jpg";
+import image3 from "../img/DetalleProducto/002.jpg";
 
 // Crea un array de rutas de imágenes
 const imagePaths = [image1, image2, image3];

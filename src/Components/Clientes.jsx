@@ -1,10 +1,10 @@
 import React from "react";
-import Ug from "../imgCarrusel/ug.png";
-import TecM from "../imgCarrusel/tec.png";
-import Ing from "../imgCarrusel/ingenieria.png";
-import Uat from "../imgCarrusel/uat.png";
-import Solena from "../imgCarrusel/solena.png";
-import { useInsoel } from "../Context/InsoelContext";
+import Ug from "../img/Clientes/ug.png";
+import TecM from "../img/Clientes/tec.png";
+import Ing from "../img/Clientes/ingenieria.png";
+import Uat from "../img/Clientes/uat.png";
+import Solena from "../img/Clientes/solena.png";
+import { useInsoel } from "../Context/InsoelContext"; 
 
 function Clientes() {
   const { setLogoColor } = useInsoel();
