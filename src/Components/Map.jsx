@@ -10,8 +10,8 @@ const Map = () => {
   const UAT = [20.705077, -100.450834];
 
   return (
-    <div style={{ width: '1000px', height: '500px', margin: 'auto' }}>
-      <MapContainer center={position} zoom={8} style={{ height: '100%', width: '100%' }}>
+    <div className="max-w-screen-lg mx-auto">
+      <MapContainer center={position} zoom={8} className="h-64 lg:h-[500px] w-full">
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
