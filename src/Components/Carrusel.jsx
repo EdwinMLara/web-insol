@@ -30,12 +30,12 @@ function Carrusel() {
 
 
   return (
-    <div>
+    <div className="">
       <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
         {imagePaths.map((path, index) => (
           <div
             key={index}
-            className={`relative w-full h-screen flex items-center justify-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
+            className={`relative  w-full h-auto md:h-screen md:h-full flex items-center justify-center transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
               index === imagenActiva ? "block" : "hidden"
             }`}
             data-te-carousel-item
@@ -44,7 +44,7 @@ function Carrusel() {
               
               <img src={path} className="block w-full" alt={`Slide ${index + 1}`} />
              {/* Agregar el título encima de la imagen */}
-             <div className="absolute md:top-2/3 left-16">
+             <div className="absolute top-2/3 left-16 ">
                 <h3 className="font-bold text-black md:top-1/3 transform ">Materializamos tus ideas</h3>
                 <h1 className="text-2xl font-bold text-black transform md:text-2xl lg:text-3xl xl:text-4xl">
                   AUTOMATIZACION Y <br class="lg:hidden xl:block" />{" "}
