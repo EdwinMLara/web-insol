@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useInsoel } from '../Context/InsoelContext'
 import Nosotros from '../Components/Nosotros';
+import Footer from '../Components/Footer';
 
 function NosotrosPage() {
   const {setLogoColor, setTxtColor} = useInsoel();
@@ -14,9 +15,15 @@ function NosotrosPage() {
   }, []);
   return (
     // color del navbar bg-black
+    <>
     <div className='min-h-screen'>
         <Nosotros />
     </div>
+    <div>
+      <Footer/>
+    </div>
+    
+    </>
   )
 }
 

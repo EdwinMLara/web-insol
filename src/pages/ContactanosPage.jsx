@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useInsoel } from "../Context/InsoelContext";
 import Formulario from "../Components/Formulario";
+import Footer from "../Components/Footer";
 function ContactanosPage() {
   const { setLogoColor, setTxtColor } = useInsoel();
   setLogoColor("amarilloBlanco");
@@ -12,9 +13,14 @@ function ContactanosPage() {
     };
   }, []);
   return (
-    <div className="min-h-screen ">
+    <>
+    <div className="min-h-screen">
       <Formulario />
     </div>
+    <div>
+      <Footer/>
+    </div>
+    </>
 
   );
 }
