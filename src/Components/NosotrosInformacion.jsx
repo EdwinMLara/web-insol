@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+import { TbCloudComputing } from "react-icons/tb";
+import { GiClockwork } from "react-icons/gi";
+import { BsGraphUpArrow } from "react-icons/bs";
+import { FaRegLightbulb } from "react-icons/fa";
+import { GiTimeSynchronization } from "react-icons/gi";
+import { FaClock } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
+
 function NosotrosInformacion() {
   const [numberOfLines, setNumberOfLines] = useState(9);
 
@@ -51,6 +59,7 @@ function NosotrosInformacion() {
     )
   );
   // animate-pulse
+
   return (
     <div className="text-center mt-20">
       <h1 className="mb-5 text-2xl font-bold text-white">¿Quiénes Somos?</h1>
@@ -67,8 +76,35 @@ function NosotrosInformacion() {
         funciona el mundo <br />
         <br />
         INSOEL — Automatización redefinida".
-        <div className="overflow-x-auto">
-          <div className="flex items-end pt-[2rem]">{verticalLines}</div>
+        <div className="mt-20 ">
+          <h1 className="text-2xl">
+            Optimizamos su Camino hacia el Éxito Empresarial
+          </h1>
+          <div className="mx-auto w-44 border-b-2 border-tertiary"></div>
+
+          <div className="flex items-center justify-evenly p-8 mt-10">
+            <div className="text-center item-center">
+              <FaRegLightbulb size={50} className="mx-auto fill-tertiary" />
+              <p>Innovación</p>
+            </div>
+            <div className="text-center">
+              <GiClockwork
+                size={50}
+                color="#28a745"
+                className="mx-auto fill-tertiary "
+                strokeWidth={0.1}
+              />
+              <p>Productividad</p>
+            </div>
+            <div className="text-center">
+              <GiTimeSynchronization
+                size={50}
+                color="#5bc0de"
+                className="mx-auto fill-tertiary"
+              />
+              <p>Eficiencia</p>
+            </div>
+          </div>
         </div>
       </div>
       {/* Vertical Lines with Different Sizes */}
@@ -77,3 +113,6 @@ function NosotrosInformacion() {
 }
 
 export default NosotrosInformacion;
+{
+  /*<div className="flex items-end pt-[2rem]">{verticalLines}</div>*/
+}

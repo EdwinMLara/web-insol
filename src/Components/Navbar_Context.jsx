@@ -11,8 +11,8 @@ import LogoAzulNegro from "../img/Logos/AzulNegro.png";
 import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 
 // Importa tus imágenes dinámicamente para seccion de ¿que hacemos?
-import image1 from "../img/Proyectos/Bio_Reactor/06.jpg";
-import image2 from "../img/Proyectos/Banco_Uat/01.jpg";
+import image1 from "../img/Proyectos/Banco_Uat/01.jpg";
+import image2 from "../img/Proyectos/Bio_Reactor/06.jpg";
 import image3 from "../img/Proyectos/Banco_Uat/01.jpg";
 import image4 from "../img/Proyectos/Banco_Uat/01.jpg";
 
@@ -21,6 +21,7 @@ const Navbar_Context = () => {
   const [activeInfo, setActiveInfo] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [mostrarContenido, setMostrarContenido] = useState(false);
 
   const handleInfoToggle = (info) => {
     setActiveInfo(activeInfo === info ? null : info);
@@ -28,6 +29,10 @@ const Navbar_Context = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
+  };
+
+  const toggleContenido = () => {
+    setMostrarContenido(!mostrarContenido);
   };
 
   const handleLogoClick = () => {
@@ -43,15 +48,15 @@ const Navbar_Context = () => {
   ];
 
   const enlaces = [
-    "/proyectos/Biorreactor",
     "/proyectos/BancoUAT",
+    "/proyectos/Biorreactor",
     "/proyectos/Consultas",
     "/proyectos/ApkLectora",
   ];
 
   const descripciones = [
-    "Un biorreactor es un dispositivo diseñado para facilitar y controlar las condiciones óptimas para el crecimiento y actividad de organismos vivos, como células, bacterias o levaduras, en un entorno controlado.",
     "Descripción de Banco UAT",
+    "La UNAM-Querétaro y el Tecnológico de Monterrey, en colaboración con SOLENA, desarrollaron un panel de control para automatizar un biorreactor, generando hidrógeno como fuente de energía. INSOEL facilitó la transición del prototipo a la implementación exitosa.",
     "Descripción de Consultas",
     "Descripción de Apk Lectora Qr",
   ];
@@ -238,20 +243,33 @@ const Navbar_Context = () => {
                           <Link to={"/web-insol/web-insol/"}>Inicio</Link>
                         </li>
                         <br />
+                        <li
+      className={`hover:bg-primary rounded ${mostrarContenido ? 'bg-primary' : ''}`}
+      onClick={toggleContenido}
+    >
+      <a className="cursor-pointer">¿Qué hacemos?</a>
+      {mostrarContenido && (
+        <ul>
+          <li>
+            <Link to="/proyectos/Biorreactor" className="text-white">
+              Soluciones de Integración
+            </Link>
+          </li>
+          {/* Agrega más elementos según sea necesario */}
+        </ul>
+      )}
+    </li>
+                        <br />
                         <li className="hover:bg-primary rounded">
-                          <Link to={"/web-insol/tecnologias"}>Tecnologías</Link>
+                          <Link to={"/web-insol/nosotros"}>¿Quiénes Somos?</Link>
                         </li>
                         <br />
                         <li className="hover:bg-primary rounded">
-                          <Link to={"/web-insol/nosotros"}>Nosotros</Link>
+                          <Link to={"/web-insol/tienda"}></Link>
                         </li>
-                        <br />
+                        
                         <li className="hover:bg-primary rounded">
-                          <Link to={"/web-insol/tienda"}>Tienda</Link>
-                        </li>
-                        <br />
-                        <li className="hover:bg-primary rounded">
-                          <Link to={"/web-insol/contactanos"}>Contáctanos</Link>
+                          <Link to={"/web-insol/contactanos"}>Contactarnos</Link>
                         </li>
                       </ul>
                     </div>

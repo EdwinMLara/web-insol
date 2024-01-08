@@ -40,7 +40,7 @@ function Fundadores() {
                 alt="Foto de la persona 1"
                 className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
-              <div className="hidden group-hover:block relative p-4 shadow-lg z-10 w-full sm:max-w-[32rem] m-3 text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 sm:static sm:top-1/2 sm:left-full sm:transform-none">
+              <div className="hidden group-hover:block relative p-4 shadow-lg z-10 w-full sm:max-w-[32rem] m-3 text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 sm:static sm:top-1/2 sm:left-full sm:transform-none ">
                 <h2 className="text-3xl text-center mb-2">{persona1.nombre}</h2>
                 <h2 className="text-xl mb-2">{persona1.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
