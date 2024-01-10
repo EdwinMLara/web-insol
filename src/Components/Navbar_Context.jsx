@@ -11,9 +11,9 @@ import LogoAzulNegro from "../img/Logos/AzulNegro.png";
 import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 
 // Importa tus imágenes dinámicamente para seccion de ¿que hacemos?
-import image1 from "../img/Proyectos/Banco_Uat/01.jpg";
+import image1 from "../img/Proyectos/Banco_Uat/09.jpg";
 import image2 from "../img/Proyectos/Bio_Reactor/06.jpg";
-import image3 from "../img/Proyectos/Banco_Uat/01.jpg";
+import image3 from "../img/Proyectos/TI/login.png";
 import image4 from "../img/Proyectos/Banco_Uat/01.jpg";
 
 const Navbar_Context = () => {
@@ -29,9 +29,11 @@ const Navbar_Context = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
+    setMostrarContenido(false);
   };
 
-  const toggleContenido = () => {
+  const toggleContenido = (e) => {
+    e.stopPropagation(); // Evita que el clic se propague al contenedor principal
     setMostrarContenido(!mostrarContenido);
   };
 
@@ -40,12 +42,7 @@ const Navbar_Context = () => {
     setActiveInfo("bg-gradient-to-b from-secondary ");
   };
 
-  const imagePaths = [
-    image1, 
-    image2, 
-    image3, 
-    image4,
-  ];
+  const imagePaths = [image1, image2, image3, image4];
 
   const enlaces = [
     "/proyectos/BancoUAT",
@@ -55,9 +52,12 @@ const Navbar_Context = () => {
   ];
 
   const descripciones = [
-    "Descripción de Banco UAT",
+    "INSOEL colaboró con la Unidad de Alta Tecnología (UAT) UNAM en la creación de un dinamómetro para investigación en motores de combustión. Destacaron por su compromiso, participación en pruebas y aportes en instrumentación e interfaz gráfica. El proyecto, sujeto a evaluación para obtener una patente, presenta innovación en la construcción del dinamómetro y su instrumentación.",
+
     "La UNAM-Querétaro y el Tecnológico de Monterrey, en colaboración con SOLENA, desarrollaron un panel de control para automatizar un biorreactor, generando hidrógeno como fuente de energía. INSOEL facilitó la transición del prototipo a la implementación exitosa.",
+
     "Descripción de Consultas",
+
     "Descripción de Apk Lectora Qr",
   ];
 
@@ -160,9 +160,7 @@ const Navbar_Context = () => {
                   color: activeInfo === "tecnologias" ? "black" : txtColor,
                   // Ajusta según sea necesario
                 }}
-              >
-                
-              </Link>
+              ></Link>
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${
@@ -198,9 +196,7 @@ const Navbar_Context = () => {
                   color: activeInfo === "clientes" ? "black" : txtColor,
                   // Ajusta según sea necesario
                 }}
-              >
-                
-              </Link>
+              ></Link>
             </div>
             <div
               className={`text-${txtColor} cursor-pointer  ${
@@ -233,46 +229,80 @@ const Navbar_Context = () => {
               onClick={toggleMenu}
             >
               <div className="container mx-auto flex justify-end items-center py-16">
-                <div className="bg-bajo p-4 ">
-                  {/* ... Resto del código ... */}
+                <div className="bg-bajo p-4">
                   <div className="container mx-auto flex items-center h-auto">
-                    <div className="bg-white p-4 ">
+                    {/* Menú Principal */}
+                    <div className="bg-white p-4 rounded-md shadow-md">
                       <ul className="text-xl">
-                        <li className="hover:bg-primary rounded">
-                          <br />
+                        <li className="hover:bg-primary rounded p-2">
                           <Link to={"/web-insol/web-insol/"}>Inicio</Link>
                         </li>
                         <br />
                         <li
-      className={`hover:bg-primary rounded ${mostrarContenido ? 'bg-primary' : ''}`}
-      onClick={toggleContenido}
-    >
-      <a className="cursor-pointer">¿Qué hacemos?</a>
-      {mostrarContenido && (
-        <ul>
-          <li>
-            <Link to="/proyectos/Biorreactor" className="text-white">
-              Soluciones de Integración
-            </Link>
-          </li>
-          {/* Agrega más elementos según sea necesario */}
-        </ul>
-      )}
-    </li>
-                        <br />
-                        <li className="hover:bg-primary rounded">
-                          <Link to={"/web-insol/nosotros"}>¿Quiénes Somos?</Link>
+                          className={`hover:bg-primary rounded p-2 ${
+                            mostrarContenido ? "bg-primary" : ""
+                          }`}
+                          onClick={toggleContenido}
+                        >
+                          <a className="cursor-pointer">¿Qué hacemos?</a>
                         </li>
                         <br />
-                        <li className="hover:bg-primary rounded">
+                        <li className="hover:bg-primary rounded p-2">
+                          <Link to={"/web-insol/nosotros"}>
+                            ¿Quiénes Somos?
+                          </Link>
+                        </li>
+                        <br />
+                        <li className="hover:bg-primary rounded"> 
                           <Link to={"/web-insol/tienda"}></Link>
                         </li>
-                        
-                        <li className="hover:bg-primary rounded">
-                          <Link to={"/web-insol/contactanos"}>Contactarnos</Link>
+                        <li className="hover:bg-primary rounded p-2">
+                          <Link to={"/web-insol/contactanos"}>
+                            Contactarnos
+                          </Link>
                         </li>
                       </ul>
                     </div>
+
+                    {/* Menú de "¿Qué hacemos?" */}
+                    {mostrarContenido && (
+                      <aside className="bg-white p-4 absolute left-0 border-2 border-primary rounded-md shadow-md w-52 mt-52">
+                        <ul className="text-xl pl-2  ">
+                          <li className="space-y-2 list-disc pt-2 pb-2">
+                            <Link
+                              to="/proyectos/BancoUAT"
+                              className="block text-black hover:bg-primary rounded p-2"
+                            >
+                              Desarrollo Tecnológico
+                            </Link>
+                            </li>
+                            <li className="space-y-2 list-disc pt-2 pb-2">
+                            <Link
+                              to="/proyectos/Biorreactor"
+                              className="block text-black hover:bg-primary rounded p-2"
+                            >
+                              Soluciones de Integración
+                            </Link>
+                            </li>
+                            <li className="space-y-2 list-disc pt-2 pb-2">
+                            <Link
+                              to="/proyectos/Consultas"
+                              className="block text-black hover:bg-primary rounded p-2"
+                            >
+                              DepOPs e Infraestructura TI
+                            </Link>
+                            </li>
+                            <li className="space-y-2 list-disc pt-2 pb-2">
+                            <Link
+                              to="/proyectos/ApkLectora"
+                              className="block text-black hover:bg-primary rounded p-2"
+                            >
+                              Adquisición de Equipos y Herramientas
+                            </Link>
+                          </li>
+                        </ul>
+                      </aside>
+                    )}
                   </div>
                 </div>
               </div>
@@ -288,38 +318,54 @@ const Navbar_Context = () => {
           >
             {activeInfo === "proyectos" && (
               <div className="flex items-center ">
-                <div className="text-right text-2xl mr-5 w-1/3">
-                <p
-        className={`cursor-pointer ${selectedItem === 0 ? 'underline decoration-wavy decoration-primary' : ''}`}
-        onClick={() => handleClick(0)}
-      >
-                    Desarrollo Tecnológico <br />
-                    <br />
-                  </p>
+                <div className="text-right text-2xl mr-5 w-1/3 ">
                   <p
-        className={`cursor-pointer ${selectedItem === 1 ? 'underline decoration-wavy decoration-primary' : ''}`}
-        onClick={() => handleClick(1)}
-      >
-                    Soluciones de Integración <br />
+                    className={`cursor-pointer ${
+                      selectedItem === 0
+                        ? "bg-primary p-1 pr-2 pl-2 rounded-lg"
+                        : ""
+                    }`}
+                    onClick={() => handleClick(0)}
+                  >
+                    Desarrollo Tecnológico 
                     <br />
-                  </p>
+                  </p><br/>
                   <p
-        className={`cursor-pointer ${selectedItem === 2 ? 'underline decoration-wavy decoration-primary' : ''}`}
-        onClick={() => handleClick(2)}
-      >
-                    DevOPs e Infraestructura TI <br />
+                    className={`cursor-pointer ${
+                      selectedItem === 1
+                        ? "bg-primary p-1 pr-2 pl-2  rounded-lg"
+                        : ""
+                    }`}
+                    onClick={() => handleClick(1)}
+                  >
+                    Soluciones de Integración 
                     <br />
-                  </p>
+                  </p><br />
                   <p
-        className={`cursor-pointer ${selectedItem === 3 ? 'underline decoration-wavy decoration-primary' : ''}`}
-        onClick={() => handleClick(3)}
-      >
+                    className={`cursor-pointer ${
+                      selectedItem === 2
+                        ? "bg-primary p-1 pr-2 pl-2  rounded-lg"
+                        : ""
+                    }`}
+                    onClick={() => handleClick(2)}
+                  >
+                    DevOPs e Infraestructura TI 
+                    <br />
+                  </p><br />
+                  <p
+                    className={`cursor-pointer ${
+                      selectedItem === 3
+                        ? "bg-primary p-1 pr-2 pl-2  rounded-lg "
+                        : ""
+                    }`}
+                    onClick={() => handleClick(3)}
+                  >
                     Adquisición de Equipos y Herramientas
                   </p>
                 </div>
 
                 <div className="border-r-2 border-yellow-500 h-[20rem]"></div>
-                <div className="ml-24 w-2/3">
+                <div className="ml-12 w-2/3">
                   <div className="flex">
                     {imagePaths.map((path, index) => (
                       <div
@@ -340,7 +386,10 @@ const Navbar_Context = () => {
                             {descripciones[index]}
                           </p>
                           <Link to={enlaces[index]}>
-                            <button className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "onClick={() => handleInfoToggle("proyectos")}>
+                            <button
+                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
+                              onClick={() => handleInfoToggle("proyectos")}
+                            >
                               Ver más
                             </button>
                           </Link>
