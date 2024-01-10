@@ -24,6 +24,7 @@ function Fundadores() {
     vision:
       "Asegura  la excelencia y confiabilidad de los productos de software. Su enfoque se centra en garantizar que las aplicaciones y sistemas cumplan con los más altos estándares de calidad antes de su lanzamiento. Busca identificar y corregir defectos, mejorar la usabilidad y optimizar el rendimiento para proporcionar a los usuarios una experiencia fluida y libre de errores. Contribuye a la entrega de software robusto y de alta calidad, garantizando la satisfacción del usuario ",
   };
+  
 
   return (
     <div className="">
@@ -33,14 +34,14 @@ function Fundadores() {
       <div className="sm:flex sm:space-x-40 mt-24 sm:flex-col items-center">
         <div className="sm:flex sm:space-x-40">
           {/* Persona 1 */}
-          <div className="flex flex-col items-center group mb-8 sm:mb-0">
+          <div className="flex flex-col items-center group mb-8 sm:mb-0 relative">
             <div className="relative flex flex-col items-center">
               <img
                 src={Persona1}
                 alt="Foto de la persona 1"
                 className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
-              <div className="hidden group-hover:block relative p-4 shadow-lg z-10 w-full sm:max-w-[32rem] m-3 text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 sm:static sm:top-1/2 sm:left-full sm:transform-none ">
+              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[24rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 ">
                 <h2 className="text-3xl text-center mb-2">{persona1.nombre}</h2>
                 <h2 className="text-xl mb-2">{persona1.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
@@ -48,9 +49,10 @@ function Fundadores() {
                 </p>
               </div>
 
-              <h1 className="text-center z-20 text-white relative">
+              <h1 className="text-center text-white relative hidden sm:block">
                 ING. LUIS ZENDEJAS
               </h1>
+              
             </div>
           </div>
 
@@ -62,14 +64,14 @@ function Fundadores() {
                 alt="Foto de la persona 2"
                 className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
-              <div className="hidden group-hover:block relative p-4 shadow-lg z-10 w-full sm:max-w-[32rem] m-3 text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 sm:static sm:top-1/2 sm:left-full sm:transform-none">
+              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[24rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50">
                 <h2 className="text-3xl text-center mb-2">{persona2.nombre}</h2>
                 <h2 className="text-xl mb-2">{persona2.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
                   {persona2.vision}
                 </p>
               </div>
-              <h1 className="text-center z-20 text-white relative">
+              <h1 className="text-center text-white relative hidden sm:block">
                 M.I. EDWIN LARA
               </h1>
             </div>
@@ -83,14 +85,14 @@ function Fundadores() {
                 alt="Foto de la persona 3"
                 className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
-              <div className="hidden group-hover:block relative p-4 shadow-lg z-10 w-full sm:max-w-[32rem] m-3 text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 sm:static sm:top-1/2 sm:left-full sm:transform-none">
+              <div className="hidden group-hover:block sm:absolute top-1/2 right-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[24rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50">
                 <h2 className="text-3xl text-center mb-2">{persona3.nombre}</h2>
                 <h2 className="text-xl mb-2">{persona3.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
                   {persona3.vision}
                 </p>
               </div>
-              <h1 className="text-center z-20 text-white relative">
+              <h1 className="text-center text-white relative hidden sm:block">
                 M.I. DAVID BALCAZAR
               </h1>
             </div>
@@ -98,7 +100,9 @@ function Fundadores() {
         </div>
       </div>
     </div>
+    
   );
+  
 }
 
 export default Fundadores;

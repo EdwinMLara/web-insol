@@ -5,6 +5,7 @@ import logo from "../../img/Logos/AmarilloNegro.png";
 import Footer from "../../Components/Footer";
 
 import Bio from "../../img/Proyectos/Bio_Reactor/01.jpg";
+
 import Img2 from "../../img/Proyectos/Bio_Reactor/02.jpg";
 import Img3 from "../../img/Proyectos/Bio_Reactor/03.jpg";
 import Img4 from "../../img/Proyectos/Bio_Reactor/04.jpg";
