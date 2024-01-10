@@ -14,7 +14,7 @@ import Img7 from "../../img/Proyectos/Bio_Reactor/07.jpg";
 
 function BiorreactorPage() {
   const { setLogoColor, setTxtColor } = useInsoel();
-  setLogoColor("amarilloNegro");
+  setLogoColor("verdeBlanco");
   setTxtColor("black");
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";
