@@ -14,7 +14,7 @@ function ContactanosPage() {
   }, []);
   return (
     <>
-    <div className="min-h-screen">
+    <div className="min-h-screen z-10">
       <Formulario />
     </div>
     <div>
