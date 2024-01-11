@@ -98,12 +98,12 @@ function BancoUatPage() {
           </div>
         </div>
       </div>
-      <div className="flex space-x-2">
+      <div className="flex flex-col sm:flex-row space-x-4">
   
-  <img src={Img15} className="w-[20rem] h-[22rem] rounded-md shadow-lg ml-5" />
-  <img src={Img13} className="w-[20rem] h-[22rem] rounded-md shadow-lg " />
-  <img src={Img4} className="w-[20rem] h-[22rem] rounded-md shadow-lg " />
-  <img src={Img5} className="w-[20rem] h-[22rem] rounded-md shadow-lg " />
+  <img src={Img15} className="w-[20rem] h-[22rem] rounded-md shadow-lg ml-4 mb-2 sm:mb-0" />
+  <img src={Img13} className="w-[20rem] h-[22rem] rounded-md shadow-lg mb-2 sm:mb-0" />
+  <img src={Img4} className="w-[20rem] h-[22rem] rounded-md shadow-lg mb-2 sm:mb-0" />
+  <img src={Img5} className="w-[20rem] h-[22rem] rounded-md shadow-lg mb-2 sm:mb-0" />
 </div>
       <div>
         <Footer />
