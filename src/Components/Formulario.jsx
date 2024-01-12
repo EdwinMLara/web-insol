@@ -6,6 +6,8 @@ import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrServices } from "react-icons/gr";
 import { MdDescription } from "react-icons/md";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Formulario() {
   const [formData, setFormData] = useState({
@@ -72,6 +74,70 @@ function Formulario() {
       descripcion: "",
     });
     setErrores({});
+  };
+
+  const handleClick = () => {
+    console.log(Object.keys(errores).length);
+    if (Object.keys(errores).length == 0) {
+      toast.success("Lorem ipsum dolor");
+    }
+  };
+  const handleSubmit2 = (e) => {
+    e.preventDefault();
+    const nuevosErrores = {};
+
+    // Realiza la validación aquí
+    if (!formData.nombre.trim()) {
+      nuevosErrores.nombre = "El nombre es requerido";
+    }
+    if (!formData.correo.trim()) {
+      nuevosErrores.correo = "El correo es requerido";
+    }
+    if (!formData.empresa.trim()) {
+      nuevosErrores.empresa = "La empresa es requerida";
+    }
+    if (!formData.descripcion.trim()) {
+      nuevosErrores.descripcion = "La descripción es requerida";
+    }
+    if (!formData.telefono.trim()) {
+      nuevosErrores.telefono = "El telefono es requerida";
+    }
+    if (!formData.servicio) {
+      nuevosErrores.servicio = "Selecciona un servicio";
+    }
+
+
+    
+
+
+    // Validación de campos vacíos
+    if (
+      !formData.nombre ||
+      !formData.empresa ||
+      !formData.correo ||
+      !formData.descripcion ||
+      !formData.telefono ||
+      !formData.servicio
+    ) {
+      setErrores(nuevosErrores)
+      toast.warn("Faltan datos en el formulario");
+    } else {
+      // Aquí puedes realizar acciones adicionales antes de enviar el formulario
+      // En este ejemplo, simplemente mostramos una alerta de éxito
+      // Limpia el formulario y los errores después del envío
+      setFormData({
+        nombre: "",
+        empresa: "",
+        correo: "",
+        telefono: "",
+        servicio: "",
+        descripcion: "",
+      });
+      setErrores({});
+
+      toast.success("Gracias por su interes, nos pondremos en contacto");
+      console.log(formData)
+    }
   };
 
   return (
@@ -154,8 +220,12 @@ function Formulario() {
                   <option disabled selected value="">
                     Servicios
                   </option>
-                  <option className="bg-blue-500 text-white" value="opcion2">Option 2</option>
-                  <option className="bg-blue-500 text-white" value="opcion3">Option 3</option>
+                  <option className="bg-blue-500 text-white" value="opcion2">
+                    Option 2
+                  </option>
+                  <option className="bg-blue-500 text-white" value="opcion3">
+                    Option 3
+                  </option>
                 </select>
                 <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
@@ -167,7 +237,9 @@ function Formulario() {
                   </svg>
                 </div>
               </div>
-              {errores.servicio && <p className="text-red-500 text-xs mt-1">{errores.servicio}</p>}
+              {errores.servicio && (
+                <p className="text-red-500 text-xs mt-1">{errores.servicio}</p>
+              )}
               <div className="md:flex mb-4 border-b border-white py-2 items-center">
                 <MdDescription className="text-white text-2xl mr-2" />
                 <input
@@ -187,6 +259,7 @@ function Formulario() {
               <button
                 className=" w-auto bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline "
                 type="submit"
+                onClick={handleSubmit2}
               >
                 Contacta a
                 <img
@@ -194,6 +267,7 @@ function Formulario() {
                   className="inline-block h-6 w-20 mr-2 pl-2 "
                 />
               </button>
+              <ToastContainer />
             </form>
           </div>
         </div>

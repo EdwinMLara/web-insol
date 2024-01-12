@@ -9,6 +9,15 @@ import { BsTwitterX } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
 
 function Footer() {
+  const redirigirAFacebbok = () => {
+    window.location.href = 'https://www.facebook.com/profile.php?id=100093302174230&mibextid=2JQ9oc';
+  };
+  const redirigirAX = () => {
+    window.location.href = 'https://x.com/InsoelMX?t=-CCkUolb6QJtigBT8ODxlw&s=09';
+  };
+  const redirigirALinkdin = () => {
+    window.location.href = 'https://www.linkedin.com/company/insoel-mexico?trk=blended-typeahead';
+  };
   return (
     <footer className=" bg-white">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -149,21 +158,21 @@ function Footer() {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0 space-x-4">
-            <div>
+            <button className="hover:bg-primary">
               <BsInstagram className="text-2xl"/>
-            </div>
-            <div>
-              <FaFacebook className="text-2xl"/>
-            </div>
-            <div>
+            </button>
+            <button onClick={redirigirAFacebbok} className="hover:bg-primary">
+              <FaFacebook className="text-2xl" />
+            </button>
+            <button className="hover:bg-primary" onClick={redirigirALinkdin}>
               <BsLinkedin className="text-2xl"/>
-            </div>
-            <div>
+            </button>
+            <button className="hover:bg-primary">
               <IoLogoYoutube className="text-2xl"/>
-            </div>
-            <div>
+            </button>
+            <button className="hover:bg-primary" onClick={redirigirAX}>
               <BsTwitterX className="text-2xl"/>
-            </div>
+            </button>
             <div>
               <FaTiktok className="text-2xl"/>
             </div>
