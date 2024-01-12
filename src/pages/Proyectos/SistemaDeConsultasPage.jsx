@@ -23,6 +23,8 @@ function SistemaDeConsultasPage() {
     };
   }, []);
 
+  
+
   return (
     <>
       <div className="bg-bajo min-h-screen  flex flex-col">

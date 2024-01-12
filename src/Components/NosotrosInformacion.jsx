@@ -10,8 +10,8 @@ import { FaArrowUp } from "react-icons/fa";
 
 // icons
 import E from "../img/Iconos/11.svg"
-import P from "../img/Iconos/9.svg"
-import I from "../img/Iconos/10.svg"
+import P from "../img/Iconos/14.svg"
+import I from "../img/Iconos/13.svg"
 
 function NosotrosInformacion() {
   const [numberOfLines, setNumberOfLines] = useState(9);
@@ -85,19 +85,19 @@ function NosotrosInformacion() {
           <h1 className="text-2xl">
             Optimizamos su Camino hacia el Éxito Empresarial
           </h1>
-          <div className="mx-auto w-44 border-b-2 border-tertiary"></div>
+          <div className="mx-auto w-44 border-b-2 border-primary"></div>
 
           <div className="flex items-center justify-evenly p-8 mt-10">
             <div className="text-center item-center">
-            <img src={I} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem]" />
+            <img src={I} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem] " />
               <p>Innovación</p>
             </div>
             <div className="text-center">
-            <img src={P} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem]" />
+            <img src={P} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem] " />
               <p>Productividad</p>
             </div>
             <div className="text-center">
-            <img src={E} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem]" />
+            <img src={E} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem] ml-5" />
   <p>Eficiencia</p>
             </div>
           </div>
