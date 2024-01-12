@@ -56,7 +56,7 @@ const Navbar_Context = () => {
 
     "La UNAM-Querétaro y el Tecnológico de Monterrey, en colaboración con SOLENA, desarrollaron un panel de control para automatizar un biorreactor, generando hidrógeno como fuente de energía. INSOEL facilitó la transición del prototipo a la implementación exitosa.",
 
-    "Descripción de Consultas",
+    "En Insoel, especializados en desarrollo de sistemas, mejoramos la administración y comunicación para médicos, comerciantes y municipios mediante sistemas eficientes, como gestión médica y punto de venta.",
 
     "Descripción de Apk Lectora Qr",
   ];

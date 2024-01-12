@@ -1,28 +1,28 @@
 import React from "react";
-import Persona1 from "../img/Personas/persona1.jpeg";
-import Persona2 from "../img/Personas/persona2.jpeg";
-import Persona3 from "../img/Personas/persona3.jpeg";
+import Alejandro from "../img/Personas/persona1.jpeg";
+import Miguel from "../img/Personas/persona2.jpeg";
+import David from "../img/Personas/persona3.jpeg";
 
 function Fundadores() {
-  const persona1 = {
+  const alejandro = {
     nombre: "Ing. Luis Alejandro Zendejas",
     puesto: "Ingeniero de Control y Automatización",
     vision:
-      "Visualiza un futuro industrial donde la ingeniería electrónica de control y automatización no solo impulsa la eficiencia operativa, sino que también establece nuevos estándares de calidad y seguridad. Su compromiso con la innovación y la aplicación práctica de la tecnología define su papel como un líder visionario en este campo dinámico.",
+      "Jefe en Instrumentación encargado de toda la etapa de sensado y control en los proyectos de INSOEL. Diseña y ejecuta logística para optimizar procesos. Su conocimiento amplio en aspectos electrónicos le dan la capacidad a INSOEL en adaptarse a gran diversidad de proyectos de monitoreo y control."
   };
 
-  const persona2 = {
+  const miguel = {
     nombre: "M.I. Edwin Miguel Lara Espinosa",
     puesto: "Ingeniero de Automatización de Sistemas",
     vision:
-      "Tiene la visión de transformar y mejorar procesos operativos mediante la implementación de soluciones tecnológicas avanzadas. Su enfoque se centra en desarrollar y aplicar sistemas automatizados que permitan la ejecución eficiente y precisa de tareas. Busca optimizar la productividad, reducir costos y mejorar la calidad , contribuir al avance de la industria mediante la creación de entornos operativos inteligentes, adaptables y altamente eficientes",
+      "Es un ingeniero de software que disfruta escribir codigo pero ademas tiene una pasion por la colaboración y aplicación de sus conocimientos en diferentes áreas de la ingenieria. Ha colaborado en el desarrollo de sistemas inteligentes, las cuales han sido publicados en revistas reconocidas en por el sector cientifico. Fuera del ambito laboral y profesional disfruta hacer reparaciones mecanicas, electricas y jugar de partidos de frontón",
   };
 
-  const persona3 = {
+  const david = {
     nombre: "M.I. David Balcazar",
     puesto: "Ingeniero de Control de Calidad de Software",
     vision:
-      "Asegura  la excelencia y confiabilidad de los productos de software. Su enfoque se centra en garantizar que las aplicaciones y sistemas cumplan con los más altos estándares de calidad antes de su lanzamiento. Busca identificar y corregir defectos, mejorar la usabilidad y optimizar el rendimiento para proporcionar a los usuarios una experiencia fluida y libre de errores. Contribuye a la entrega de software robusto y de alta calidad, garantizando la satisfacción del usuario ",
+      "David descubrió el mundo de la automatización e instrumentación mientras se encontraba estudiando ingeniería en comunicaciones y electrónica en la Universidad de Guanajuato y desde su segundo año comenzó a participar en concursos de innovación y desarrollo de prototipos en donde presentó proyectos que variaron desde sistemas de control para la eficiencia energética hasta páginas web para promocionar el turismo. En el 2020, David obtuvo su grado de Maestro en Ingeniería Electrónica Aplicada en la Universidad de Guanajuato y actualmente se encuentra por concluir el MBA con enfoque en Business Analytics en la IMF Business School en Madrid. Fuera del trabajo, a David le gusta meditar, practicar yoga, leer manga y ver animes además de llevar una dieta vegetariana. ",
   };
   
 
@@ -37,20 +37,20 @@ function Fundadores() {
           <div className="flex flex-col items-center group mb-8 sm:mb-0 relative">
             <div className="relative flex flex-col items-center">
               <img
-                src={Persona1}
+                src={Miguel}
                 alt="Foto de la persona 1"
                 className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
-              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[24rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 ">
-                <h2 className="text-3xl text-center mb-2">{persona1.nombre}</h2>
-                <h2 className="text-xl mb-2">{persona1.puesto}</h2>
+              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 ">
+                <h2 className="text-3xl text-center mb-2 font-bold">{miguel.nombre}</h2>
+                <h2 className="text-xl mb-2">{miguel.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
-                  {persona1.vision}
+                  {miguel.vision}
                 </p>
               </div>
 
               <h1 className="text-center text-white relative hidden sm:block">
-                ING. LUIS ZENDEJAS
+                M.I. EDWIN LARA
               </h1>
               
             </div>
@@ -60,19 +60,19 @@ function Fundadores() {
           <div className="flex flex-col items-center group mb-8 sm:mb-0">
             <div className="relative flex flex-col items-center">
               <img
-                src={Persona2}
+                src={Alejandro}
                 alt="Foto de la persona 2"
                 className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
-              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[24rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50">
-                <h2 className="text-3xl text-center mb-2">{persona2.nombre}</h2>
-                <h2 className="text-xl mb-2">{persona2.puesto}</h2>
+              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[28rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50">
+                <h2 className="text-3xl text-center mb-2 font-bold">{alejandro.nombre}</h2>
+                <h2 className="text-xl mb-2">{alejandro.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
-                  {persona2.vision}
+                  {alejandro.vision}
                 </p>
               </div>
               <h1 className="text-center text-white relative hidden sm:block">
-                M.I. EDWIN LARA
+              ING. LUIS ZENDEJAS
               </h1>
             </div>
           </div>
@@ -81,15 +81,15 @@ function Fundadores() {
           <div className="flex flex-col items-center group mb-8 sm:mb-0">
             <div className="relative flex flex-col items-center">
               <img
-                src={Persona3}
+                src={David}
                 alt="Foto de la persona 3"
                 className="w-[16rem] h-[18rem] object-cover outline outline-offset-2 outline-white rounded-lg mb-4 hover:outline-quaternary"
               />
-              <div className="hidden group-hover:block sm:absolute top-1/2 right-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[24rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50">
-                <h2 className="text-3xl text-center mb-2">{persona3.nombre}</h2>
-                <h2 className="text-xl mb-2">{persona3.puesto}</h2>
+              <div className="hidden group-hover:block sm:absolute top-1/2 right-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[52rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50">
+                <h2 className="text-3xl text-center mb-2 font-bold">{david.nombre}</h2>
+                <h2 className="text-xl mb-2">{david.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
-                  {persona3.vision}
+                  {david.vision}
                 </p>
               </div>
               <h1 className="text-center text-white relative hidden sm:block">

@@ -8,6 +8,11 @@ import { GiTimeSynchronization } from "react-icons/gi";
 import { FaClock } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 
+// icons
+import E from "../img/Iconos/11.svg"
+import P from "../img/Iconos/9.svg"
+import I from "../img/Iconos/10.svg"
+
 function NosotrosInformacion() {
   const [numberOfLines, setNumberOfLines] = useState(9);
 
@@ -84,25 +89,16 @@ function NosotrosInformacion() {
 
           <div className="flex items-center justify-evenly p-8 mt-10">
             <div className="text-center item-center">
-              <FaRegLightbulb size={50} className="mx-auto fill-tertiary" />
+            <img src={I} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem]" />
               <p>Innovación</p>
             </div>
             <div className="text-center">
-              <GiClockwork
-                size={50}
-                color="#28a745"
-                className="mx-auto fill-tertiary "
-                strokeWidth={0.1}
-              />
+            <img src={P} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem]" />
               <p>Productividad</p>
             </div>
             <div className="text-center">
-              <GiTimeSynchronization
-                size={50}
-                color="#5bc0de"
-                className="mx-auto fill-tertiary"
-              />
-              <p>Eficiencia</p>
+            <img src={E} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem]" />
+  <p>Eficiencia</p>
             </div>
           </div>
         </div>
