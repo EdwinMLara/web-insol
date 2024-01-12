@@ -31,6 +31,9 @@ function BancoUatPage() {
       document.title = "INSOEL";
     };
   }, []);
+
+
+  
   return (
     <>
       <div className="bg-bajo min-h-screen  flex flex-col">

@@ -52,14 +52,15 @@ const Navbar_Context = () => {
   ];
 
   const descripciones = [
-    "INSOEL colaboró con la Unidad de Alta Tecnología (UAT) UNAM en la creación de un dinamómetro para investigación en motores de combustión. Destacaron por su compromiso, participación en pruebas y aportes en instrumentación e interfaz gráfica. El proyecto, sujeto a evaluación para obtener una patente, presenta innovación en la construcción del dinamómetro y su instrumentación.",
+    "INSOEL colaboró con la Unidad de Alta Tecnología (UAT) UNAM en la creación de un dinamómetro para investigación en motores de combustión. Destacaron por su compromiso, participación en pruebas y aportes en instrumentación e interfaz gráfica. El proyecto, sujeto a evaluación para obtener una patente...",
 
-    "La UNAM-Querétaro y el Tecnológico de Monterrey, en colaboración con SOLENA, desarrollaron un panel de control para automatizar un biorreactor, generando hidrógeno como fuente de energía. INSOEL facilitó la transición del prototipo a la implementación exitosa.",
+    "La UNAM-Querétaro y el Tecnológico de Monterrey, en colaboración con SOLENA, desarrollaron un panel de control para automatizar un biorreactor, generando hidrógeno como fuente de energía. INSOEL facilitó la transición del prototipo a la implementación exitosa...",
 
-    "En Insoel, especializados en desarrollo de sistemas, mejoramos la administración y comunicación para médicos, comerciantes y municipios mediante sistemas eficientes, como gestión médica y punto de venta.",
+    "En Insoel, especializados en desarrollo de sistemas, mejoramos la administración y comunicación para médicos, comerciantes y municipios mediante sistemas eficientes, como gestión médica y punto de venta...",
 
     "Descripción de Apk Lectora Qr",
   ];
+  
 
   const [imagen, setImagen] = useState(0);
 
@@ -139,7 +140,8 @@ const Navbar_Context = () => {
               } cursor-pointer  ${
                 activeInfo === "proyectos"
                   ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
-                  : ""
+                  : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+
               }`}
               onClick={() => handleInfoToggle("proyectos")}
             >
@@ -164,8 +166,9 @@ const Navbar_Context = () => {
             </div>
             <div
               className={`text-${txtColor} cursor-pointer ${
-                activeInfo === "nosotros" &&
-                "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
+                activeInfo === "nosotros" 
+                ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
+                : " hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
               }`}
               onClick={() => handleInfoToggle("nosotros")}
             >
@@ -202,7 +205,7 @@ const Navbar_Context = () => {
               className={`text-${txtColor} cursor-pointer  ${
                 activeInfo === "contactanos"
                   ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg"
-                  : ""
+                  : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
               }`}
               onClick={() => handleInfoToggle("contactanos")}
             >
@@ -323,7 +326,7 @@ const Navbar_Context = () => {
                     className={`cursor-pointer ${
                       selectedItem === 0
                         ? "bg-primary p-1 pr-2 pl-2 rounded-lg"
-                        : ""
+                        : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(0)}
                   >
@@ -334,7 +337,7 @@ const Navbar_Context = () => {
                     className={`cursor-pointer ${
                       selectedItem === 1
                         ? "bg-primary p-1 pr-2 pl-2  rounded-lg"
-                        : ""
+                        : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(1)}
                   >
@@ -345,7 +348,7 @@ const Navbar_Context = () => {
                     className={`cursor-pointer ${
                       selectedItem === 2
                         ? "bg-primary p-1 pr-2 pl-2  rounded-lg"
-                        : ""
+                        : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(2)}
                   >
@@ -356,7 +359,7 @@ const Navbar_Context = () => {
                     className={`cursor-pointer ${
                       selectedItem === 3
                         ? "bg-primary p-1 pr-2 pl-2  rounded-lg "
-                        : ""
+                        : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(3)}
                   >
