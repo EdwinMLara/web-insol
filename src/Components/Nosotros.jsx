@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 import NosotrosInformacion from "./NosotrosInformacion";
 import Fundadores from "./Fundadores";
@@ -6,30 +7,53 @@ import Clientes from "./Clientes";
 import Colaboradores from "./Colaboradores";
 
 function Nosotros() {
+  // Estado local para realizar un seguimiento de qué sección mostrar
+  const [seccionVisible, setSeccionVisible] = useState("fundadores");
+
+  const mostrarOcultarColaboradores = () => {
+    // Cambia la sección solo si actualmente es 'fundadores'
+    setSeccionVisible((seccionActual) =>
+      seccionActual === "fundadores" ? "colaboradores" : "fundadores"
+    );
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
-  {/* Section: NosotrosInformacion */}
-  <div className="min-h-screen bg-gradient-to-b from-black via-black to-black ">
-    <NosotrosInformacion />
-  </div>
+      {/* Section: NosotrosInformacion */}
+      <div className="min-h-screen bg-gradient-to-b from-black via-black to-black ">
+        <NosotrosInformacion />
+      </div>
 
-  {/* Section: Fundadores */}
-  <div className="min-h-screen bg-gradient-to-b from-black via-black to-quaternary">
-    <Fundadores />
-  </div>
+      {/* Section: Fundadores */}
+      <div className="min-h-screen bg-gradient-to-b from-black via-black to-quaternary">
+        <Fundadores />
+        
+      </div>
 
-  {/* section: Clientes */}
-  <div className="bg-gradient-to-b from-quaternary  to-quaternary" >
-    <Colaboradores />
-  </div>
-
-  {/* section: Clientes */}
-  <div className="bg-gradient-to-b from-quaternary  to-secondary" >
-    <Clientes />
-  </div>
-
-  
+      <div className="bg-gradient-to-b from-quaternary to-quaternary flex justify-end items-center">
+  {/* Botón para mostrar Colaboradores */}
+  <button className=" flex m-5 mr-24   rounded-lg" onClick={mostrarOcultarColaboradores}>
+  <IoMdArrowDropdown size={28}/>
+   <h1 className="text-xl">Colaboradores</h1> 
+  </button>
 </div>
+
+
+
+      {/* Section: Colaboradores */}
+      <div
+        className={`bg-gradient-to-b from-quaternary to-quaternary ${
+          seccionVisible === "colaboradores" ? "block" : "hidden"
+        }`}
+      >
+        <Colaboradores />
+      </div>
+
+      {/* section: Clientes */}
+      <div className="bg-gradient-to-b from-quaternary  to-secondary">
+        <Clientes />
+      </div>
+    </div>
   );
 }
 
