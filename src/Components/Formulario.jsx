@@ -91,9 +91,9 @@ function Formulario() {
   };
 
   return (
-    <div className="bg-gradient-to-t from-quaternary to-quaternary z-10">
+    <div className="bg-gradient-to-b from-secondary to-secondary z-10">
       <div className="md:pt-32 md:pb-16">
-        <div className="md:flex bg-gradient-to-r from-secondary from-10% via-secondary via-30% to-black t0-90% ">
+        <div className="md:flex bg-gradient-to-r from-secondary from-10% via-secondary via-30% to-black to-90% ">
           <div className="md:w-1/2 p-8 ">
             <h1 className="text-4xl font-bold mb-4 text-white text-left pt-32">
               AUTOMATIZACIÓN <br />

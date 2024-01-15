@@ -67,60 +67,6 @@ function Footer() {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
-                Tecnologias
-              </h2>
-              <ul className="text-gray-500  font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Programacion PLC
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    React Native
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    React Js
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    LOT
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
-                Tutoriales
-              </h2>
-              <ul className="text-gray-500 font-medium">
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    TypeScript
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    C++
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Arduino
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    PLC
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Servicios
               </h2>
               <ul className="text-gray-500 font-medium">
@@ -173,9 +119,6 @@ function Footer() {
             <button className="hover:bg-primary" onClick={redirigirAX}>
               <BsTwitterX className="text-2xl"/>
             </button>
-            <div>
-              <FaTiktok className="text-2xl"/>
-            </div>
           </div>
         </div>
       </div>

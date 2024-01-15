@@ -22,9 +22,17 @@ const Navbar_Context = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [mostrarContenido, setMostrarContenido] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isContentActive, setIsContentActive] = useState(false);
 
   const handleInfoToggle = (info) => {
-    setActiveInfo(activeInfo === info ? null : info);
+    //setActiveInfo(activeInfo === info ? null : info);
+    if (activeInfo === info) {
+      setIsContentActive(!isContentActive); // Cambia el estado al hacer clic nuevamente en la misma sección
+    } else {
+      setActiveInfo(info);
+      setIsContentActive(true); // Activa el contenido al hacer clic en una nueva sección
+    }
   };
 
   const toggleMenu = () => {
@@ -67,13 +75,22 @@ const Navbar_Context = () => {
   const handleClick = (index) => {
     setImagen(index);
     setSelectedItem(index);
+    setIsHovered(!isHovered); // Invertir el estado al hacer clic
+  };
+
+
+  const handleMouseLeave = () => {
+    if (isContentActive) {
+      setActiveInfo('');
+      setIsContentActive(false); // Desactiva el contenido al salir del recuadro
+    }
   };
 
   return (
     <div>
       <nav
         className={`${
-          activeInfo === "proyectos"
+          activeInfo === "proyectos" && isContentActive
             ? "bg-tertiary bg-opacity-75 "
             : activeInfo === ""
             ? ""
@@ -81,6 +98,7 @@ const Navbar_Context = () => {
             ? ""
             : "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
         }  p-4 absolute top-0 left-0 right-0  z-10`}
+        onMouseLeave={handleMouseLeave}
       >
         <div className="flex items-center justify-between">
           <div className="bg-transparent ">
@@ -133,6 +151,7 @@ const Navbar_Context = () => {
             </button>
           </div>
 
+{/*Navavar */}
           <div className="hidden lg:flex space-x-5 relative mx-auto text-[22px] mr-10">
             <div
               className={`text-${
@@ -140,7 +159,7 @@ const Navbar_Context = () => {
               } cursor-pointer  ${
                 activeInfo === "proyectos"
                   ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
-                  : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+                  : "hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
 
               }`}
               onClick={() => handleInfoToggle("proyectos")}
@@ -165,10 +184,12 @@ const Navbar_Context = () => {
               ></Link>
             </div>
             <div
-              className={`text-${txtColor} cursor-pointer ${
+              className={`text-${
+                activeInfo === "nosotros" ? "black" : "white"
+              } cursor-pointer  ${
                 activeInfo === "nosotros" 
                 ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
-                : " hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+                : " hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
               }`}
               onClick={() => handleInfoToggle("nosotros")}
             >
@@ -179,7 +200,7 @@ const Navbar_Context = () => {
                 offset={-70}
                 duration={500}
                 style={{
-                  color: activeInfo === "nosotros" ? "black" : txtColor,
+                  //color: activeInfo === "nosotros" ? "black" : txtColor,
                   // Ajusta según sea necesario
                 }}
               >
@@ -202,17 +223,19 @@ const Navbar_Context = () => {
               ></Link>
             </div>
             <div
-              className={`text-${txtColor} cursor-pointer  ${
+              className={`text-${
+                activeInfo === "contactanos" ? "black" : "white"
+              } cursor-pointer  ${
                 activeInfo === "contactanos"
                   ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg"
-                  : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+                  : "hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
               }`}
               onClick={() => handleInfoToggle("contactanos")}
             >
               <Link
                 to="/web-insol/contactanos"
                 style={{
-                  color: activeInfo === "contactanos" ? "black" : txtColor,
+                  //color: activeInfo === "contactanos" ? "black" : txtColor,
                   // Ajusta según sea necesario
                 }}
               >
@@ -318,17 +341,21 @@ const Navbar_Context = () => {
             className={`bg-${
               activeInfo === "proyectos" ? "transparent" : "transparent"
             } bg-opacity-75 p-4 mt-2 w-full text-center text-black`}
+            
+          onMouseLeave={handleMouseLeave}
           >
-            {activeInfo === "proyectos" && (
+            {activeInfo === "proyectos" && isContentActive && (
               <div className="flex items-center ">
                 <div className="text-right text-2xl mr-5 w-1/3 ">
                   <p
+                  
                     className={`cursor-pointer ${
                       selectedItem === 0
                         ? "bg-primary p-1 pr-2 pl-2 rounded-lg"
                         : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(0)}
+                    //onClick={() => handleInfoToggle("proyectos")}
                   >
                     Desarrollo Tecnológico 
                     <br />
