@@ -18,10 +18,13 @@ function Nosotros() {
     <Fundadores />
   </div>
 
-  
-
   {/* section: Clientes */}
   <div className="bg-gradient-to-b from-quaternary  to-quaternary" >
+    <Colaboradores />
+  </div>
+
+  {/* section: Clientes */}
+  <div className="bg-gradient-to-b from-quaternary  to-secondary" >
     <Clientes />
   </div>
 

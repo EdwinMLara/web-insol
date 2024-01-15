@@ -10,7 +10,7 @@ function Clientes() {
   const { setLogoColor } = useInsoel();
   setLogoColor("amarilloBlanco");
   return (
-    <div className=" ">
+    <div className=" mt-24 mb-10">
       <div className=" font-bold text-3xl text-center p-5">
         MARCAS QUE CONFÍAN EN NOSOTROS
         <div className="flex flex-wrap brightness-50 lur-none justify-center text-center pt-20 pb-5 md:pr-[10rem] md:pl-[10rem]">
