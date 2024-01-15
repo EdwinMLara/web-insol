@@ -1,9 +1,9 @@
 // src/components/Map.js
-import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css'; // Importa los estilos de Leaflet
-import { color } from 'framer-motion';
-import markerIcon from '../img/Logos/marcaMapa.png'
+import React, { useRef, useState } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css"; // Importa los estilos de Leaflet
+import { color } from "framer-motion";
+import markerIcon from "../img/Logos/marcaMapa3.png";
 
 const Map = () => {
   const Insoel = [20.140833, -101.190961];
@@ -14,27 +14,54 @@ const Map = () => {
   const insoelIcon = new L.Icon({
     iconUrl: markerIcon,
     iconSize: [36, 36], // Tamaño del icono
-    iconAnchor: [16, 32], // Punto de anclaje del icono
+    iconAnchor: [26, 32], // Punto de anclaje del icono
     popupAnchor: [0, -32], // Punto de anclaje del popup
   });
 
+  const [scrollZoomEnabled, setScrollZoomEnabled] = useState(true);
+
+  const mapRef = useRef();
+
+  const toggleScrollZoom = () => {
+    setScrollZoomEnabled((prev) => {
+      const map = mapRef.current;
+      if (map) {
+        if (prev) {
+          map.scrollWheelZoom.disable();
+        } else {
+          map.scrollWheelZoom.enable();
+        }
+      }
+      return !prev;
+    });
+  };
+  
+
   return (
     <div className="max-w-screen-lg mx-auto">
-      <MapContainer center={Insoel} zoom={8} className="h-64 lg:h-[500px] w-full" scrollWheelZoom={false}>
+      {/* 
+      <button onClick={toggleScrollZoom}>
+        {scrollZoomEnabled
+          ? "Desactivar Zoom por Scroll"
+          : "Activar Zoom por Scroll"}
+      </button>
+      */}
+      <MapContainer
+        center={Insoel}
+        zoom={8}
+        className="h-64 lg:h-[500px] w-full"
+        scrollWheelZoom={false}
+      >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <Marker position={Insoel} icon={insoelIcon}>
-          <Popup >
-            INSOEL
-          </Popup>
+          <Popup>INSOEL</Popup>
         </Marker>
 
         <Marker position={Solena} icon={insoelIcon}>
-          <Popup>
-            Solena
-          </Popup>
+          <Popup>Solena</Popup>
         </Marker>
 
         <Marker position={UAT} icon={insoelIcon}>

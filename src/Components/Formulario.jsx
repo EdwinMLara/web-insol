@@ -30,10 +30,10 @@ function Formulario() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const nuevosErrores = {};
-
+  
     // Realiza la validación aquí
+    const nuevosErrores = {};
+  
     if (!formData.nombre.trim()) {
       nuevosErrores.nombre = "El nombre es requerido";
     }
@@ -52,18 +52,30 @@ function Formulario() {
     if (!formData.servicio) {
       nuevosErrores.servicio = "Selecciona un servicio";
     }
-
-    // Agrega más validaciones para los demás campos según tus necesidades
-
-    // Si hay errores, actualiza el estado y no envíes el formulario
+  
+    // Validación de correo electrónico
+    const correoValido = /\S+@\S+\.\S+/;
+    if (!correoValido.test(formData.correo)) {
+      nuevosErrores.correo = "Introduce un correo válido";
+    }
+  
+    // Validación de número de teléfono (formato simple)
+    const telefonoValido = /^\d{10}$/;
+    if (!telefonoValido.test(formData.telefono)) {
+      nuevosErrores.telefono ='Por favor, introduce un número de teléfono válido (10 dígitos)';
+    }
+  
+    // Actualiza el estado de errores
+    setErrores(nuevosErrores);
+  
+    // Si hay errores, muestra una advertencia
     if (Object.keys(nuevosErrores).length > 0) {
-      setErrores(nuevosErrores);
+      toast.warn("Faltan datos o hay errores en el formulario");
       return;
     }
-
-    // Aquí puedes enviar el formulario, por ejemplo, llamando a una función en tu componente padre.
-    console.log("Formulario enviado:", formData);
-
+  
+    // Aquí puedes realizar acciones adicionales antes de enviar el formulario
+    // En este ejemplo, simplemente mostramos una alerta de éxito
     // Limpia el formulario y los errores después del envío
     setFormData({
       nombre: "",
@@ -74,70 +86,8 @@ function Formulario() {
       descripcion: "",
     });
     setErrores({});
-  };
-
-  const handleClick = () => {
-    console.log(Object.keys(errores).length);
-    if (Object.keys(errores).length == 0) {
-      toast.success("Lorem ipsum dolor");
-    }
-  };
-  const handleSubmit2 = (e) => {
-    e.preventDefault();
-    const nuevosErrores = {};
-
-    // Realiza la validación aquí
-    if (!formData.nombre.trim()) {
-      nuevosErrores.nombre = "El nombre es requerido";
-    }
-    if (!formData.correo.trim()) {
-      nuevosErrores.correo = "El correo es requerido";
-    }
-    if (!formData.empresa.trim()) {
-      nuevosErrores.empresa = "La empresa es requerida";
-    }
-    if (!formData.descripcion.trim()) {
-      nuevosErrores.descripcion = "La descripción es requerida";
-    }
-    if (!formData.telefono.trim()) {
-      nuevosErrores.telefono = "El telefono es requerida";
-    }
-    if (!formData.servicio) {
-      nuevosErrores.servicio = "Selecciona un servicio";
-    }
-
-
-    
-
-
-    // Validación de campos vacíos
-    if (
-      !formData.nombre ||
-      !formData.empresa ||
-      !formData.correo ||
-      !formData.descripcion ||
-      !formData.telefono ||
-      !formData.servicio
-    ) {
-      setErrores(nuevosErrores)
-      toast.warn("Faltan datos en el formulario");
-    } else {
-      // Aquí puedes realizar acciones adicionales antes de enviar el formulario
-      // En este ejemplo, simplemente mostramos una alerta de éxito
-      // Limpia el formulario y los errores después del envío
-      setFormData({
-        nombre: "",
-        empresa: "",
-        correo: "",
-        telefono: "",
-        servicio: "",
-        descripcion: "",
-      });
-      setErrores({});
-
-      toast.success("Gracias por su interes, nos pondremos en contacto");
-      console.log(formData)
-    }
+    toast.success("Gracias por su interés, nos pondremos en contacto");
+    console.log(formData);
   };
 
   return (
@@ -152,7 +102,7 @@ function Formulario() {
             </h1>
           </div>
           <div className="md:w-1/2 p-5">
-            <form className="md:pr-28 z-10" onSubmit={handleSubmit}>
+            <form className="md:pr-28 z-10" >
               <div className="md:flex mb-4 border-b border-white py-2 items-center">
                 <ImUser className="text-white text-2xl mr-2" />
                 <input
@@ -186,21 +136,21 @@ function Formulario() {
                 <input
                   className="md:w-2/3 appearance-none bg-transparent border-none w-full text-white py-1 px-2 leading-tight focus:outline-none"
                   id="correo"
-                  type="text"
+                  type="email"
                   placeholder="Correo"
                   value={formData.correo}
                   onChange={handleInputChange}
                 />
               </div>
               {errores.correo && (
-                <p className="text-red-500 text-xs mt-1">{errores.nombre}</p>
+                <p className="text-red-500 text-xs mt-1">{errores.correo}</p>
               )}
               <div className="md:flex mb-4 border-b border-white py-2 items-center">
                 <FaPhoneAlt className="text-white text-2xl mr-2" />
                 <input
                   className="md:w-2/3 appearance-none bg-transparent border-none w-full text-white  py-1 px-2 leading-tight focus:outline-none"
                   id="telefono"
-                  type="text"
+                  type="tel"
                   placeholder="Teléfono"
                   value={formData.telefono}
                   onChange={handleInputChange}
@@ -259,7 +209,7 @@ function Formulario() {
               <button
                 className=" w-auto bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline "
                 type="submit"
-                onClick={handleSubmit2}
+                onClick={handleSubmit}
               >
                 Contacta a
                 <img
