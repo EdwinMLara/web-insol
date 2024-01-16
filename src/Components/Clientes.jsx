@@ -1,9 +1,9 @@
 import React from "react";
-import Ug from "../img/Clientes/ug.png";
-import TecM from "../img/Clientes/tec.png";
-import Ing from "../img/Clientes/ingenieria.png";
-import Uat from "../img/Clientes/uat.png";
-import Solena from "../img/Clientes/solena.png";
+import Ug from "../img/Clientes/ugBlanco.png";
+import TecM from "../img/Clientes/tecBlanco.png";
+import Ing from "../img/Clientes/ingenieriaBlanco.png";
+import Uat from "../img/Clientes/uatBlanco.png";
+import Solena from "../img/Clientes/solenaBlanco.png";
 import { useInsoel } from "../Context/InsoelContext"; 
 
 function Clientes() {

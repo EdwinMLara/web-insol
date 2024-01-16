@@ -18,34 +18,9 @@ const Map = () => {
     popupAnchor: [0, -32], // Punto de anclaje del popup
   });
 
-  const [scrollZoomEnabled, setScrollZoomEnabled] = useState(true);
-
-  const mapRef = useRef();
-
-  const toggleScrollZoom = () => {
-    setScrollZoomEnabled((prev) => {
-      const map = mapRef.current;
-      if (map) {
-        if (prev) {
-          map.scrollWheelZoom.disable();
-        } else {
-          map.scrollWheelZoom.enable();
-        }
-      }
-      return !prev;
-    });
-  };
-  
-
   return (
     <div className="max-w-screen-lg mx-auto">
-      {/* 
-      <button onClick={toggleScrollZoom}>
-        {scrollZoomEnabled
-          ? "Desactivar Zoom por Scroll"
-          : "Activar Zoom por Scroll"}
-      </button>
-      */}
+      
       <MapContainer
         center={Insoel}
         zoom={8}
