@@ -1,14 +1,27 @@
-import React from "react";
+import React, {useEffect} from "react";
+import { useInsoel } from "../Context/InsoelContext"; 
+
 import Ug from "../img/Clientes/ug.png";
 import TecM from "../img/Clientes/tec.png";
 import Ing from "../img/Clientes/ingenieria.png";
 import Uat from "../img/Clientes/uat.png";
 import Solena from "../img/Clientes/solena.png";
-import { useInsoel } from "../Context/InsoelContext"; 
+
 
 function Clientes() {
   const { setLogoColor } = useInsoel();
-  setLogoColor("amarilloBlanco");
+  
+  useEffect(() => {
+    // Este efecto se ejecutará después del montaje inicial
+    setLogoColor("amarilloBlanco");
+
+    // Si necesitas realizar alguna limpieza al desmontar el componente, puedes devolver una función
+    return () => {
+      // Código de limpieza, si es necesario
+    };
+  }, []); // El segundo argumento, un array vacío, significa que el efecto solo se ejecutará al montar y desmontar
+
+
   return (
     <div className=" mt-24 mb-10">
       <div className=" font-bold text-3xl text-center p-5">

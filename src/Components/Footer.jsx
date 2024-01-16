@@ -32,7 +32,7 @@ function Footer() {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Contactanos
               </h2>
-              <ul className="text-gray-500  font-medium">
+              <ul className="text-gray-700  font-medium">
                 <li className="mb-4">
                   <p>
                     {" "}
@@ -47,20 +47,25 @@ function Footer() {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Nosotros
               </h2>
-              <ul className="text-gray-500  font-medium">
+              <ul className="text-gray-700  font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline ">
+                  <a href="#nosotrosSeccion" className="hover:underline decoration-primary decoration-double">
                     Sobre INSOEL
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="#nosotrosSeccionFundadores" className="hover:underline decoration-primary decoration-double">
                     Fundadores
                   </a>
                 </li>
-                <li>
-                  <a href="nosotrosSeccion" className="hover:underline">
+                <li className="mb-4">
+                  <a href="#nosotrosSeccionColaboradores" className="hover:underline decoration-primary decoration-double">
                     Nuestro Equipos
+                  </a>
+                </li>
+                <li>
+                  <a href="#nosotrosSeccionClientes" className="hover:underline decoration-primary decoration-double">
+                    Clientes
                   </a>
                 </li>
               </ul>
@@ -69,25 +74,20 @@ function Footer() {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Servicios
               </h2>
-              <ul className="text-gray-500 font-medium">
+              <ul className="text-gray-700 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a className="">
                     Sistemas de Control PLC
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a className="">
                     Instrumentación
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Desarrollo Web
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:underline">
-                    Desarrollo Movil
+                  <a className="">
+                    Desarrollo Web y Movil
                   </a>
                 </li>
               </ul>

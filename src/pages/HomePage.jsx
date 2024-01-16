@@ -24,7 +24,7 @@ function HomePage() {
           innovación en el ámbito nacional.
         </p>
         <div className="mb-5">
-          <Map />
+          <Map id="mapa"/>
         </div>
       </div>
 
@@ -33,7 +33,7 @@ function HomePage() {
       </div>
 
       <div className="flex-grow mb-5 " id="formularioSeccion">
-        <Formulario />
+        <Formulario id="formulario" />
       </div>
       <div>
         <Footer />
