@@ -7,16 +7,22 @@ import { BsLinkedin } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io5";
 import { BsTwitterX } from "react-icons/bs";
 import { FaTiktok } from "react-icons/fa";
+import { FaRegBuilding } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { MdPhoneAndroid } from "react-icons/md";
 
 function Footer() {
   const redirigirAFacebbok = () => {
-    window.location.href = 'https://www.facebook.com/profile.php?id=100093302174230&mibextid=2JQ9oc';
+    window.location.href =
+      "https://www.facebook.com/profile.php?id=100093302174230&mibextid=2JQ9oc";
   };
   const redirigirAX = () => {
-    window.location.href = 'https://x.com/InsoelMX?t=-CCkUolb6QJtigBT8ODxlw&s=09';
+    window.location.href =
+      "https://x.com/InsoelMX?t=-CCkUolb6QJtigBT8ODxlw&s=09";
   };
   const redirigirALinkdin = () => {
-    window.location.href = 'https://www.linkedin.com/company/insoel-mexico?trk=blended-typeahead';
+    window.location.href =
+      "https://www.linkedin.com/company/insoel-mexico?trk=blended-typeahead";
   };
   return (
     <footer className=" bg-white">
@@ -27,68 +33,87 @@ function Footer() {
               <img src={LogoAmarillo} className="h-16 " alt="" />
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 mb-14">
-            <div>
+          <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3 mb-14">
+            <div className="ml-24">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Contactanos
               </h2>
               <ul className="text-gray-700  font-medium">
                 <li className="mb-4">
-                  <p>
-                    {" "}
-                    Adolfo Ruiz Cortines #34, Uriangato Gto. <br />
-                    insoel.ventas@gmail.com <br />
-                    445 111 222 452
-                  </p>
+                  <div className="flex mb-3">
+                    <FaRegBuilding size={18} />
+                    <p className="pl-2">
+                      Adolfo Ruiz Cortines #34,
+                      <br />
+                      Uriangato Gto.
+                    </p>
+                  </div>
+                  <div className="flex mb-4">
+                    <MdOutlineMailOutline size={20} />
+                    <p className="pl-2"> insoel.ventas@gmail.com </p>
+                  </div>
+                  <div className="flex">
+                    <MdPhoneAndroid size={22} />
+                    <p className="pl-2"> 445 111 222 452 </p>
+                  </div>
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="ml-24">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Nosotros
               </h2>
               <ul className="text-gray-700  font-medium">
                 <li className="mb-4">
-                  <a href="#nosotrosSeccion" className="hover:underline decoration-primary decoration-double">
+                  <a
+                    href="#nosotrosSeccion"
+                    className="hover:underline decoration-primary decoration-double"
+                  >
                     Sobre INSOEL
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#nosotrosSeccionFundadores" className="hover:underline decoration-primary decoration-double">
+                  <a
+                    href="#nosotrosSeccionFundadores"
+                    className="hover:underline decoration-primary decoration-double"
+                  >
                     Fundadores
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#nosotrosSeccionColaboradores" className="hover:underline decoration-primary decoration-double">
+                  <a
+                    href="#nosotrosSeccionColaboradores"
+                    className="hover:underline decoration-primary decoration-double"
+                  >
                     Nuestro Equipos
                   </a>
                 </li>
                 <li>
-                  <a href="#nosotrosSeccionClientes" className="hover:underline decoration-primary decoration-double">
+                  <a
+                    href="#nosotrosSeccionClientes"
+                    className="hover:underline decoration-primary decoration-double"
+                  >
                     Clientes
                   </a>
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="ml-24 sm:ml-0">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
                 Servicios
               </h2>
               <ul className="text-gray-700 font-medium">
                 <li className="mb-4">
-                  <a className="">
-                    Sistemas de Control PLC
-                  </a>
+                  <a className="">Sistemas de Control PLC</a>
                 </li>
                 <li className="mb-4">
-                  <a className="">
-                    Instrumentación
-                  </a>
+                  <a className="">Instrumentación</a>
                 </li>
                 <li className="mb-4">
-                  <a className="">
-                    Desarrollo Web y Movil
-                  </a>
+                  <a className="">Desarrollo Web y Movil</a>
+                </li>
+                <li className="mb-4">
+                  <a className="">Servicios Iot</a>
                 </li>
               </ul>
             </div>
@@ -104,20 +129,17 @@ function Footer() {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0 space-x-4">
-            <button className="hover:bg-primary">
-              <BsInstagram className="text-2xl"/>
-            </button>
             <button onClick={redirigirAFacebbok} className="hover:bg-primary">
               <FaFacebook className="text-2xl" />
             </button>
             <button className="hover:bg-primary" onClick={redirigirALinkdin}>
-              <BsLinkedin className="text-2xl"/>
+              <BsLinkedin className="text-2xl" />
             </button>
             <button className="hover:bg-primary">
-              <IoLogoYoutube className="text-2xl"/>
+              <IoLogoYoutube className="text-2xl" />
             </button>
             <button className="hover:bg-primary" onClick={redirigirAX}>
-              <BsTwitterX className="text-2xl"/>
+              <BsTwitterX className="text-2xl" />
             </button>
           </div>
         </div>

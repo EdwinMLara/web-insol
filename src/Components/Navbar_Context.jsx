@@ -81,7 +81,7 @@ const Navbar_Context = () => {
 
   const handleMouseLeave = () => {
     if (isContentActive) {
-      setActiveInfo('');
+      setActiveInfo('bg-gradient-to-b from-secondary bottom-96');
       setIsContentActive(false); // Desactiva el contenido al salir del recuadro
     }
   };
@@ -97,7 +97,7 @@ const Navbar_Context = () => {
             : activeInfo === ""
             ? ""
             : "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
-        }  p-4 absolute top-0 left-0 right-0  z-10`}
+        } p-4 absolute top-0 left-0 right-0  z-10`}
         onMouseLeave={handleMouseLeave}
       >
         <div className="flex items-center justify-between">
@@ -417,7 +417,7 @@ const Navbar_Context = () => {
                           </p>
                           <Link to={enlaces[index]}>
                             <button
-                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
+                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary rounded-lg "
                               onClick={() => handleInfoToggle("proyectos")}
                             >
                               Ver más
