@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useInsoel } from "../Context/InsoelContext";
 
 // Importa tus imágenes dinámicamente
 import image1 from "../img/Carrusel/1.png";
@@ -7,15 +8,13 @@ import image2 from "../img/Carrusel/2.png";
 import image3 from "../img/Carrusel/3.png";
 import image4 from "../img/Carrusel/4.png";
 import image5 from "../img/Carrusel/5.png"; 
-import { useInsoel } from "../Context/InsoelContext";
+
 
 // Crea un array de rutas de imágenes
 const imagePaths = [image1, image2, image3, image4, image5];
 
 function Carrusel() {
   const {setTxtColor, setLogoColor} = useInsoel()
-  setTxtColor('white')
-  setLogoColor('amarilloBlanco')
   const [imagenActiva, setImagenActiva] = useState(0);
 
   useEffect(() => {
@@ -27,6 +26,17 @@ function Carrusel() {
     // Limpia el intervalo cuando el componente se desmonta
     return () => clearInterval(intervalId);
   }, []);
+
+  // Utiliza imagenActiva para establecer el color
+  useEffect(() => {
+    // Aquí puedes usar el valor actualizado de imagenActiva para establecer colores
+    if (imagenActiva === 0) {
+      setTxtColor('white');
+      setLogoColor('amarilloBlanco');
+    } else {
+      // Otros casos según la imagen activa
+    }
+  }, [imagenActiva]);
 
 
   return (

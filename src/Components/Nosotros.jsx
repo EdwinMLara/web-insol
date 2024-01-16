@@ -25,12 +25,12 @@ function Nosotros() {
       </div>
 
       {/* Section: Fundadores */}
-      <div className="min-h-screen bg-gradient-to-b from-black via-black to-quaternary">
-        <Fundadores />
+      <div className="min-h-screen bg-gradient-to-b from-black via-black to-quaternary" id="nosotrosSeccionFundadores">
+        <Fundadores id="nosotrosSeccionFundadores"/>
         
       </div>
 
-      <div className="bg-gradient-to-b from-quaternary to-quaternary flex justify-end items-center">
+      <div className="bg-gradient-to-b from-quaternary to-quaternary flex justify-end items-center" id="nosotrosSeccionColaboradores">
   {/* Botón para mostrar Colaboradores */}
   <button className=" flex m-5 mr-24   rounded-lg" onClick={mostrarOcultarColaboradores}>
   <IoMdArrowDropdown size={28}/>
@@ -46,12 +46,12 @@ function Nosotros() {
           seccionVisible === "colaboradores" ? "block" : "hidden"
         }`}
       >
-        <Colaboradores />
+        <Colaboradores id="nosotrosSeccionColaboradores"/>
       </div>
 
       {/* section: Clientes */}
-      <div className="bg-gradient-to-b from-quaternary  to-secondary">
-        <Clientes />
+      <div className="bg-gradient-to-b from-quaternary  to-secondary" id="nosotrosSeccionClientes">
+        <Clientes id="nosotrosSeccionClientes"/>
       </div>
     </div>
   );

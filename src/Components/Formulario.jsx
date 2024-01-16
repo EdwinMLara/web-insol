@@ -98,8 +98,9 @@ function Formulario() {
             <h1 className="text-4xl font-bold mb-4 text-white text-left pt-32">
               AUTOMATIZACIÓN <br />
               REDEFINIDA <br />
-              <h2 className="md:pl-24 text-3xl">Contáctanos.</h2>
-            </h1>
+              </h1>
+              <h2 className="md:pl-24 font-bold text-white text-3xl">Contáctanos.</h2>
+            
           </div>
           <div className="md:w-1/2 p-5">
             <form className="md:pr-28 z-10" >
@@ -167,7 +168,7 @@ function Formulario() {
                   value={formData.servicio}
                   onChange={handleInputChange}
                 >
-                  <option disabled selected value="">
+                  <option disabled value="">
                     Servicios
                   </option>
                   <option className="bg-blue-500 text-white" value="opcion2">
@@ -177,9 +178,9 @@ function Formulario() {
                     Option 3
                   </option>
                 </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                   <svg
-                    class="fill-current h-4 w-4"
+                    className="fill-current h-4 w-4"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                   >
