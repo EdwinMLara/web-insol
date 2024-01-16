@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Ug from "../img/Clientes/ugBlanco.png";
 import TecM from "../img/Clientes/tecBlanco.png";
 import Ing from "../img/Clientes/ingenieriaBlanco.png";
