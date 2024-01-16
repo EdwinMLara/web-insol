@@ -9,9 +9,9 @@ import { FaClock } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 
 // icons
-import E from "../img/Iconos/11.svg"
-import P from "../img/Iconos/14.svg"
-import I from "../img/Iconos/13.svg"
+import E from "../img/Iconos/11.svg";
+import P from "../img/Iconos/14.svg";
+import I from "../img/Iconos/13.svg";
 
 function NosotrosInformacion() {
   const [numberOfLines, setNumberOfLines] = useState(9);
@@ -68,7 +68,7 @@ function NosotrosInformacion() {
   return (
     <div className="text-center mt-20">
       <h1 className="mb-5 text-2xl font-bold text-white">¿Quiénes Somos?</h1>
-      <div className="text-white pt-5 p-5 z-10 relative">
+      <div className="text-white pt-5 p-5 relative">
         {" "}
         "En INSOEL, somos arquitectos del progreso, pioneros en el ámbito de la
         automatización, donde la innovación se une a la eficiencia. Con un
@@ -89,16 +89,28 @@ function NosotrosInformacion() {
 
           <div className="flex items-center justify-evenly p-8 mt-10">
             <div className="text-center item-center">
-            <img src={I} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem] " />
+              <img
+                src={I}
+                alt="Icono Personalizado"
+                className="mx-auto fill-tertiary W-[5rem] h-[5rem] "
+              />
               <p>Innovación</p>
             </div>
             <div className="text-center">
-            <img src={P} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem] " />
+              <img
+                src={P}
+                alt="Icono Personalizado"
+                className="mx-auto fill-tertiary W-[5rem] h-[5rem] "
+              />
               <p>Productividad</p>
             </div>
             <div className="text-center">
-            <img src={E} alt="Icono Personalizado" className="mx-auto fill-tertiary W-[5rem] h-[5rem] ml-5" />
-  <p>Eficiencia</p>
+              <img
+                src={E}
+                alt="Icono Personalizado"
+                className="mx-auto fill-tertiary W-[5rem] h-[5rem] ml-5"
+              />
+              <p>Eficiencia</p>
             </div>
           </div>
         </div>

@@ -25,13 +25,29 @@ function Nosotros() {
       </div>
 
       {/* Section: Fundadores */}
-      <div className="min-h-screen bg-gradient-to-b from-black via-black to-quaternary" id="nosotrosSeccionFundadores">
-        <Fundadores id="nosotrosSeccionFundadores"/>
-        
+      <div
+        className="min-h-screen bg-gradient-to-b from-black via-black to-quaternary"
+        id="nosotrosSeccionFundadores"
+      >
+        <Fundadores id="nosotrosSeccionFundadores" />
       </div>
 
+      {/* section: Clientes */}
+      <div
+        className="bg-gradient-to-b from-quaternary  to-secondary"
+        id="nosotrosSeccionClientes"
+      >
+        <Clientes id="nosotrosSeccionClientes" />
+      </div>
+    </div>
+  );
+}
+
+export default Nosotros;
+
+/* 
       <div className="bg-gradient-to-b from-quaternary to-quaternary flex justify-end items-center" id="nosotrosSeccionColaboradores">
-  {/* Botón para mostrar Colaboradores */}
+   Botón para mostrar Colaboradores 
   <button className=" flex m-5 mr-24   rounded-lg" onClick={mostrarOcultarColaboradores}>
   <IoMdArrowDropdown size={28}/>
    <h1 className="text-xl">Colaboradores</h1> 
@@ -40,7 +56,7 @@ function Nosotros() {
 
 
 
-      {/* Section: Colaboradores */}
+       Section: Colaboradores 
       <div
         className={`bg-gradient-to-b from-quaternary to-quaternary ${
           seccionVisible === "colaboradores" ? "block" : "hidden"
@@ -48,13 +64,4 @@ function Nosotros() {
       >
         <Colaboradores id="nosotrosSeccionColaboradores"/>
       </div>
-
-      {/* section: Clientes */}
-      <div className="bg-gradient-to-b from-quaternary  to-secondary" id="nosotrosSeccionClientes">
-        <Clientes id="nosotrosSeccionClientes"/>
-      </div>
-    </div>
-  );
-}
-
-export default Nosotros;
+*/
