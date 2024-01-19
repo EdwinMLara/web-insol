@@ -26,19 +26,19 @@ function Clientes() {
         MARCAS QUE CONFÍAN EN NOSOTROS
         <div className="relative flex flex-wrap justify-center text-center pt-20 pb-5 md:pr-[10rem] md:pl-[10rem] ">
           <div className="md:flex-none w-1/5 ">
-            <img src={Ug} alt="Imagen 1" className="w-[7rem] h-[7rem] " />
+            <img src={Ug} alt="Imagen 1" className="w-[3rem] h-[3rem] sm:w-[7rem] sm:h-[7rem]" />
           </div>
           <div className="flex-none w-1/5">
-            <img src={TecM} alt="Imagen 2" className="w-[7rem] h-[7rem] object-cover rounded-full" />
+            <img src={TecM} alt="Imagen 2" className="w-[3rem] h-[3rem] sm:w-[7rem] sm:h-[7rem]" />
           </div>
           <div className="flex-none w-1/5">
-            <img src={Ing} alt="Imagen 3" className="w-[7rem] h-[7rem]" />
+            <img src={Ing} alt="Imagen 3" className="w-[3rem] h-[3rem] sm:w-[7rem] sm:h-[7rem]" />
           </div>
           <div className="flex-none w-1/5">
-            <img src={Uat} alt="Imagen 4" className="w-[7rem] h-[7rem] " />
+            <img src={Uat} alt="Imagen 4" className="w-[3rem] h-[3rem] sm:w-[7rem] sm:h-[7rem] " />
           </div>
           <div className="flex-none w-1/5">
-            <img src={Solena} alt="Imagen 5" className="w-[24rem] h-[7rem]" />
+            <img src={Solena} alt="Imagen 5" className="w-[10rem] h-[3rem] sm:w-[24rem] sm:h-[7rem]" />
           </div>
          
          
