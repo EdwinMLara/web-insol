@@ -3,9 +3,10 @@ import { useInsoel } from "../Context/InsoelContext";
 import Formulario from "../Components/Formulario";
 import Footer from "../Components/Footer";
 function ContactanosPage() {
-  const { setLogoColor, setTxtColor } = useInsoel();
+  const { setLogoColor, setTxtColor, setProyectColor } = useInsoel();
   setLogoColor("amarilloBlanco");
   setTxtColor("white");
+  setProyectColor('bg-tertiary bg-opacity-75')
   useEffect(() => {
     document.title = "Contáctanos | INSOEL";
     return () => {

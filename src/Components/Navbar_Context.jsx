@@ -5,6 +5,7 @@ import { useInsoel } from "../Context/InsoelContext";
 
 import LogoAmarilloNegro from "../img/Logos/AmarilloNegro.png";
 import LogoAmarilloBlanco from "../img/Logos/AmarilloBlanco.png";
+import LogoAmarilloBlancoNosotros from "../img/Logos/AmarilloBlanco.png";
 import LogoVerdeNegro from "../img/Logos/VerdeNegro.png";
 import LogoVerdeBlanco from "../img/Logos/VerdeBlanco.png";
 import LogoAzulNegro from "../img/Logos/AzulNegro.png";
@@ -18,12 +19,14 @@ import image4 from "../img/Proyectos/Banco_Uat/01.jpg";
 
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
+  const {proyectColor} = useInsoel(); 
   const [activeInfo, setActiveInfo] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
   const [mostrarContenido, setMostrarContenido] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isContentActive, setIsContentActive] = useState(false);
+  
 
   const handleInfoToggle = (info) => {
     //setActiveInfo(activeInfo === info ? null : info);
@@ -80,7 +83,7 @@ const Navbar_Context = () => {
 
 
   const handleMouseLeave = () => {
-    if (isContentActive) {
+    if (activeInfo === "proyectos" && isContentActive){
       setActiveInfo('bg-gradient-to-b from-secondary bottom-96');
       setIsContentActive(false); // Desactiva el contenido al salir del recuadro
     }
@@ -91,14 +94,13 @@ const Navbar_Context = () => {
       <nav
         className={`${
           activeInfo === "proyectos" && isContentActive
-            ? "bg-tertiary bg-opacity-75 "
-            : activeInfo === ""
-            ? ""
+            ? proyectColor
             : activeInfo === ""
             ? ""
             : "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
-        } p-4 absolute top-0 left-0 right-0  z-10`}
-        onMouseLeave={handleMouseLeave}
+        } p-4 absolute top-0 left-0 right-0  z-10 `}
+        //onMouseLeave={handleMouseLeave}
+        onMouseLeave={activeInfo === "proyectos" && isContentActive ? handleMouseLeave : null}
       >
         <div className="flex items-center justify-between">
           <div className="bg-transparent ">
@@ -111,7 +113,7 @@ const Navbar_Context = () => {
                 src={
                   logoColor === "amarilloNegro"
                     ? LogoAmarilloNegro
-                    : logoColor === "amarilloBlanco"
+                    : logoColor === "amarilloBlanco" && proyectColor 
                     ? LogoAmarilloBlanco
                     : logoColor === "verdeBlanco"
                     ? LogoVerdeBlanco
@@ -121,7 +123,9 @@ const Navbar_Context = () => {
                     ? LogoAzulBlanco
                     : logoColor === "azulNegro"
                     ? LogoAzulNegro
-                    : LogoAmarilloNegro
+                    : logoColor === "amarilloBlancoNosotros" && proyectColor 
+                    ? LogoAmarilloBlancoNosotros
+                    : LogoAmarilloBlanco
                 }
                 alt="Logo"
               />

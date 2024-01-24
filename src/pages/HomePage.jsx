@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Carrusel from "../Components/Carrusel";
 import Nosotros from "../Components/Nosotros";
 import Formulario from "../Components/Formulario";
@@ -5,8 +6,19 @@ import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import Map from "../Components/Map";
 import MapaPage from "./MapaPage";
+import { useInsoel } from "../Context/InsoelContext";
 
 function HomePage() {
+  const {setLogoColor, setTxtColor, setProyectColor} = useInsoel();
+  setLogoColor('amarilloBlanco')
+  setTxtColor('white')
+  setProyectColor('bg-tertiary bg-opacity-75')
+  useEffect(() => {
+    document.title = "Nosotros | INSOEL";
+    return () => {
+      document.title = "INSOEL";
+    };
+  }, []);
   return (
     <div className="flex flex-col h-screen ">
       <div className="flex-grow" id="inicioSeccion">

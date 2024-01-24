@@ -63,7 +63,7 @@ function BancoUatPage() {
         <div className="text-black m-5">
           <h2 className="text-2xl">14 Diciembre, 2023</h2>
           <h1 className="text-4xl font-semibold">
-            yyyyyyyyyyyyyyyyyyyyyyy
+            Dinamómetro
           </h1>
           <br />
           <div className="md:columns-2 text-justify">

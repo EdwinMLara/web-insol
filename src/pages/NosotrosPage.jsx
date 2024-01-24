@@ -4,9 +4,10 @@ import Nosotros from '../Components/Nosotros';
 import Footer from '../Components/Footer';
 
 function NosotrosPage() {
-  const {setLogoColor, setTxtColor} = useInsoel();
-  setLogoColor('amarilloBlanco')
+  const {setLogoColor, setTxtColor, setProyectColor} = useInsoel();
+  setLogoColor('amarilloBlancoNosotros')
   setTxtColor('white')
+  setProyectColor('bg-secondary')
   useEffect(() => {
     document.title = "Nosotros | INSOEL";
     return () => {
