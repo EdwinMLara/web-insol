@@ -41,7 +41,7 @@ function Carrusel() {
 
   return (
     <div className="">
-      <div className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+      <div className="relative w-full overflow-hidden after:clear-both after:block after:content-[''] ">
         {imagePaths.map((path, index) => (
           <div
             key={index}

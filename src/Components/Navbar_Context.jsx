@@ -19,7 +19,7 @@ import image4 from "../img/Proyectos/Banco_Uat/01.jpg";
 
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
-  const {proyectColor} = useInsoel(); 
+  const {proyectColor, opacidadColor} = useInsoel(); 
   const [activeInfo, setActiveInfo] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -97,7 +97,7 @@ const Navbar_Context = () => {
             ? proyectColor
             : activeInfo === ""
             ? ""
-            : "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
+            : opacidadColor
         } p-4 absolute top-0 left-0 right-0  z-10 `}
         //onMouseLeave={handleMouseLeave}
         onMouseLeave={activeInfo === "proyectos" && isContentActive ? handleMouseLeave : null}
@@ -111,9 +111,11 @@ const Navbar_Context = () => {
                 transition={{ duration: 1.5 }}
                 className="h-16"
                 src={
-                  logoColor === "amarilloNegro"
-                    ? LogoAmarilloNegro
-                    : logoColor === "amarilloBlanco" && proyectColor 
+                  activeInfo === "proyectos" && isContentActive
+        ? LogoAmarilloNegro
+        
+                    
+                    : logoColor === "amarilloBlanco" && proyectColor && opacidadColor
                     ? LogoAmarilloBlanco
                     : logoColor === "verdeBlanco"
                     ? LogoVerdeBlanco
@@ -123,7 +125,7 @@ const Navbar_Context = () => {
                     ? LogoAzulBlanco
                     : logoColor === "azulNegro"
                     ? LogoAzulNegro
-                    : logoColor === "amarilloBlancoNosotros" && proyectColor 
+                    : logoColor === "amarilloBlancoNosotros" && proyectColor && opacidadColor
                     ? LogoAmarilloBlancoNosotros
                     : LogoAmarilloBlanco
                 }
@@ -416,7 +418,7 @@ const Navbar_Context = () => {
                           className="w-[26rem]"
                         />
                         <div className="flex flex-col items-start mt-2 ml-2">
-                          <p className="text-lg text-white text-justify p-3">
+                          <p className="text-lg text-black text-justify p-3">
                             {descripciones[index]}
                           </p>
                           <Link to={enlaces[index]}>

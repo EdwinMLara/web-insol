@@ -9,10 +9,11 @@ import MapaPage from "./MapaPage";
 import { useInsoel } from "../Context/InsoelContext";
 
 function HomePage() {
-  const {setLogoColor, setTxtColor, setProyectColor} = useInsoel();
+  const {setLogoColor, setTxtColor, setProyectColor, setOpacidadColor} = useInsoel();
   setLogoColor('amarilloBlanco')
   setTxtColor('white')
   setProyectColor('bg-tertiary bg-opacity-75')
+  setOpacidadColor('bg-opacity-75 bg-gradient-to-b from-secondary bottom-96')
   useEffect(() => {
     document.title = "Nosotros | INSOEL";
     return () => {
@@ -20,7 +21,7 @@ function HomePage() {
     };
   }, []);
   return (
-    <div className="flex flex-col h-screen ">
+    <div className="flex flex-col h-screen  ">
       <div className="flex-grow" id="inicioSeccion">
         <Carrusel />
       </div>
