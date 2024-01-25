@@ -111,10 +111,8 @@ const Navbar_Context = () => {
                 transition={{ duration: 1.5 }}
                 className="h-16"
                 src={
-                  activeInfo === "proyectos" && isContentActive
-        ? LogoAmarilloNegro
-        
-                    
+                  logoColor === "amarilloNegro"
+                    ? LogoAmarilloNegro
                     : logoColor === "amarilloBlanco" && proyectColor && opacidadColor
                     ? LogoAmarilloBlanco
                     : logoColor === "verdeBlanco"

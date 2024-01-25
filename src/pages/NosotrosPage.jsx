@@ -7,7 +7,7 @@ function NosotrosPage() {
   const {setLogoColor, setTxtColor, setProyectColor,setOpacidadColor} = useInsoel();
   setLogoColor('amarilloBlancoNosotros')
   setTxtColor('white')
-  setProyectColor('bg-primary')
+  setProyectColor('bg-tertiary')
   setOpacidadColor('bg-opacity-75 bg-gradient-to-b from-grey-500 bottom-96')
   useEffect(() => {
     document.title = "Nosotros | INSOEL";

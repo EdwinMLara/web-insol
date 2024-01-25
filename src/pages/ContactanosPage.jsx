@@ -6,7 +6,7 @@ function ContactanosPage() {
   const { setLogoColor, setTxtColor, setProyectColor } = useInsoel();
   setLogoColor("amarilloBlanco");
   setTxtColor("white");
-  setProyectColor('bg-tertiary bg-opacity-75')
+  setProyectColor('bg-tertiary')
   useEffect(() => {
     document.title = "Contáctanos | INSOEL";
     return () => {
