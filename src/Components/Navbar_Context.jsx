@@ -12,10 +12,10 @@ import LogoAzulNegro from "../img/Logos/AzulNegro.png";
 import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 
 // Importa tus imágenes dinámicamente para seccion de ¿que hacemos?
-import image1 from "../img/Proyectos/Banco_Uat/09.jpg";
-import image2 from "../img/Proyectos/Bio_Reactor/06.jpg";
+import image1 from "../img/Submenu/Industria_Integracion_01.jpg";
+import image2 from "../img/Submenu/Industria_Integracion_02.jpg";
 import image3 from "../img/Submenu/TI.jpg";
-import image4 from "../img/Proyectos/Banco_Uat/01.jpg";
+import image4 from "../img/Submenu/Industria_Integracion_03.jpg";
 
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
