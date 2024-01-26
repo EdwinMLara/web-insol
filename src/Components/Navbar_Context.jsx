@@ -398,8 +398,8 @@ const Navbar_Context = () => {
                   </p>
                 </div>
 
-                <div className="border-r-2 border-yellow-500 h-[20rem]"></div>
-                <div className="ml-12 w-2/3">
+                <div className="border-r-2 border-yellow-500 h-[20rem] ml-10"></div>
+                <div className="ml-16 w-2/3">
                   <div className="flex">
                     {imagePaths.map((path, index) => (
                       <div
@@ -413,7 +413,7 @@ const Navbar_Context = () => {
                         <img
                           src={path}
                           alt={`Slide ${index + 1}`}
-                          className="w-[26rem]"
+                          className="w-[20rem]"
                         />
                         <div className="flex flex-col items-start mt-2 ml-2">
                           <p className="text-lg text-black text-justify p-3">
