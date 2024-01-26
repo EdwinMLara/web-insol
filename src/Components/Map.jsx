@@ -39,7 +39,7 @@ const Map = () => {
         }}
       >
         <button
-          className={`bg-primary hover:bg-secondary text-black font-semibold p-2 rounded`}
+          className={`bg-primary hover:bg-darkPrimary text-black font-semibold p-2 rounded`}
           onClick={() => handleZoomButtonClick()}
         >
           {zoomEnabled ? "Desactivar Zoom" : "Activar Zoom"}
