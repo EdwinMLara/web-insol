@@ -29,7 +29,7 @@ const Navbar_Context = () => {
   
 
   const handleInfoToggle = (info) => {
-    //setActiveInfo(activeInfo === info ? null : info);
+    setActiveInfo(activeInfo === info ? null : info);
     if (activeInfo === info) {
       setIsContentActive(!isContentActive); // Cambia el estado al hacer clic nuevamente en la misma sección
     } else {
@@ -115,7 +115,7 @@ const Navbar_Context = () => {
                     ? LogoAmarilloNegro
                     : logoColor === "amarilloBlanco" && proyectColor && opacidadColor
                     ? LogoAmarilloBlanco
-                    : logoColor === "verdeBlanco"
+                    : logoColor === "verdeBlanco" && opacidadColor
                     ? LogoVerdeBlanco
                     : logoColor === "verdeNegro"
                     ? LogoVerdeNegro
@@ -162,7 +162,7 @@ const Navbar_Context = () => {
                 activeInfo === "proyectos" ? "black" : "white"
               } cursor-pointer  ${
                 activeInfo === "proyectos"
-                  ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
+                  ? "p-1 pr-2 pl-2 bg-darkPrimary  transform border-2 border-black/50 rounded-lg "
                   : "hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
 
               }`}
@@ -355,7 +355,7 @@ const Navbar_Context = () => {
                   
                     className={`cursor-pointer ${
                       selectedItem === 0
-                        ? "bg-primary p-1 pr-2 pl-2 rounded-lg"
+                        ? "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                         : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(0)}
@@ -367,7 +367,7 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 1
-                        ? "bg-primary p-1 pr-2 pl-2  rounded-lg"
+                        ? "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                         : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(1)}
@@ -378,7 +378,7 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 2
-                        ? "bg-primary p-1 pr-2 pl-2  rounded-lg"
+                        ? "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                         : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(2)}
@@ -389,7 +389,7 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 3
-                        ? "bg-primary p-1 pr-2 pl-2  rounded-lg "
+                        ? "hover:bg-primary p-1 pr-2 pl-2 rounded-lg "
                         : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(3)}
@@ -421,7 +421,7 @@ const Navbar_Context = () => {
                           </p>
                           <Link to={enlaces[index]}>
                             <button
-                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary rounded-lg "
+                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary rounded-lg "
                               onClick={() => handleInfoToggle("proyectos")}
                             >
                               Ver más

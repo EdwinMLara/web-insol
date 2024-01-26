@@ -14,9 +14,10 @@ import Img6 from "../../img/Proyectos/Bio_Reactor/06.jpg";
 import Img7 from "../../img/Proyectos/Bio_Reactor/07.jpg";
 
 function BiorreactorPage() {
-  const { setLogoColor, setTxtColor } = useInsoel();
+  const { setLogoColor, setTxtColor,setOpacidadColor } = useInsoel();
   setLogoColor("verdeBlanco");
   setTxtColor("black");
+  setOpacidadColor('bg-opacity-75 bg-gradient-to-b from-secondary bottom-[29rem]')
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";
     return () => {
@@ -26,7 +27,7 @@ function BiorreactorPage() {
   return (
     <>
       <div className="bg-bajo min-h-screen  flex flex-col">
-        <div className="mb-20"></div>
+        <div className="mb-28"></div>
         <div>
           <img
             src={Bio}

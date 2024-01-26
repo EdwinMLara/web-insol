@@ -22,9 +22,10 @@ import Img15 from "../../img/Proyectos/Banco_Uat/09.jpg";
 
 
 function BancoUatPage() {
-  const { setLogoColor, setTxtColor } = useInsoel();
+  const { setLogoColor, setTxtColor,setOpacidadColor } = useInsoel();
   setLogoColor("amarilloNegro");
   setTxtColor("black");
+  setOpacidadColor('bg-opacity-75 bg-gradient-to-b from-secondary bottom-[29rem]')
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";
     return () => {
@@ -37,7 +38,7 @@ function BancoUatPage() {
   return (
     <>
       <div className="bg-bajo min-h-screen  flex flex-col">
-        <div className="mb-20"></div>
+        <div className="mb-28"></div>
         <div className='bg-gray-200 '><div class="grid grid-cols-3 ">
     
     <div class="relative">

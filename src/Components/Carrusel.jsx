@@ -60,7 +60,7 @@ function Carrusel() {
               <h1 className="text-2xl font-bold text-black transform md:text-2xl lg:text-3xl xl:text-4xl">
                 AUTOMATIZACION Y <br className="lg:hidden xl:block" /> CONTROL
               </h1>
-              <button className="bg-primary bg-opacity-75 text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary">
+              <button className="bg-primary  text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary">
                 <Link to="/web-insol/invernadero">CONOCE MÁS</Link>
               </button>
             </div> 
