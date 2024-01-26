@@ -14,7 +14,7 @@ import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 // Importa tus imágenes dinámicamente para seccion de ¿que hacemos?
 import image1 from "../img/Proyectos/Banco_Uat/09.jpg";
 import image2 from "../img/Proyectos/Bio_Reactor/06.jpg";
-import image3 from "../img/Proyectos/TI/login.png";
+import image3 from "../img/Submenu/TI.jpg";
 import image4 from "../img/Proyectos/Banco_Uat/01.jpg";
 
 const Navbar_Context = () => {
@@ -398,8 +398,8 @@ const Navbar_Context = () => {
                   </p>
                 </div>
 
-                <div className="border-r-2 border-yellow-500 h-[20rem]"></div>
-                <div className="ml-12 w-2/3">
+                <div className="border-r-2 border-yellow-500 h-[20rem] ml-10"></div>
+                <div className="ml-16 w-2/3">
                   <div className="flex">
                     {imagePaths.map((path, index) => (
                       <div
@@ -413,7 +413,7 @@ const Navbar_Context = () => {
                         <img
                           src={path}
                           alt={`Slide ${index + 1}`}
-                          className="w-[26rem]"
+                          className="w-[20rem]"
                         />
                         <div className="flex flex-col items-start mt-2 ml-2">
                           <p className="text-lg text-black text-justify p-3">
