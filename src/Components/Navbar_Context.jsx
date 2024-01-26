@@ -192,7 +192,7 @@ const Navbar_Context = () => {
                 activeInfo === "nosotros" ? "black" : "white"
               } cursor-pointer  ${
                 activeInfo === "nosotros" 
-                ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg "
+                ? "p-1 pr-2 pl-2 bg-darkPrimary transform border-2 border-black/50 rounded-lg "
                 : " hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
               }`}
               onClick={() => handleInfoToggle("nosotros")}
@@ -231,7 +231,7 @@ const Navbar_Context = () => {
                 activeInfo === "contactanos" ? "black" : "white"
               } cursor-pointer  ${
                 activeInfo === "contactanos"
-                  ? "p-1 pr-2 pl-2 bg-primary bg-opacity-75 transform border-2 border-black/50 rounded-lg"
+                  ? "p-1 pr-2 pl-2 bg-darkPrimary transform border-2 border-black/50 rounded-lg"
                   : "hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
               }`}
               onClick={() => handleInfoToggle("contactanos")}
