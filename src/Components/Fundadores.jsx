@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Alejandro from "../img/Personas/persona1.jpeg";
 import Miguel from "../img/Personas/persona2.jpeg";
-import David from "../img/Personas/persona3.jpeg";
+import David from "../img/Personas/persona3.png";
 
 function Fundadores() {
   const [showH1, setShowH1] = useState(true);

@@ -32,7 +32,7 @@ function BiorreactorPage() {
   }, []); // Asegúrate de pasar un array vacío como dependencia para que el efecto se ejecute solo una vez
 
   const { setLogoColor, setTxtColor,setOpacidadColor } = useInsoel();
-  setLogoColor("verdeBlanco");
+  setLogoColor("AmarilloBlanco");
   setTxtColor("black");
   setOpacidadColor('bg-opacity-75 bg-gradient-to-b from-secondary bottom-[29rem]')
   useEffect(() => {
@@ -44,13 +44,13 @@ function BiorreactorPage() {
   return (
     <>
       <div className="bg-bajo min-h-screen  flex flex-col">
-        <div className="mb-28"></div>
-        <div>
+        <div className=""></div>
+        <div className="relative  w-full h-auto  md:h-screen">
         <video
       ref={videoRef}
       autoPlay // Inicia la reproducción automáticamente
       //controls
-      className="w-full h-[32rem] max-h-[80%] md:max-h-full rounded-lg shadow-md p-5"
+      className="block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md "
     >
       <source src={Bio} type="video/mp4" />
       Tu navegador no soporta el elemento de video.
