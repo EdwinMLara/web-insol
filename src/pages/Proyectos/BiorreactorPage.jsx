@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useRef,useEffect } from "react";
 import { useInsoel } from "../../Context/InsoelContext";
 import imgBiorreactor from "../../img/Proyectos/49.png";
 import logo from "../../img/Logos/AmarilloNegro.png";
 import Footer from "../../Components/Footer";
 
-import Bio from "../../img/Proyectos/Bio_Reactor/01.jpg";
+import Bio from "../../img/Proyectos/Bio_Reactor/000.mp4";
 
 import Img2 from "../../img/Proyectos/Bio_Reactor/02.jpg";
 import Img3 from "../../img/Proyectos/Bio_Reactor/03.jpg";
@@ -14,6 +14,23 @@ import Img6 from "../../img/Proyectos/Bio_Reactor/06.jpg";
 import Img7 from "../../img/Proyectos/Bio_Reactor/07.jpg";
 
 function BiorreactorPage() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    const handleVideoEnd = () => {
+      videoElement.currentTime = 0; // Reinicia el video al principio
+      videoElement.play(); // Inicia la reproducción nuevamente
+    };
+
+    videoElement.addEventListener('ended', handleVideoEnd);
+
+    return () => {
+      videoElement.removeEventListener('ended', handleVideoEnd);
+    };
+  }, []); // Asegúrate de pasar un array vacío como dependencia para que el efecto se ejecute solo una vez
+
   const { setLogoColor, setTxtColor,setOpacidadColor } = useInsoel();
   setLogoColor("verdeBlanco");
   setTxtColor("black");
@@ -29,11 +46,16 @@ function BiorreactorPage() {
       <div className="bg-bajo min-h-screen  flex flex-col">
         <div className="mb-28"></div>
         <div>
-          <img
-            src={Bio}
-            alt="Biorreactor"
-            className="w-full h-[32rem] max-h-[80%] md:max-h-full rounded-lg shadow-md p-5"
-          />
+        <video
+      ref={videoRef}
+      autoPlay // Inicia la reproducción automáticamente
+      //controls
+      className="w-full h-[32rem] max-h-[80%] md:max-h-full rounded-lg shadow-md p-5"
+    >
+      <source src={Bio} type="video/mp4" />
+      Tu navegador no soporta el elemento de video.
+    </video>
+          
         </div>
         <div className="text-black m-5">
           <h2 className="text-2xl">14 Diciembre, 2023</h2>
