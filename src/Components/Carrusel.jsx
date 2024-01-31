@@ -56,8 +56,8 @@ function Carrusel() {
              {/* Agregar el título encima de la imagen */}
              {index === imagenActiva && (
               <div className={`hidden md:block absolute w-full md:top-2/3 md:bottom-1/3 md:left-16`}>
-              <h3 className="font-bold text-black md:mb-1 transform md:mt-0 ">Materializamos tus ideas</h3>
-              <h1 className="text-2xl font-bold text-black transform md:text-2xl lg:text-3xl xl:text-4xl">
+              <h3 className="font-bold text-white md:mb-1 transform md:mt-0 ">Materializamos tus ideas</h3>
+              <h1 className="text-2xl font-bold text-wi transform md:text-2xl lg:text-3xl xl:text-4xl text-white">
                 AUTOMATIZACION Y <br className="lg:hidden xl:block" /> CONTROL
               </h1>
               <button className="bg-primary  text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary">
