@@ -13,9 +13,9 @@ import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 
 // Importa tus imágenes dinámicamente para seccion de ¿que hacemos?
 import image1 from "../img/Submenu/Industria_Integracion_01.jpg";
-import image2 from "../img/Submenu/Industria_Integracion_02.jpg";
-import image3 from "../img/Submenu/TI.jpg";
-import image4 from "../img/Submenu/Industria_Integracion_03.jpg";
+import image2 from "../img/Submenu/implementacion.jpg";
+import image3 from "../img/Submenu/TI.png";
+import image4 from "../img/Submenu/adquisicion.png";
 
 const Navbar_Context = () => {
   const { logoColor, setLogoColor, txtColor } = useInsoel();
