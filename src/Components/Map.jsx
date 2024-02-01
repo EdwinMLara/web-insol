@@ -8,6 +8,7 @@ const Map = () => {
   const Insoel = [20.140833, -101.190961];
   const Solena = [21.089017, -101.594047];
   const UAT = [20.705077, -100.450834];
+  const IRA = [20.661059, -101.308844];
 
   const insoelIcon = new L.Icon({
     iconUrl: markerIcon,
@@ -67,6 +68,9 @@ const Map = () => {
 
         <Marker position={Solena} icon={insoelIcon}>
           <Popup>Solena</Popup>
+        </Marker>
+        <Marker position={IRA} icon={insoelIcon}>
+          <Popup>Irapuato</Popup>
         </Marker>
 
         <Marker position={UAT} icon={insoelIcon}>
