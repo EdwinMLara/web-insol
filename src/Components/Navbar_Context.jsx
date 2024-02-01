@@ -59,7 +59,7 @@ const Navbar_Context = () => {
     "/proyectos/BancoUAT",
     "/proyectos/Biorreactor",
     "/proyectos/Consultas",
-    "/proyectos/ApkLectora",
+    "/web-insol/Tienda",
   ];
 
   const descripciones = [
@@ -69,7 +69,7 @@ const Navbar_Context = () => {
 
     "En Insoel, especializados en desarrollo de sistemas, mejoramos la administración y comunicación para médicos, comerciantes y municipios mediante sistemas eficientes, como gestión médica y punto de venta...",
 
-    "Descripción de Apk Lectora Qr",
+    "Descubre nuestra sección de adquisición de equipos y herramientas, donde nuestra tienda virtual te brinda acceso directo a los productos líderes de la industria. Descubre soluciones eficientes para impulsar tus proyectos con facilidad y confianza...",
   ];
   
 
@@ -258,11 +258,11 @@ const Navbar_Context = () => {
               className="bg-black bg-opacity-50 fixed inset-0 z-50"
               onClick={toggleMenu}
             >
-              <div className="container mx-auto flex justify-end items-center py-16">
-                <div className="bg-bajo p-4">
-                  <div className="container mx-auto flex items-center h-auto">
+              <div className="container mx-auto flex justify-end items-center py-16 ">
+                <div className="bg-bajo p-4 ">
+                  <div className="container mx-auto flex items-center h-auto ">
                     {/* Menú Principal */}
-                    <div className="bg-white p-4 rounded-md shadow-md">
+                    <div className="bg-white p-4 rounded-md shadow-md ">
                       <ul className="text-xl">
                         <li className="hover:bg-primary rounded p-2">
                           <Link to={"/web-insol/web-insol/"}>Inicio</Link>
@@ -296,7 +296,7 @@ const Navbar_Context = () => {
 
                     {/* Menú de "¿Qué hacemos?" */}
                     {mostrarContenido && (
-                      <aside className="bg-white p-4 absolute left-0 border-2 border-primary rounded-md shadow-md w-52 mt-52">
+                        <aside className="bg-white p-4 absolute left-0 border-2 border-primary rounded-md shadow-md w-52 mt-52 ">
                         <ul className="text-xl pl-2  ">
                           <li className="space-y-2 list-disc pt-2 pb-2">
                             <Link
@@ -383,7 +383,7 @@ const Navbar_Context = () => {
                     }`}
                     onClick={() => handleClick(2)}
                   >
-                    DevOPs e Infraestructura TI 
+                    Infraestructura TI 
                     <br />
                   </p><br />
                   <p

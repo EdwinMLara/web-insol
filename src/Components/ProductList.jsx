@@ -3,11 +3,11 @@ import producto from "../img/Productos/producto1.jpg";
 
 const ProductList = ({ products, onSelectProduct }) => {
   return (
-    <div className="grid md:grid-cols-4 sm:grid-cols-1 gap-4">
+    <div className="grid md:grid-cols-3 sm:grid-cols-1 gap-5 md:ml-12 md:mt-5">
       {products.map((product) => (
         <div
           key={product.id}
-          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:z-10"
         >
           <a href="#">
             <img className="rounded-t-lg" src={producto} alt={product.name} />
@@ -19,18 +19,18 @@ const ProductList = ({ products, onSelectProduct }) => {
                 {product.name}
               </h5>
             </a>
-            <span className="text-3xl font-bold text-gray-900 dark:text-white text-decoration: line-through">$599</span>
-            <br />
-            <span className="text-3xl font-bold text-red-600">$399</span>
+            <p>
+              {product.descripcion}
+            </p>
 
           </div>
           <div className="flex justify-end p-5">
           <a
               href={"/web-insol/tienda/DetalleProducto"}
               //href={`/web-insol/tienda/${product.id}`}
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 justify-end"
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blacks bg-primary rounded-lg hover:bg-darkPrimary focus:ring-4 focus:outline-none justify-end"
             >
-              Read more
+              Ver productos
               <svg
                 className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                 aria-hidden="true"
