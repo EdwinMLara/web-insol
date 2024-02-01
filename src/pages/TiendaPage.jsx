@@ -16,38 +16,21 @@ function TiendaPage() {
   const products = [
     {
       id: 1,
-      name: "Producto 1",
+      name: "Electrónica",
       image: "ss",
-      price: 50,
-      features: "Características del Producto 1",
+      descripcion: "Tecnología innovadora para una vida digital avanzada. Explora diferentes componentes; resistencias, placas, entre otros para potenciar tus proyectos electrónicos.",
     },
     {
       id: 2,
-      name: "Producto 2",
+      name: "Herramientas",
       image: "../",
-      price: 75,
-      features: "Características del Producto 2",
+      descripcion: "Descubre herramientas de primera calidad para bricolaje y proyectos, todo en un solo lugar. Desde manuales hasta eléctricas, ofrecemos variedad, calidad y conveniencia para llevar tus ideas a la realidad. ¡Explora ahora!",
     },
     {
       id: 3,
-      name: "Producto 3",
+      name: "Equipo de Integración",
       image: "url_imagen_2",
-      price: 75,
-      features: "Características del Producto 3",
-    },
-    {
-      id: 4,
-      name: "Producto 4",
-      image: "url_imagen_2",
-      price: 75,
-      features: "Características del Producto 4",
-    },
-    {
-      id: 5,
-      name: "Producto 5",
-      image: "url_imagen_2",
-      price: 75,
-      features: "Características del Producto 5",
+      descripcion: "Soluciones avanzadas para una integración eficiente de sistemas, Conectores, cables, placas de circuito, herramientas de soldadura, etc. para simplificar la integración de sistemas electrónicos.",
     },
     // Agrega más productos según sea necesario
   ];
@@ -58,7 +41,7 @@ function TiendaPage() {
 
   return (
     <>
-      <div className="min-h-screen p-5 mt-24 bg-gradient-to-b from-white to-quaternary">
+      <div className="min-h-screen p-5 mt-24 bg-gradient-to-b from-white to-quaternary  ">
         <ProductList
           products={products}
           onSelectProduct={setSelectedProductId}

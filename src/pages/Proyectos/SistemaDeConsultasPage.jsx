@@ -14,7 +14,7 @@ import Img7 from "../../img/Proyectos/TI/08.png";
 
 function SistemaDeConsultasPage() {
   const { setLogoColor, setTxtColor } = useInsoel();
-  setLogoColor("amarilloNegro");
+  setLogoColor("amarilloBlanco");
   setTxtColor("black");
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";

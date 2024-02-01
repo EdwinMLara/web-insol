@@ -23,7 +23,7 @@ import Img15 from "../../img/Proyectos/Banco_Uat/09.jpg";
 
 function BancoUatPage() {
   const { setLogoColor, setTxtColor,setOpacidadColor } = useInsoel();
-  setLogoColor("amarilloNegro");
+  setLogoColor("amarilloBlanco");
   setTxtColor("black");
   setOpacidadColor('bg-opacity-75 bg-gradient-to-b from-secondary bottom-[29rem]')
   useEffect(() => {

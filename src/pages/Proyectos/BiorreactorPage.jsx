@@ -41,7 +41,7 @@ function BiorreactorPage() {
   setLogoColor("AmarilloBlanco");
   setTxtColor("black");
   setOpacidadColor(
-    "bg-opacity-75 bg-gradient-to-b from-secondary bottom-[29rem]"
+    "bg-opacity-75"
   );
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";
@@ -66,7 +66,7 @@ function BiorreactorPage() {
           </video>
         </div>
         <div className="text-black m-5 bg-light p-6 rounded-md shadow-md">
-          <h2 className="text-2xl text-primary">14 Diciembre, 2023</h2>
+          <h2 className="text-2xl text-secondary">14 Diciembre, 2023</h2>
           <h1 className="text-4xl font-semibold text-accent">
             Integración de Soluciones en Automatización y Control
           </h1>
