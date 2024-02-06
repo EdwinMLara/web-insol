@@ -19,7 +19,7 @@ const ProductList = ({ products, onSelectProduct }) => {
                 {product.name}
               </h5>
             </a>
-            <p>
+            <p className="dark:text-white" >
               {product.descripcion}
             </p>
 

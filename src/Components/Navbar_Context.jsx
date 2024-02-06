@@ -18,6 +18,7 @@ import image3 from "../img/Submenu/TI.png";
 import image4 from "../img/Submenu/adquisicion.png";
 
 const Navbar_Context = () => {
+  
   const { logoColor, setLogoColor, txtColor } = useInsoel();
   const {proyectColor, opacidadColor} = useInsoel(); 
   const [activeInfo, setActiveInfo] = useState(null);
@@ -89,19 +90,21 @@ const Navbar_Context = () => {
     }
   };
 
+  
   return (
     <div>
       <nav
         className={`${
-          activeInfo === "proyectos" && isContentActive
+           activeInfo === "proyectos" && isContentActive
             ? proyectColor
             : activeInfo === ""
             ? ""
             : opacidadColor
         } p-4 absolute top-0 left-0 right-0  z-10 `}
         //onMouseLeave={handleMouseLeave}
-        onMouseLeave={activeInfo === "proyectos" && isContentActive ? handleMouseLeave : null}
+        onMouseLeave={ activeInfo === "proyectos" && isContentActive ? handleMouseLeave : null}
       >
+        {/* logos */}
         <div className="flex items-center justify-between">
           <div className="bg-transparent ">
             <Link to={"/web-insol/"} onClick={handleLogoClick}>
@@ -155,7 +158,7 @@ const Navbar_Context = () => {
             </button>
           </div>
 
-{/*Navavar */}
+          {/*Navavar */}
           <div className="hidden lg:flex space-x-5 relative mx-auto text-[22px] mr-10">
             <div
               className={`text-${
@@ -226,6 +229,7 @@ const Navbar_Context = () => {
                 }}
               ></Link>
             </div>
+            
             <div
               className={`text-${
                 activeInfo === "contactanos" ? "black" : "white"
@@ -246,9 +250,12 @@ const Navbar_Context = () => {
                 Contactarnos
               </Link>
             </div>
+            
           </div>
+
         </div>
 
+        {/* menu en pantallas pequeñas */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -265,7 +272,7 @@ const Navbar_Context = () => {
                     <div className="bg-white p-4 rounded-md shadow-md ">
                       <ul className="text-xl">
                         <li className="hover:bg-primary rounded p-2">
-                          <Link to={"/web-insol/web-insol/"}>Inicio</Link>
+                          <Link to={"/web-insol/"}>Inicio</Link>
                         </li>
                         <br />
                         <li
@@ -340,6 +347,7 @@ const Navbar_Context = () => {
           )}
         </AnimatePresence>
 
+        {/* menu de proyectos */}
         {activeInfo && (
           <div
             className={`bg-${
@@ -434,6 +442,7 @@ const Navbar_Context = () => {
                 </div>
               </div>
             )}
+
           </div>
         )}
       </nav>

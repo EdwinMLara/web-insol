@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
+import { useInsoel } from "../Context/InsoelContext";
 import ProductList from "../Components/ProductList";
 import ProductDetail from "../Components/ProductoDetail";
 import Footer from "../Components/Footer";
 
+
 function TiendaPage() {
   const [selectedProductId, setSelectedProductId] = useState(null);
+  const { setLogoColor } = useInsoel();
+  setLogoColor("AmarilloBlanco");
 
   useEffect(() => {
     document.title = "Tienda | INSOEL";

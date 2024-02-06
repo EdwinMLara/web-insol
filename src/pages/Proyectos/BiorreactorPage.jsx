@@ -4,7 +4,7 @@ import imgBiorreactor from "../../img/Proyectos/49.png";
 import logo from "../../img/Logos/AmarilloNegro.png";
 import Footer from "../../Components/Footer";
 
-import Bio from "../../img/Proyectos/Bio_Reactor/000.mp4";
+import Bio from "../../img/Proyectos/Bio_Reactor/001.mp4";
 
 import Img2 from "../../img/Proyectos/Bio_Reactor/02.jpg";
 import Img3 from "../../img/Proyectos/Bio_Reactor/03.jpg";
@@ -21,9 +21,11 @@ const images = [
 
 function BiorreactorPage() {
   const videoRef = useRef(null);
+  const logoRef = useRef(null);
 
   useEffect(() => {
     const videoElement = videoRef.current;
+    
 
     const handleVideoEnd = () => {
       videoElement.currentTime = 0; // Reinicia el video al principio
