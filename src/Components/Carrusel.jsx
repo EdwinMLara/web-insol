@@ -7,14 +7,13 @@ import image1 from "../img/Carrusel/1.png";
 import image2 from "../img/Carrusel/2.png";
 import image3 from "../img/Carrusel/3.png";
 import image4 from "../img/Carrusel/4.png";
-import image5 from "../img/Carrusel/5.png"; 
-
+import image5 from "../img/Carrusel/5.png";
 
 // Crea un array de rutas de imágenes
 const imagePaths = [image1, image2, image3, image4, image5];
 
 function Carrusel() {
-  const {setTxtColor, setLogoColor} = useInsoel()
+  const { setTxtColor, setLogoColor } = useInsoel();
   const [imagenActiva, setImagenActiva] = useState(0);
 
   useEffect(() => {
@@ -31,13 +30,12 @@ function Carrusel() {
   useEffect(() => {
     // Aquí puedes usar el valor actualizado de imagenActiva para establecer colores
     if (imagenActiva === 0) {
-      setTxtColor('white');
-      setLogoColor('amarilloBlanco');
+      setTxtColor("white");
+      setLogoColor("amarilloBlanco");
     } else {
       // Otros casos según la imagen activa
     }
   }, [imagenActiva]);
-
 
   return (
     <div className="">
@@ -51,41 +49,53 @@ function Carrusel() {
             data-te-carousel-item
             data-te-carousel-active={index === imagenActiva}
           >
-              
-              <img src={path} className="block w-full" alt={`Slide ${index + 1}`} />
-             {/* Agregar el título encima de la imagen */}
-             {index === imagenActiva && (
-              <div className={`hidden md:block absolute w-full md:top-2/3 md:bottom-1/3 md:left-16`}>
-              <h3 className="font-bold text-white md:mb-1 transform md:mt-0 ">Materializamos tus ideas</h3>
-              <h1 className="text-2xl font-bold text-wi transform md:text-2xl lg:text-3xl xl:text-4xl text-white">
-                AUTOMATIZACION Y <br className="lg:hidden xl:block" /> CONTROL
-              </h1>
-              <button className="bg-primary  text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary">
-                <Link to="/web-insol/invernadero">CONOCE MÁS</Link>
-              </button>
-            </div> 
-             )}
+            <img
+              src={path}
+              className="block w-full"
+              alt={`Slide ${index + 1}`}
+            />
+            {/* Agregar el título encima de la imagen */}
+            {index === imagenActiva && (
+              <div className="">
+                <div
+                  className={`hidden md:block absolute w-full md:top-2/3 md:bottom-1/3 md:left-16`}
+                >
+                  <h1 className="text-2xl font-bold text-wi transform md:text-2xl lg:text-3xl xl:text-4xl text-white">
+                    AUTOMATIZACION Y <br className="lg:hidden xl:block" />{" "}
+                    CONTROL
+                  </h1>
+                  <h3 className="font-bold text-white md:mb-1 transform md:mt-0 ">
+                    Materializamos tus ideas
+                  </h3>
+                  <button className="bg-primary  text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary">
+                    <Link to="/web-insol/invernadero">CONOCE MÁS</Link>
+                  </button>
+                </div>
+                <div className="hidden md:block absolute bg-white top-0 bottom-0 right-0 w-1/3 shadow-lg p-4 mr-5 mt-24 mb-20">
+    <p className="text-black">Texto adicional aquí</p>
+  </div>
+              </div>
+            )}
           </div>
-          
         ))}
         {/* Contenido para pantallas pequeñas */}
-  <div className="md:hidden bg-white p-4 text-center">
-    <h3 className="font-bold text-black mb-1">Materializamos tus ideas</h3>
-    <h1 className="text-2xl font-bold text-black">
-      AUTOMATIZACION Y <br className="lg:hidden xl:block" /> CONTROL
-    </h1>
-    <button className="bg-primary bg-opacity-75 text-black py-3 px-8 mt-2 border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary">
-      <Link to="/invernadero">CONOCE MÁS</Link>
-    </button>
-  </div>
+        <div className="md:hidden bg-white p-4 text-center">
+          <h3 className="font-bold text-black mb-1">
+            Materializamos tus ideas
+          </h3>
+          <h1 className="text-2xl font-bold text-black">
+            AUTOMATIZACION Y <br className="lg:hidden xl:block" /> CONTROL
+          </h1>
+          <button className="bg-primary bg-opacity-75 text-black py-3 px-8 mt-2 border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary">
+            <Link to="/invernadero">CONOCE MÁS</Link>
+          </button>
+        </div>
       </div>
-      </div>
-  
+    </div>
   );
 }
 
 export default Carrusel;
-
 
 /*
 src={`https://mdbcdn.b-cdn.net/img/new/slides/04${

@@ -331,7 +331,7 @@ const Navbar_Context = () => {
                             </li>
                             <li className="space-y-2 list-disc pt-2 pb-2">
                             <Link
-                              to="/proyectos/ApkLectora"
+                              to="/web-insol/tienda"
                               className="block text-black hover:bg-primary rounded p-2"
                             >
                               Adquisición de Equipos y Herramientas

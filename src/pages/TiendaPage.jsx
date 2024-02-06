@@ -4,6 +4,10 @@ import ProductList from "../Components/ProductList";
 import ProductDetail from "../Components/ProductoDetail";
 import Footer from "../Components/Footer";
 
+import EQ from "../img/Tienda/Categorias/equipos_integracion.png";
+import EL from "../img/Tienda/Categorias/electronica.png" 
+import HE from "../img/Tienda/Categorias/herramientas.jpg" 
+
 
 function TiendaPage() {
   const [selectedProductId, setSelectedProductId] = useState(null);
@@ -21,19 +25,19 @@ function TiendaPage() {
     {
       id: 1,
       name: "Electrónica",
-      image: "ss",
+      image: EL,
       descripcion: "Tecnología innovadora para una vida digital avanzada. Explora diferentes componentes; resistencias, placas, entre otros para potenciar tus proyectos electrónicos.",
     },
     {
       id: 2,
       name: "Herramientas",
-      image: "../",
+      image: HE,
       descripcion: "Descubre herramientas de primera calidad para bricolaje y proyectos, todo en un solo lugar. Desde manuales hasta eléctricas, ofrecemos variedad, calidad y conveniencia para llevar tus ideas a la realidad. ¡Explora ahora!",
     },
     {
       id: 3,
       name: "Equipo de Integración",
-      image: "url_imagen_2",
+      image: EQ,
       descripcion: "Soluciones avanzadas para una integración eficiente de sistemas, Conectores, cables, placas de circuito, herramientas de soldadura, etc. para simplificar la integración de sistemas electrónicos.",
     },
     // Agrega más productos según sea necesario

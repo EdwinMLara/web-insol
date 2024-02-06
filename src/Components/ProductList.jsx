@@ -10,7 +10,7 @@ const ProductList = ({ products, onSelectProduct }) => {
           className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:z-10"
         >
           <a href="#">
-            <img className="rounded-t-lg" src={producto} alt={product.name} />
+            <img className="rounded-t-lg" src={product.image} alt={product.name} />
           </a>
 
           <div className="p-5">

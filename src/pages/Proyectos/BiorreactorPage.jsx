@@ -1,7 +1,7 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useInsoel } from "../../Context/InsoelContext";
 import imgBiorreactor from "../../img/Proyectos/49.png";
-import logo from "../../img/Logos/AmarilloNegro.png";
+//import AmarilloBlanco from "../../img/Logos/AmarilloBlanco.png";
 import Footer from "../../Components/Footer";
 
 import Bio from "../../img/Proyectos/Bio_Reactor/001.mp4";
@@ -20,12 +20,24 @@ const images = [
 ];
 
 function BiorreactorPage() {
+  const { setLogoColor, setTxtColor, setOpacidadColor } = useInsoel();
   const videoRef = useRef(null);
-  const logoRef = useRef(null);
+  
+  setLogoColor("AmarilloBlanco");
+  setTxtColor("black");
+  setOpacidadColor(
+    "bg-opacity-75"
+  );
+  useEffect(() => {
+    document.title = "BIORREACTOR | INSOEL";
+    return () => {
+      document.title = "INSOEL";
+    };
+  }, []);
 
   useEffect(() => {
-    const videoElement = videoRef.current;
     
+    const videoElement = videoRef.current;
 
     const handleVideoEnd = () => {
       videoElement.currentTime = 0; // Reinicia el video al principio
@@ -38,19 +50,7 @@ function BiorreactorPage() {
       videoElement.removeEventListener("ended", handleVideoEnd);
     };
   }, []); // Asegúrate de pasar un array vacío como dependencia para que el efecto se ejecute solo una vez
-
-  const { setLogoColor, setTxtColor, setOpacidadColor } = useInsoel();
-  setLogoColor("AmarilloBlanco");
-  setTxtColor("black");
-  setOpacidadColor(
-    "bg-opacity-75"
-  );
-  useEffect(() => {
-    document.title = "BIORREACTOR | INSOEL";
-    return () => {
-      document.title = "INSOEL";
-    };
-  }, []);
+  
   
   return (
     <>
