@@ -11,12 +11,6 @@ import LogoVerdeBlanco from "../img/Logos/VerdeBlanco.png";
 import LogoAzulNegro from "../img/Logos/AzulNegro.png";
 import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 
-// Importa tus imágenes dinámicamente para seccion de ¿que hacemos?
-import image1 from "../img/Submenu/Industria_Integracion_01.jpg";
-import image2 from "../img/Submenu/implementacion.jpg";
-import image3 from "../img/Submenu/TI.png";
-import image4 from "../img/Submenu/adquisicion.png";
-
 function Navbar_Tienda() {
   const { logoColor } = useInsoel();
   const { proyectColor, opacidadColor } = useInsoel();
