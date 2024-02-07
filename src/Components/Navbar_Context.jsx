@@ -424,7 +424,7 @@ const Navbar_Context = () => {
                           className="w-[20rem]"
                         />
                         <div className="flex flex-col items-start mt-2 ml-2">
-                          <p className="text-lg text-black text-justify p-3">
+                          <p className="text-lg text-black text-justify p-3 ">
                             {descripciones[index]}
                           </p>
                           <Link to={enlaces[index]}>
@@ -440,7 +440,7 @@ const Navbar_Context = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+                </div>
             )}
 
           </div>
