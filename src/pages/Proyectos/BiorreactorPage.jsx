@@ -67,13 +67,12 @@ function BiorreactorPage() {
             Tu navegador no soporta el elemento de video.
           </video>
         </div>
-        <div className="text-black m-5 bg-light p-6 rounded-md shadow-md">
-          <h2 className="text-2xl text-secondary">14 Diciembre, 2023</h2>
+        <div className="text-black m-3 bg-light p-6 rounded-md shadow-md space-y-4">
           <h1 className="text-4xl font-semibold text-accent">
             Integración de Soluciones en Automatización y Control
           </h1>
-          <br />
-          <div className="text-justify mb-5">
+          <h2 className="text-xl text-secondary">14 Diciembre, 2023</h2>
+          <div className="text-justify ">
             <p>
               Estamos comprometidos en brindar soluciones integrales y
               eficientes a nuestros clientes, debido a que nuestro lema implica

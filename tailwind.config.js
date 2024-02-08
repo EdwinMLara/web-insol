@@ -11,7 +11,7 @@ export default {
         darkPrimary: "#B09419"
       },
       fontFamily: {
-        custom: ["Montserrat", "sans-serif"], // Fuente personalizada
+        custom: ["Exo 2"], // Fuente personalizada
       },
       fontSize: {
         "2xl": "1.75rem", // Tamaño de fuente personalizado

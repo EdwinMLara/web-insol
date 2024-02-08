@@ -72,9 +72,9 @@ function Carrusel() {
                   </button>
             </div> */}
                 <div className="hidden md:block absolute bg-gray-600 top-1/3 bottom-0 right-0 w-1/3 shadow-lg p-10 mr-5  mb-32">
-    <div>
+    <div className="space-y-4">
     <h1 className="text-2xl font-bold text-wi transform md:text-2xl lg:text-3xl xl:text-4xl text-white">
-                    AUTOMATIZACION Y <br className="lg:hidden xl:block" />{" "}
+                    AUTOMATIZACIÓN Y <br className="lg:hidden xl:block" />{" "}
                     CONTROL
                   </h1>
                   <h3 className="font-bold text-white md:mb-1 transform md:mt-0 ">

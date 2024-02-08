@@ -11,9 +11,9 @@ function Fundadores() {
 
   const alejandro = {
     nombre: "Ing. Luis Alejandro Zendejas",
-    puesto: "Ingeniero de Control y Automatización",
+    puesto: "Jefe de Instrumentación",
     vision:
-      "Jefe en Instrumentación encargado de toda la etapa de sensado y control en los proyectos de INSOEL. Diseña y ejecuta logística para optimizar procesos. Su conocimiento amplio en aspectos electrónicos le dan la capacidad a INSOEL en adaptarse a gran diversidad de proyectos de monitoreo y control."
+      "Encargado de toda la etapa de sensado y control en los proyectos de INSOEL. Diseña y ejecuta logística para optimizar procesos. Su conocimiento amplio en aspectos electrónicos le dan la capacidad a INSOEL en adaptarse a gran diversidad de proyectos de monitoreo y control."
   };
 
   const miguel = {
@@ -48,11 +48,11 @@ function Fundadores() {
                 onMouseEnter={() => setShowH2(false)}
                 onMouseLeave={() => setShowH2(true)}
               />
-              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 "
+              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[32rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 space-y-4"
                >
                 <h2 className="text-3xl text-center mb-2 font-bold">{miguel.nombre}</h2>
-                <h2 className="text-xl mb-2">{miguel.puesto}</h2>
-                <p className="text-lg text-justify leading-relaxed indent-8">
+                <h2 className="text-xl mb-2 italic text-secondary font-semibold ">{miguel.puesto}</h2>
+                <p className="text-lg text-justify leading-relaxed indent-8  ">
                   {miguel.vision}
                 </p>
               </div>
@@ -76,9 +76,9 @@ function Fundadores() {
                 onMouseEnter={() => setShowH1(false)}
                 onMouseLeave={() => setShowH1(true)}
               />
-              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[28rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50">
+              <div className="hidden group-hover:block sm:absolute top-1/2 left-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[28rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 space-y-4">
                 <h2 className="text-3xl text-center mb-2 font-bold">{alejandro.nombre}</h2>
-                <h2 className="text-xl mb-2">{alejandro.puesto}</h2>
+                <h2 className="text-xl mb-2 italic text-secondary font-semibold">{alejandro.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
                   {alejandro.vision}
                 </p>
@@ -101,9 +101,9 @@ function Fundadores() {
                 onMouseEnter={() => setShowH3(false)}
                 onMouseLeave={() => setShowH3(true)}
               />
-              <div className="hidden group-hover:block sm:absolute top-1/2 right-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[52rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50">
+              <div className="hidden group-hover:block sm:absolute top-1/2 right-full transform -translate-y-2/2   sm:-translate-y-1/2 sm:m-5 p-4 shadow-lg z-10 w-96 sm:w-[52rem] sm:h-[28rem] text-black py-3 px-8 bottom-16 rounded-lg bg-gradient-to-t from-quaternary to-primary mt-2 border-2 border-black/50 space-y-4">
                 <h2 className="text-3xl text-center mb-2 font-bold">{david.nombre}</h2>
-                <h2 className="text-xl mb-2">{david.puesto}</h2>
+                <h2 className="text-xl mb-2 italic text-secondary font-semibold">{david.puesto}</h2>
                 <p className="text-lg text-justify leading-relaxed indent-8">
                   {david.vision}
                 </p>

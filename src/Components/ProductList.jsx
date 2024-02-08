@@ -7,7 +7,7 @@ const ProductList = ({ products, onSelectProduct }) => {
       {products.map((product) => (
         <div
           key={product.id}
-          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:z-10"
+          className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 md:z-10 relative"
         >
           <a href="#">
             <img className="rounded-t-lg" src={product.image} alt={product.name} />
@@ -19,16 +19,16 @@ const ProductList = ({ products, onSelectProduct }) => {
                 {product.name}
               </h5>
             </a>
-            <p className="dark:text-white" >
+            <p className="dark:text-white m-5 mb-16 text-justify" >
               {product.descripcion}
             </p>
 
           </div>
-          <div className="flex justify-end p-5">
+          <div className="absolute bottom-0 right-0 p-5 ">
           <a
               href={"/web-insol/tienda/DetalleProducto"}
               //href={`/web-insol/tienda/${product.id}`}
-              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blacks bg-primary rounded-lg hover:bg-darkPrimary focus:ring-4 focus:outline-none justify-end"
+              className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-blacks bg-primary rounded-lg hover:bg-darkPrimary focus:ring-4 focus:outline-none justify-end h-10"
             >
               Ver productos
               <svg
