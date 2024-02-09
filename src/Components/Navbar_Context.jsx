@@ -423,13 +423,13 @@ const Navbar_Context = () => {
                           alt={`Slide ${index + 1}`}
                           className="w-[20rem]"
                         />
-                        <div className="flex flex-col items-start mt-2 ml-2">
-                          <p className="text-lg text-black text-justify p-3 ">
+                        <div className="flex flex-col items-start mt-3 ml-3">
+                          <p className="text-lg text-black text-justify p-5 ">
                             {descripciones[index]}
                           </p>
                           <Link to={enlaces[index]}>
                             <button
-                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary rounded-lg "
+                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 mb-5 bg-primary transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary rounded-lg "
                               onClick={() => handleInfoToggle("proyectos")}
                             >
                               Ver más

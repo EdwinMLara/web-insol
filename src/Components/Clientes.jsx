@@ -22,8 +22,8 @@ function Clientes() {
 
   return (
     <div className=" mt-24 mb-10 ">
-      <div className=" font-bold text-3xl text-center p-5">
-        MARCAS QUE CONFÍAN EN NOSOTROS
+      <div className=" font-bold text-3xl text-center p-5  ">
+        <h1 className=" text-white ">MARCAS QUE CONFÍAN EN NOSOTROS</h1>
         <div className="relative flex flex-wrap justify-center text-center pt-20 pb-5 md:pr-[10rem] md:pl-[10rem] ">
           <div className="md:flex-none w-1/5 ">
             <img src={Ug} alt="Imagen 1" className="w-[3rem] h-[3rem] sm:w-[7rem] sm:h-[7rem]" />

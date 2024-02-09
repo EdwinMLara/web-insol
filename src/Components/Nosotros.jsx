@@ -19,6 +19,7 @@ function Nosotros() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      
       {/* Section: NosotrosInformacion */}
       <div className="min-h-screen bg-gradient-to-b from-black via-black to-black ">
         <NosotrosInformacion />
