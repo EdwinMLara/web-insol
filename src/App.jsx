@@ -19,6 +19,8 @@ import TiendaPage from "./pages/TiendaPage";
 import ProductDetail from "./Components/ProductoDetail";
 import DetalleProducto from "./Components/DetalleProducto";
 import MapaPage from "./pages/MapaPage";
+import Login from "./Components_Panel/Login";
+import Registrarse from "./Components_Panel/Registrarse";
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
                 </>
               }
             />
+            <Route path="/web-insol/login" element={<Login />} />
+            <Route path="/web-insol/registrarse" element={<Registrarse />} />
           </Routes>
         </main>
       </BrowserRouter>
@@ -79,6 +83,7 @@ function MainRoutes() {
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
       <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
+      
     </Routes>
   );
 }

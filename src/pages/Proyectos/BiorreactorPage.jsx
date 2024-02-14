@@ -26,7 +26,7 @@ function BiorreactorPage() {
   setLogoColor("AmarilloBlanco");
   setTxtColor("black");
   setOpacidadColor(
-    "bg-opacity-75"
+    " bg-secondary  "
   );
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";
@@ -61,7 +61,8 @@ function BiorreactorPage() {
             ref={videoRef}
             autoPlay // Inicia la reproducción automáticamente
             //controls
-            className="block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md "
+            className="block h-5/6 w-full object-fill max-h-[80%] md:max-h-full  shadow-md mt-24"
+            // block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md 
           >
             <source src={Bio} type="video/mp4" />
             Tu navegador no soporta el elemento de video.
