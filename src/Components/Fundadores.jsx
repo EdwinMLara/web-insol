@@ -18,14 +18,14 @@ function Fundadores() {
 
   const miguel = {
     nombre: "M.I. Edwin Miguel Lara Espinosa",
-    puesto: "Ingeniero de Automatización de Sistemas",
+    puesto: "Ingeniero de Software",
     vision:
       "Es un ingeniero de software que disfruta escribir codigo pero ademas tiene una pasion por la colaboración y aplicación de sus conocimientos en diferentes áreas de la ingenieria. Ha colaborado en el desarrollo de sistemas inteligentes, las cuales han sido publicados en revistas reconocidas en por el sector cientifico. Fuera del ambito laboral y profesional disfruta hacer reparaciones mecanicas, electricas y jugar de partidos de frontón",
   };
 
   const david = {
     nombre: "M.I. David Balcazar",
-    puesto: "Ingeniero de Control de Calidad de Software",
+    puesto: "Ingeniero de Automatización y Electrónica",
     vision:
       "David descubrió el mundo de la automatización e instrumentación mientras se encontraba estudiando ingeniería en comunicaciones y electrónica en la Universidad de Guanajuato y desde su segundo año comenzó a participar en concursos de innovación y desarrollo de prototipos en donde presentó proyectos que variaron desde sistemas de control para la eficiencia energética hasta páginas web para promocionar el turismo. En el 2020, David obtuvo su grado de Maestro en Ingeniería Electrónica Aplicada en la Universidad de Guanajuato y actualmente se encuentra por concluir el MBA con enfoque en Business Analytics en la IMF Business School en Madrid. Fuera del trabajo, a David le gusta meditar, practicar yoga, leer manga y ver animes además de llevar una dieta vegetariana. ",
   };

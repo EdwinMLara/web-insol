@@ -8,7 +8,7 @@ function Login() {
         <div className='text-center'>
         <img src={LogoAmarilloBlanco} className=" w-[14rem] mx-auto" />
         </div>
-        <h2 className="text-xl font-semibold mb-4">Login</h2>
+        <h2 className="text-xl font-semibold mb-4"></h2>
         <form>
             <div className="mb-4">
                 <label for="email" class="block text-sm font-medium">Correo electrónico</label>
@@ -18,8 +18,8 @@ function Login() {
                 <label for="password" class="block text-sm font-medium ">Contraseña</label>
                 <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded-md" placeholder="Tu contraseña"/>
             </div>
-            <div className="mb-4">
-                <button type="submit" class="bg-primary text-black py-2 px-4 rounded-md hover:bg-darkPrimary hover:text-white">Iniciar sesión</button>
+            <div className="flex justify-end mb-4 ">
+                <button type="submit" class="bg-primary text-black py-2 px-4 rounded-md hover:bg-darkPrimary hover:text-white ml-auto">Iniciar sesión</button>
             </div>
         </form>
     </div>

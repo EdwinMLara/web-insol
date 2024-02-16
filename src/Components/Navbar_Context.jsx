@@ -326,7 +326,7 @@ const Navbar_Context = () => {
                               to="/proyectos/Consultas"
                               className="block text-black hover:bg-primary rounded p-2"
                             >
-                              DepOPs e Infraestructura TI
+                              Infraestructura TI
                             </Link>
                             </li>
                             <li className="space-y-2 list-disc pt-2 pb-2">

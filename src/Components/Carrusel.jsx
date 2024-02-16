@@ -71,8 +71,8 @@ function Carrusel() {
                     <Link to="/web-insol/invernadero">CONOCE MÁS</Link>
                   </button>
             </div> */}
-                <div className="hidden md:block absolute bg-gray-600 top-1/3 bottom-0 right-0 w-1/3 shadow-lg p-10 mr-5  mb-32">
-    <div className="space-y-4">
+                <div className="hidden md:block xl:flex xl:justify-center xl:items-center  absolute bg-gray-600 top-1/3 bottom-0 right-0 w-1/3 shadow-lg p-10 mr-5 mb-36 ">
+    <div className="space-y-4 ">
     <h1 className="text-2xl font-bold text-wi transform md:text-2xl lg:text-3xl xl:text-4xl text-white">
                     AUTOMATIZACIÓN Y <br className="lg:hidden xl:block" />{" "}
                     CONTROL
