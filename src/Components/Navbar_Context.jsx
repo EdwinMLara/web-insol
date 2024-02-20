@@ -363,7 +363,7 @@ const Navbar_Context = () => {
                   
                     className={`cursor-pointer ${
                       selectedItem === 0
-                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
+                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg text-black"
                         : "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(0)}
@@ -375,7 +375,7 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 1
-                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
+                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg text-black"
                         : "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(1)}
@@ -386,7 +386,7 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 2
-                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
+                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg text-black"
                         : "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(2)}
@@ -397,7 +397,7 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 3
-                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg "
+                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg text-black"
                         : "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(3)}
