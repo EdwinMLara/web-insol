@@ -24,8 +24,10 @@ const Map = () => {
     const handleZoomButtonClick = () => {
       if (zoomEnabled) {
         map.scrollWheelZoom.disable();
+        map.dragging.disable()
       } else {
         map.scrollWheelZoom.enable();
+        map.dragging.enable()
       }
       setZoomEnabled(!zoomEnabled);
     };
@@ -57,6 +59,7 @@ const Map = () => {
         className="h-64 lg:h-[500px] w-full"
         scrollWheelZoom={false}
         zoomControl={false}
+        dragging={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
