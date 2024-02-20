@@ -129,16 +129,18 @@ function Footer() {
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0 space-x-4">
-            <button onClick={redirigirAFacebbok} className="hover:bg-primary">
-              <FaFacebook className="text-2xl" />
+            <button onClick={redirigirAFacebbok} className="hover:bg-primary hover:border-black border border-gray-100 p-1">
+              <FaFacebook className="text-2xl " />
             </button>
-            <button className="hover:bg-primary" onClick={redirigirALinkdin}>
+            <button className="hover:bg-primary hover:border-black border border-gray-100 p-1" 
+            onClick={redirigirALinkdin}>
               <BsLinkedin className="text-2xl" />
             </button>
-            <button className="hover:bg-primary">
+            <button className="hover:bg-primary hover:border-black border border-gray-100 p-1">
               <IoLogoYoutube className="text-2xl" />
             </button>
-            <button className="hover:bg-primary" onClick={redirigirAX}>
+            <button className="hover:bg-primary hover:border-black border border-gray-100 p-1" 
+            onClick={redirigirAX}>
               <BsTwitterX className="text-2xl" />
             </button>
           </div>

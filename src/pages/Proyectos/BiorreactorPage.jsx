@@ -26,7 +26,7 @@ function BiorreactorPage() {
   setLogoColor("AmarilloBlanco");
   setTxtColor("black");
   setOpacidadColor(
-    "bg-opacity-75"
+    " bg-secondary  "
   );
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";
@@ -61,19 +61,19 @@ function BiorreactorPage() {
             ref={videoRef}
             autoPlay // Inicia la reproducción automáticamente
             //controls
-            className="block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md "
+            className="block h-5/6 w-full object-fill max-h-[80%] md:max-h-full  shadow-md mt-24"
+            // block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md 
           >
             <source src={Bio} type="video/mp4" />
             Tu navegador no soporta el elemento de video.
           </video>
         </div>
-        <div className="text-black m-5 bg-light p-6 rounded-md shadow-md">
-          <h2 className="text-2xl text-secondary">14 Diciembre, 2023</h2>
+        <div className="text-black m-3 bg-light p-6 rounded-md shadow-md space-y-4">
           <h1 className="text-4xl font-semibold text-accent">
             Integración de Soluciones en Automatización y Control
           </h1>
-          <br />
-          <div className="text-justify mb-5">
+          <h2 className="text-xl text-secondary">14 Diciembre, 2023</h2>
+          <div className="text-justify ">
             <p>
               Estamos comprometidos en brindar soluciones integrales y
               eficientes a nuestros clientes, debido a que nuestro lema implica

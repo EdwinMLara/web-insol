@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 
 import EQ from "../img/Tienda/Categorias/equipos_integracion.png";
 import EL from "../img/Tienda/Categorias/electronica.png" 
-import HE from "../img/Tienda/Categorias/herramientas.jpg" 
+import HE from "../img/Tienda/Categorias/herramientas.png" 
 
 
 function TiendaPage() {

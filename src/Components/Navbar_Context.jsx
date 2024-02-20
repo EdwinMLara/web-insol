@@ -12,7 +12,7 @@ import LogoAzulNegro from "../img/Logos/AzulNegro.png";
 import LogoAzulBlanco from "../img/Logos/AzulBlanco.png";
 
 // Importa tus imágenes dinámicamente para seccion de ¿que hacemos?
-import image1 from "../img/Submenu/Industria_Integracion_01.jpg";
+import image1 from "../img/Submenu/desarrollo.png";
 import image2 from "../img/Submenu/implementacion.png";
 import image3 from "../img/Submenu/TI.png";
 import image4 from "../img/Submenu/adquisicion.png";
@@ -64,13 +64,13 @@ const Navbar_Context = () => {
   ];
 
   const descripciones = [
-    "INSOEL colaboró con la Unidad de Alta Tecnología (UAT) UNAM en la creación de un dinamómetro para investigación en motores de combustión. Destacaron por su compromiso, participación en pruebas y aportes en instrumentación e interfaz gráfica. El proyecto, sujeto a evaluación para obtener una patente...",
+    "Explora nuestra sección de Desarrollo Tecnológico para conocer los proyectos pioneros que hemos llevado a cabo. Desde la creación de soluciones personalizadas hasta la adopción de tecnologías emergentes, demostramos nuestro compromiso con la innovación y el avance en el mundo digital",
 
-    "La UNAM-Querétaro y el Tecnológico de Monterrey, en colaboración con SOLENA, desarrollaron un panel de control para automatizar un biorreactor, generando hidrógeno como fuente de energía. INSOEL facilitó la transición del prototipo a la implementación exitosa...",
+    "Descubre nuestra amplia gama de proyectos de integración, donde combinamos tecnología innovadora y expertise empresarial para ofrecer soluciones personalizadas y eficientes. Desde integración de sistemas hasta implementaciones de software a medida, cada proyecto refleja nuestro compromiso con la excelencia y la satisfacción del cliente.",
 
-    "En Insoel, especializados en desarrollo de sistemas, mejoramos la administración y comunicación para médicos, comerciantes y municipios mediante sistemas eficientes, como gestión médica y punto de venta...",
+    "Descubre cómo nuestra empresa ha transformado la infraestructura tecnológica con proyectos innovadores y eficientes. Desde la implementación de sistemas de gestión avanzados hasta la optimización de redes y servidores, nuestra sección de Infraestructura TI muestra nuestro compromiso con la excelencia tecnológica y la mejora continua.",
 
-    "Descubre nuestra sección de adquisición de equipos y herramientas, donde nuestra tienda virtual te brinda acceso directo a los productos líderes de la industria. Descubre soluciones eficientes para impulsar tus proyectos con facilidad y confianza...",
+    "Descubre nuestra sección de adquisición de equipos y herramientas, donde nuestra tienda virtual te brinda acceso directo a los productos líderes de la industria. Descubre soluciones eficientes para impulsar tus proyectos con facilidad y confianza.",
   ];
   
 
@@ -326,7 +326,7 @@ const Navbar_Context = () => {
                               to="/proyectos/Consultas"
                               className="block text-black hover:bg-primary rounded p-2"
                             >
-                              DepOPs e Infraestructura TI
+                              Infraestructura TI
                             </Link>
                             </li>
                             <li className="space-y-2 list-disc pt-2 pb-2">
@@ -358,13 +358,13 @@ const Navbar_Context = () => {
           >
             {activeInfo === "proyectos" && isContentActive && (
               <div className="flex items-center ">
-                <div className="text-right text-2xl mr-5 w-1/3 ">
+                <div className="text-right text-white text-2xl mr-5 w-1/3 ">
                   <p
                   
                     className={`cursor-pointer ${
                       selectedItem === 0
-                        ? "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
-                        : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
+                        : "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(0)}
                     //onClick={() => handleInfoToggle("proyectos")}
@@ -375,8 +375,8 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 1
-                        ? "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
-                        : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
+                        : "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(1)}
                   >
@@ -386,8 +386,8 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 2
-                        ? "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
-                        : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
+                        : "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(2)}
                   >
@@ -397,8 +397,8 @@ const Navbar_Context = () => {
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 3
-                        ? "hover:bg-primary p-1 pr-2 pl-2 rounded-lg "
-                        : "hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+                        ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg "
+                        : "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg"
                     }`}
                     onClick={() => handleClick(3)}
                   >
@@ -423,13 +423,13 @@ const Navbar_Context = () => {
                           alt={`Slide ${index + 1}`}
                           className="w-[20rem]"
                         />
-                        <div className="flex flex-col items-start mt-2 ml-2">
-                          <p className="text-lg text-black text-justify p-3">
+                        <div className="flex flex-col items-start mt-3 ml-3">
+                          <p className="text-lg text-white text-justify p-5 ">
                             {descripciones[index]}
                           </p>
                           <Link to={enlaces[index]}>
                             <button
-                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 bg-primary transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary rounded-lg "
+                              className="absolute bottom-0 right-0 p-1 pr-2 pl-2 mb-5 bg-primary transform border-2 border-black/50 bg-gradient-to-r hover:bg-darkPrimary rounded-lg "
                               onClick={() => handleInfoToggle("proyectos")}
                             >
                               Ver más
@@ -440,7 +440,7 @@ const Navbar_Context = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+                </div>
             )}
 
           </div>

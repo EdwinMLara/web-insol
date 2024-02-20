@@ -12,7 +12,7 @@ function HomePage() {
   const {setLogoColor, setTxtColor, setProyectColor, setOpacidadColor} = useInsoel();
   setLogoColor('amarilloBlanco')
   setTxtColor('white')
-  setProyectColor('bg-tertiary bg-opacity-75')
+  setProyectColor('bg-tertiary')
   setOpacidadColor('bg-opacity-75 bg-gradient-to-b from-secondary bottom-96')
   useEffect(() => {
     document.title = "Nosotros | INSOEL";
@@ -26,10 +26,10 @@ function HomePage() {
         <Carrusel />
       </div>
       <div className="flex-grow bg-gradient-to-b from-tertiary via-tertiary to-black ">
-        <h1 className="text-2xl justify-center text-center mt-5">
+        <h1 className="text-2xl justify-center text-center text-white mt-5">
           Mapa de proyectos en el país
         </h1>
-        <p className="justify-normal m-10">
+        <p className="justify-normal text-center text-white m-10">
           Te damos la bienvenida a nuestra sección de "Proyectos en el país",
           donde te invitamos a descubrir las diversas ubicaciones dentro de
           nuestro país donde hemos dejado nuestra marca. Cada región, cada
