@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, ZoomControl, useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import markerIcon from "../img/Logos/marcaMapa3.png";
 
 const Map = () => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
   const Insoel = [20.140833, -101.190961];
   const Solena = [21.089017, -101.594047];
   const UAT = [20.705077, -100.450834];
@@ -16,6 +18,19 @@ const Map = () => {
     iconAnchor: [26, 32],
     popupAnchor: [0, -32],
   });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    // Verificar el tamaño de la pantalla al cargar y al cambiar el tamaño de la ventana
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Limpiar el event listener cuando el componente se desmonte
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const ZoomButton = () => {
     const map = useMap();
@@ -45,7 +60,7 @@ const Map = () => {
           className={`bg-primary hover:bg-darkPrimary text-black font-semibold p-2 rounded`}
           onClick={() => handleZoomButtonClick()}
         >
-          {zoomEnabled ? "Desactivar Zoom" : "Activar Zoom"}
+           {isSmallScreen ? (zoomEnabled ? "Desactivar Mapa" : "Activar Mapa") : (zoomEnabled ? "Desactivar Zoom" : "Activar Zoom")}
         </button>
       </div>
     );
