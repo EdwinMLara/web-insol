@@ -83,6 +83,7 @@ function MainRoutes() {
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
       <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
+     
       
     </Routes>
   );
