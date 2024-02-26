@@ -6,11 +6,10 @@ import { useInsoel } from "../Context/InsoelContext";
 import image1 from "../img/Carrusel/1.png";
 import image2 from "../img/Carrusel/2.png";
 import image3 from "../img/Carrusel/3.png";
-import image4 from "../img/Carrusel/4.png";
-import image5 from "../img/Carrusel/5.png";
+import image4 from "../img/Carrusel/4.png"; 
 
 // Crea un array de rutas de imágenes
-const imagePaths = [image1, image2, image3, image4, image5];
+const imagePaths = [image1, image2, image3, image4];
 
 function Carrusel() {
   const { setTxtColor, setLogoColor } = useInsoel();
