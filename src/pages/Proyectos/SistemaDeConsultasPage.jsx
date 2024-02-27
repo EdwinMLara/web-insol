@@ -15,9 +15,9 @@ import Img6 from "../../img/Proyectos/TI/07.png";
 import Img7 from "../../img/Proyectos/TI/login.png";
 
 const images = [
-  { src: Img2, description: "Descripción de la imagen 1" },
-  { src: Img7, description: "Descripción de la imagen 2" },
-  { src: Img4, description: "Descripción de la imagen 3" },
+  { src: Img2, description: "Sistema de Administración de Consultas" },
+  { src: Img7, description: "Sistema de Punto de Venta" },
+  { src: Img4, description: "Administración de Becas" },
 ];
 
 function SistemaDeConsultasPage() {
@@ -27,7 +27,7 @@ function SistemaDeConsultasPage() {
   setLogoColor("amarilloBlanco");
   setTxtColor("black");
   setOpacidadColor(
-    " bg-secondary  "
+    " bg-secondary h-24 "
   );
   useEffect(() => {
     document.title = "INFRAESTRUCTURA TI | INSOEL";
@@ -103,8 +103,8 @@ function SistemaDeConsultasPage() {
                   className=" object-cover rounded-md transition-transform transform hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <p className="text-black text-lg font-semibold">
-                    Descripción de la imagen {index + 1}
+                  <p className=" text-primary bg-secondary bg-opacity-75 p-2 text-lg font-bold">
+                     {image.description}
                   </p>
                 </div>
               </div>

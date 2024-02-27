@@ -6,7 +6,7 @@ import { useInsoel } from "../Context/InsoelContext";
 import image1 from "../img/Carrusel/1.png";
 import image2 from "../img/Carrusel/2.png";
 import image3 from "../img/Carrusel/3.png";
-import image4 from "../img/Carrusel/4.png"; 
+import image4 from "../img/Carrusel/5.png"; 
 
 // Crea un array de rutas de imágenes
 const imagePaths = [image1, image2, image3, image4];
@@ -80,7 +80,7 @@ function Carrusel() {
                     Materializamos tus ideas
                   </h3>
                   <button className="bg-primary  text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:text-white hover:bg-darkPrimary">
-                    <Link to="/web-insol/invernadero">CONOCE MÁS</Link>
+                    <Link to="/web-insol/blog">CONOCE MÁS</Link>
                   </button>
     </div>
   </div>
