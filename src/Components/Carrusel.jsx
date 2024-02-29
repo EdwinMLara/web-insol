@@ -97,7 +97,7 @@ function Carrusel() {
             AUTOMATIZACION Y <br className="lg:hidden xl:block" /> CONTROL
           </h1>
           <button className="bg-primary bg-opacity-75 text-black py-3 px-8 mt-2 border-2 border-black/50 bg-gradient-to-r hover:from-secondary hover:to-tertiary">
-            <Link to="/invernadero">CONOCE MÁS</Link>
+            <Link to="/web-insol/blog">CONOCE MÁS</Link>
           </button>
         </div>
       </div>
