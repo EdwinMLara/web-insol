@@ -121,12 +121,13 @@ function Footer() {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-black sm:text-center dark:text-gray-400">
+          <span className="text-sm text-left text-black  dark:text-gray-400">
             © 2023{" "}
             <a href="#" className="hover:underline">
               INSOEL™
             </a>
-            . All Rights Reserved.
+            . All Rights Reserved. <br/>
+            Created by M.I Edwin Miguel, Jesus Salazar and Diana Melina.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0 space-x-4">
             <button onClick={redirigirAFacebbok} className="hover:bg-primary hover:border-black border border-gray-100 p-1">

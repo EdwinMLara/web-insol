@@ -12,7 +12,7 @@ import Img3 from "../../img/Proyectos/TI/04.png";
 import Img4 from "../../img/Proyectos/TI/05.png";
 import Img5 from "../../img/Proyectos/TI/06.png";
 import Img6 from "../../img/Proyectos/TI/07.png";
-import Img7 from "../../img/Proyectos/TI/login.png";
+import Img7 from "../../img/Proyectos/TI/09.png"; 
 
 const images = [
   { src: Img2, description: "Sistema de Administración de Consultas" },
@@ -77,11 +77,11 @@ function SistemaDeConsultasPage() {
           <div className="text-justify ">
             <div className="highlight-box mt-4">
               <p>
-              En Insoel ofrecemos el desarrollo de sistemas de información,
+              En INSOEL ofrecemos el desarrollo de sistemas de información,
                   lo cual permite a los usuarios optimizar y mejorar sus
                   procesos de administración y comunicación, ya sea con sus
                   clientes o compañeros de equipo. Hemos realizado
-                  colaboraciones con medicos; implementado un sistema de
+                  colaboraciones con médicos; implementado un sistema de
                   administración de paciente y consultas, Comerciantes;
                   realizando un punto de venta que le permite monitorear las
                   entradas y salidas de activos en cada uno de sus

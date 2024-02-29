@@ -64,7 +64,7 @@ const Navbar_Context = () => {
   ];
 
   const descripciones = [
-    "Explora nuestra sección de Desarrollo Tecnológico para conocer los proyectos pioneros que hemos llevado a cabo. Desde la creación de soluciones personalizadas hasta la adopción de tecnologías emergentes, demostramos nuestro compromiso con la innovación y el avance en el mundo digital",
+    "Explora nuestra sección de Desarrollo Tecnológico para conocer los proyectos pioneros que hemos llevado a cabo. Desde la creación de soluciones personalizadas hasta la adopción de tecnologías emergentes, demostramos nuestro compromiso con la innovación y el avance en el mundo digital.",
 
     "Descubre nuestra amplia gama de proyectos de integración, donde combinamos tecnología innovadora y expertise empresarial para ofrecer soluciones personalizadas y eficientes. Desde integración de sistemas hasta implementaciones de software a medida, cada proyecto refleja nuestro compromiso con la excelencia y la satisfacción del cliente.",
 

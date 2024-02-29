@@ -82,7 +82,7 @@ function BancoUatPage() {
             <p>
               La Unidad de Alta Tecnología (UAT) de la Universidad Nacional
               Autónoma de México (UNAM) emprendió la creación de una herramienta
-              dedicada a la investigación en motores de combustión, con el
+              dedicada a la investigación en motores de combustión, con él
               objetivo de fomentar el desarrollo de nuevas tecnologías y la
               exploración de diversos combustibles. El equipo llevó a cabo la
               construcción de un dinamómetro, incorporando un motor de
@@ -124,7 +124,7 @@ function BancoUatPage() {
                 Es relevante destacar que el proyecto se sometió a evaluación
                 para obtener una patente, ya que tanto la construcción del
                 dinamómetro como su instrumentación presentaron innovaciones
-                significativas. Por esta razón, los elementos específicos no se
+                significativas. Por esta razón, los elementos específicos no sé
                 detallan en esta descripción.
               </p>
             </div>

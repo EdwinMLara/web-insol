@@ -77,15 +77,15 @@ function BiorreactorPage() {
             <p>
               Estamos comprometidos en brindar soluciones integrales y
               eficientes a nuestros clientes, debido a que nuestro lema implica
-              aplicar lo último en innovación, eficiencia y viabilidad
+              aplicar lo último en innovación, eficiencia y viabilidad.
             </p>
             <div className="highlight-box mt-4">
               <p>
-                Llevamos a cabo una colaboración con la UNAM - Querétaro, el
+                Llevamos a cabo una colaboración con la UNAM - Querétaro, él
                 Tecnológico de Monterrey y la empresa SOLENA para realizar una
                 integración de un panel de control con el objetivo de
                 implementar un sistema de automatización. El biorreactor tienen
-                la finalidad generador de Hidrógeno como fuente de energía
+                la finalidad de generar Hidrógeno como fuente de energía
                 alterna. En este proyecto multidisciplinario se contó con la
                 aportación del desarrollo tecnológico de las instituciones
                 educativas de la UNAM y el Tec de Monterrey. <br />
