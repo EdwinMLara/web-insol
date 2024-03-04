@@ -6,6 +6,7 @@ import Navbar_Tienda from "./Components/Navbar_Tienda";
 import Carrusel from "./Components/Carrusel";
 import InvernaderoPage from "./pages/InvernaderoPage";
 import { InsoelProvider } from "./Context/InsoelContext";
+import { AuthProvider } from "./Context/AuthContext";
 import ClientesPage from "./pages/ClientesPage";
 import NosotrosPage from "./pages/NosotrosPage";
 import ContactanosPage from "./pages/ContactanosPage";
@@ -21,39 +22,50 @@ import DetalleProducto from "./Components/DetalleProducto";
 import MapaPage from "./pages/MapaPage";
 import Login from "./Components_Panel/Login";
 import Registrarse from "./Components_Panel/Registrarse";
+import PanelControlPage from "./pages/PanelControlPage";
+import LoginPage from "./pages/LoginPage";
+import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
   return (
-    <InsoelProvider>
-      <BrowserRouter>
-        <main>
-           {/* Ruta para la tienda */}
-           <Routes>
-            <Route
-              path="/web-insol/tienda/*"
-              element={
-                <>
-                  <Navbar_Tienda />
-                  <TiendaRoutes />
-                </>
-              }
-            />
-            {/* Otras rutas */}
-            <Route
-              path="/*"
-              element={
-                <>
-                  <Navbar_Context />
-                  <MainRoutes />
-                </>
-              }
-            />
-            <Route path="/web-insol/login" element={<Login />} />
-            <Route path="/web-insol/registrarse" element={<Registrarse />} />
-          </Routes>
-        </main>
-      </BrowserRouter>
-    </InsoelProvider>
+    <AuthProvider>
+      <InsoelProvider>
+        <BrowserRouter>
+          <main>
+            {/* Ruta para la tienda */}
+            <Routes>
+              <Route
+                path="/web-insol/tienda/*"
+                element={
+                  <>
+                    <Navbar_Tienda />
+                    <TiendaRoutes />
+                  </>
+                }
+              />
+              {/* Otras rutas */}
+              <Route
+                path="/*"
+                element={
+                  <>
+                    <Navbar_Context />
+                    <MainRoutes />
+                  </>
+                }
+              />
+              <Route path="/web-insol/login" element={<Login />} />
+              <Route path="/web-insol/registrarse" element={<Registrarse />} />
+              <Route
+                path="/web-insol/panelControl"
+                element={<PanelControlPage />}
+              />
+
+              <Route element={<ProtectedRoute />}></Route>
+            </Routes>
+          </main>
+        </BrowserRouter>
+      </InsoelProvider>
+    </AuthProvider>
   );
 }
 
@@ -61,7 +73,7 @@ function App() {
 function TiendaRoutes() {
   return (
     <Routes>
-     <Route path="/" element={<TiendaPage />} />
+      <Route path="/" element={<TiendaPage />} />
       <Route path="/DetalleProducto" element={<DetalleProducto />} />
       <Route path="/:productId" element={<ProductDetail />} />
     </Routes>
@@ -83,8 +95,6 @@ function MainRoutes() {
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
       <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
-     
-      
     </Routes>
   );
 }

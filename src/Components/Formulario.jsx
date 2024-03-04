@@ -32,7 +32,7 @@ function Formulario() {
     });
   };
 
-  const handleSubmit_ = (e) => {
+  const mensajesValidacion = (e) => {
     e.preventDefault();
   
     // Realiza la validación aquí
@@ -95,73 +95,6 @@ function Formulario() {
     console.log(formData);
   };
 
-  const onSubmit = handleSubmit((data) => {
-    // Realiza las validaciones aquí
-    const nuevosErrores = {};
-  
-    if (!formData.nombre.trim()) {
-      nuevosErrores.nombre = "El nombre es requerido";
-    }
-    if (!formData.correo.trim()) {
-      nuevosErrores.correo = "El correo es requerido";
-    }
-    if (!formData.empresa.trim()) {
-      nuevosErrores.empresa = "La empresa es requerida";
-    }
-    if (!formData.descripcion.trim()) {
-      nuevosErrores.descripcion = "La descripción es requerida";
-    }
-    if (!formData.telefono.trim()) {
-      nuevosErrores.telefono = "El telefono es requerida";
-    }
-    if (!formData.servicio) {
-      nuevosErrores.servicio = "Selecciona un servicio";
-    }
-  
-    // Si hay errores, muestra una advertencia
-    if (Object.keys(nuevosErrores).length > 0) {
-      toast.warn("Faltan datos o hay errores en el formulario");
-      return;
-    }
-
-    // Validación de correo electrónico
-    const correoValido = /\S+@\S+\.\S+/;
-    if (!correoValido.test(formData.correo)) {
-      nuevosErrores.correo = "Introduce un correo válido";
-    }
-  
-    // Validación de número de teléfono (formato simple)
-    const telefonoValido = /^\d{10}$/;
-    if (!telefonoValido.test(formData.telefono)) {
-      nuevosErrores.telefono ='Por favor, introduce un número de teléfono válido (10 dígitos)';
-    }
-  
-    // Actualiza el estado de errores
-    setErrores(nuevosErrores);
-  
-    // Si hay errores, muestra una advertencia
-    if (Object.keys(nuevosErrores).length > 0) {
-      toast.warn("Faltan datos o hay errores en el formulario");
-      return;
-    }
-  
-    // Aquí puedes realizar acciones adicionales antes de enviar el formulario
-    // En este ejemplo, simplemente mostramos una alerta de éxito
-    // Limpia el formulario y los errores después del envío
-    setFormData({
-      nombre: "",
-      empresa: "",
-      correo: "",
-      telefono: "",
-      servicio: "",
-      descripcion: "",
-    });
-    setErrores({});
-    createSolicitud(data);
-    toast.success("Gracias por su interés, nos pondremos en contacto");
-  });
-  
-
   return (
     <div className="bg-gradient-to-b from-secondary to-secondary z-10">
       <div className="md:pt-32 md:pb-16">
@@ -175,7 +108,7 @@ function Formulario() {
             
           </div>
           <div className="md:w-1/2 p-5">
-            <form onSubmit={onSubmit} className="md:pr-28 z-10" >
+            <form className="md:pr-28 z-10" >
               <div className="md:flex mb-4 border-b border-white py-2 items-center">
                 <ImUser className="text-white text-2xl mr-2" />
                 <input
@@ -288,6 +221,7 @@ function Formulario() {
               <button
                 className=" w-auto bg-black text-white rounded-full py-2 px-4 focus:outline-none focus:shadow-outline "
                 type="submit"
+                onClick={mensajesValidacion}
               >
                 Contacta a
                 <img
