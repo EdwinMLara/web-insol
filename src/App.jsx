@@ -22,6 +22,9 @@ import DetalleProducto from "./Components/DetalleProducto";
 import MapaPage from "./pages/MapaPage";
 import Login from "./Components_Panel/Login";
 import Registrarse from "./Components_Panel/Registrarse";
+import BlogPage from "./pages/BlogPage";
+import PanelControlPage from './pages/PanelControlPage'
+import ProtectedRoute from './ProtectedRoute'
 
 function App() {
   return (
@@ -92,6 +95,7 @@ function MainRoutes() {
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
       <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
+      <Route path="/web-insol/blog" element={<BlogPage />} />
      
       
     </Routes>
