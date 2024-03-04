@@ -14,9 +14,9 @@ import Img6 from "../../img/Proyectos/Bio_Reactor/06.jpg";
 import Img7 from "../../img/Proyectos/Bio_Reactor/07.jpg";
 
 const images = [
-  { src: Img5, description: "Descripción de la imagen 1" },
-  { src: Img6, description: "Descripción de la imagen 2" },
-  { src: Img7, description: "Descripción de la imagen 3" },
+  { src: Img5, description: "Interfaz de Control" },
+  { src: Img6, description: "Sistema Hidraulico de Biorreactor" },
+  { src: Img7, description: "Sistema Generador de Hidrogeno" },
 ];
 
 function BiorreactorPage() {
@@ -26,7 +26,7 @@ function BiorreactorPage() {
   setLogoColor("AmarilloBlanco");
   setTxtColor("black");
   setOpacidadColor(
-    " bg-secondary  "
+    " bg-secondary h-24 "
   );
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";
@@ -77,15 +77,15 @@ function BiorreactorPage() {
             <p>
               Estamos comprometidos en brindar soluciones integrales y
               eficientes a nuestros clientes, debido a que nuestro lema implica
-              aplicar lo último en innovación, eficiencia y viabilidad
+              aplicar lo último en innovación, eficiencia y viabilidad.
             </p>
             <div className="highlight-box mt-4">
               <p>
-                Llevamos a cabo una colaboración con la UNAM - Querétaro, el
+                Llevamos a cabo una colaboración con la UNAM - Querétaro, él
                 Tecnológico de Monterrey y la empresa SOLENA para realizar una
                 integración de un panel de control con el objetivo de
                 implementar un sistema de automatización. El biorreactor tienen
-                la finalidad generador de Hidrógeno como fuente de energía
+                la finalidad de generar Hidrógeno como fuente de energía
                 alterna. En este proyecto multidisciplinario se contó con la
                 aportación del desarrollo tecnológico de las instituciones
                 educativas de la UNAM y el Tec de Monterrey. <br />
@@ -112,8 +112,8 @@ function BiorreactorPage() {
                   className="w-[35rem] h-[25rem] object-cover rounded-md transition-transform transform hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <p className="text-white text-lg font-semibold">
-                    Descripción de la imagen {index + 1}
+                  <p className="text-primary bg-secondary bg-opacity-75 p-2 text-lg font-bold">
+                     {image.description}
                   </p>
                 </div>
               </div>

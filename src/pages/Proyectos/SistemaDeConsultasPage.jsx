@@ -12,12 +12,12 @@ import Img3 from "../../img/Proyectos/TI/04.png";
 import Img4 from "../../img/Proyectos/TI/05.png";
 import Img5 from "../../img/Proyectos/TI/06.png";
 import Img6 from "../../img/Proyectos/TI/07.png";
-import Img7 from "../../img/Proyectos/TI/login.png";
+import Img7 from "../../img/Proyectos/TI/09.png"; 
 
 const images = [
-  { src: Img2, description: "Descripción de la imagen 1" },
-  { src: Img7, description: "Descripción de la imagen 2" },
-  { src: Img4, description: "Descripción de la imagen 3" },
+  { src: Img2, description: "Sistema de Administración de Consultas" },
+  { src: Img7, description: "Sistema de Punto de Venta" },
+  { src: Img4, description: "Administración de Becas" },
 ];
 
 function SistemaDeConsultasPage() {
@@ -27,7 +27,7 @@ function SistemaDeConsultasPage() {
   setLogoColor("amarilloBlanco");
   setTxtColor("black");
   setOpacidadColor(
-    " bg-secondary  "
+    " bg-secondary h-24 "
   );
   useEffect(() => {
     document.title = "INFRAESTRUCTURA TI | INSOEL";
@@ -77,11 +77,11 @@ function SistemaDeConsultasPage() {
           <div className="text-justify ">
             <div className="highlight-box mt-4">
               <p>
-              En Insoel ofrecemos el desarrollo de sistemas de información,
+              En INSOEL ofrecemos el desarrollo de sistemas de información,
                   lo cual permite a los usuarios optimizar y mejorar sus
                   procesos de administración y comunicación, ya sea con sus
                   clientes o compañeros de equipo. Hemos realizado
-                  colaboraciones con medicos; implementado un sistema de
+                  colaboraciones con médicos; implementado un sistema de
                   administración de paciente y consultas, Comerciantes;
                   realizando un punto de venta que le permite monitorear las
                   entradas y salidas de activos en cada uno de sus
@@ -103,8 +103,8 @@ function SistemaDeConsultasPage() {
                   className=" object-cover rounded-md transition-transform transform hover:scale-105"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <p className="text-black text-lg font-semibold">
-                    Descripción de la imagen {index + 1}
+                  <p className=" text-primary bg-secondary bg-opacity-75 p-2 text-lg font-bold">
+                     {image.description}
                   </p>
                 </div>
               </div>

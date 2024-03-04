@@ -23,9 +23,9 @@ import Img14 from "../../img/Proyectos/Banco_Uat/10.jpg";
 import Img15 from "../../img/Proyectos/Banco_Uat/09.jpg";
 
 const images = [
-  { src: Img9, description: "Descripción de la imagen 1" },
-  { src: Img7, description: "Descripción de la imagen 2" },
-  { src: Img6, description: "Descripción de la imagen 3" },
+  { src: Img9, description: "Interfaz de Monitoreo" },
+  { src: Img7, description: "Banco de Control" },
+  { src: Img6, description: "Dinamonetro" },
 ];
 
 function BancoUatPage() {
@@ -34,7 +34,7 @@ function BancoUatPage() {
 
   setLogoColor("amarilloBlanco");
   setTxtColor("black");
-  setOpacidadColor("bg-secondary ");
+  setOpacidadColor("bg-secondary h-24 ");
 
   useEffect(() => {
     document.title = "BANCO UAT | INSOEL";
@@ -82,7 +82,7 @@ function BancoUatPage() {
             <p>
               La Unidad de Alta Tecnología (UAT) de la Universidad Nacional
               Autónoma de México (UNAM) emprendió la creación de una herramienta
-              dedicada a la investigación en motores de combustión, con el
+              dedicada a la investigación en motores de combustión, con él
               objetivo de fomentar el desarrollo de nuevas tecnologías y la
               exploración de diversos combustibles. El equipo llevó a cabo la
               construcción de un dinamómetro, incorporando un motor de
@@ -124,7 +124,7 @@ function BancoUatPage() {
                 Es relevante destacar que el proyecto se sometió a evaluación
                 para obtener una patente, ya que tanto la construcción del
                 dinamómetro como su instrumentación presentaron innovaciones
-                significativas. Por esta razón, los elementos específicos no se
+                significativas. Por esta razón, los elementos específicos no sé
                 detallan en esta descripción.
               </p>
             </div>
@@ -140,8 +140,8 @@ function BancoUatPage() {
               className=" object-cover rounded-md transition-transform transform hover:scale-105"
             />
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <p className="text-white text-lg font-semibold">
-                Descripción de la imagen {index + 1}
+              <p className="text-primary bg-secondary bg-opacity-50 p-2 text-lg font-bold">
+              {image.description}
               </p>
             </div>
           </div>
