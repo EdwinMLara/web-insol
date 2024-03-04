@@ -1,4 +1,4 @@
-import {motion} from 'framer-motion'
+import { motion } from "framer-motion";
 
 function Animaciones() {
   return (
@@ -15,7 +15,7 @@ function Animaciones() {
         <p className="text-white">Este es un ejemplo básico de animación.</p>
       </motion.div>
     </div>
-  )
+  );
 }
 
-export default Animaciones
+export default Animaciones;

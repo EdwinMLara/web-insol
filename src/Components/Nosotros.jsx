@@ -28,7 +28,7 @@ function Nosotros() {
       {/* Section: Fundadores */}
       <div
         className="min-h-screen bg-gradient-to-b from-black via-black to-quaternary"
-        id="nosotrosSeccionFundadores"
+        id="nosotrosSeccionFundadores" 
       >
         <Fundadores id="nosotrosSeccionFundadores" />
       </div>

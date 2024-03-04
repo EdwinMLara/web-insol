@@ -12,7 +12,6 @@ import ContactanosPage from "./pages/ContactanosPage";
 import BiorreactorPage from "./pages/Proyectos/BiorreactorPage";
 import BancoUatPage from "./pages/Proyectos/BancoUatPage";
 import SistemaDeConsultasPage from "./pages/Proyectos/SistemaDeConsultasPage";
-import ApkLectoraQrPage from "./pages/Proyectos/ApkLectoraQrPage";
 import HomePage from "./pages/HomePage";
 import Footer from "./Components/Footer";
 import TiendaPage from "./pages/TiendaPage";
@@ -28,8 +27,8 @@ function App() {
     <InsoelProvider>
       <BrowserRouter>
         <main>
-           {/* Ruta para la tienda */}
-           <Routes>
+          {/* Ruta para la tienda */}
+          <Routes>
             <Route
               path="/web-insol/tienda/*"
               element={
@@ -62,7 +61,7 @@ function App() {
 function TiendaRoutes() {
   return (
     <Routes>
-     <Route path="/" element={<TiendaPage />} />
+      <Route path="/" element={<TiendaPage />} />
       <Route path="/DetalleProducto" element={<DetalleProducto />} />
       <Route path="/:productId" element={<ProductDetail />} />
     </Routes>
@@ -82,10 +81,8 @@ function MainRoutes() {
       <Route path="/proyectos/Biorreactor" element={<BiorreactorPage />} />
       <Route path="/proyectos/BancoUAT" element={<BancoUatPage />} />
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
-      <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
       <Route path="/web-insol/blog" element={<BlogPage />} />
-      
     </Routes>
   );
 }

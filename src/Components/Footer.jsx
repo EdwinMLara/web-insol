@@ -24,6 +24,11 @@ function Footer() {
     window.location.href =
       "https://www.linkedin.com/company/insoel-mexico?trk=blended-typeahead";
   };
+  const redirigirALinkYoutube = () => {
+    window.location.href =
+      "https://www.youtube.com/@INSOELMexico";
+  };
+  
   return (
     <footer className=" bg-white">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -36,7 +41,7 @@ function Footer() {
           <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3 mb-14">
             <div className="ml-24">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">
-                Contactanos
+                Contáctanos
               </h2>
               <ul className="text-gray-700  font-medium">
                 <li className="mb-4">
@@ -54,7 +59,7 @@ function Footer() {
                   </div>
                   <div className="flex">
                     <MdPhoneAndroid size={22} />
-                    <p className="pl-2"> 445 111 222 452 </p>
+                    <p className="pl-2"> 442 331 39 11 </p>
                   </div>
                 </li>
               </ul>
@@ -78,14 +83,6 @@ function Footer() {
                     className="hover:underline decoration-primary decoration-double"
                   >
                     Fundadores
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a
-                    href="#nosotrosSeccionColaboradores"
-                    className="hover:underline decoration-primary decoration-double"
-                  >
-                    Nuestro Equipos
                   </a>
                 </li>
                 <li>
@@ -137,7 +134,8 @@ function Footer() {
             onClick={redirigirALinkdin}>
               <BsLinkedin className="text-2xl" />
             </button>
-            <button className="hover:bg-primary hover:border-black border border-gray-100 p-1">
+            <button className="hover:bg-primary hover:border-black border border-gray-100 p-1"
+            onClick={redirigirALinkYoutube}>
               <IoLogoYoutube className="text-2xl" />
             </button>
             <button className="hover:bg-primary hover:border-black border border-gray-100 p-1" 

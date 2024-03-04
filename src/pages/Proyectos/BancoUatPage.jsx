@@ -1,11 +1,12 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useInsoel } from "../../Context/InsoelContext";
 import imgBancoUAT from "../../img/Proyectos/49.png";
 import logo from "../../img/Logos/AmarilloNegro.png";
 import Footer from "../../Components/Footer";
 
 import Uat from "../../img/Proyectos/Banco_Uat/000.mp4";
+import Carga from "../../img/Proyectos/Banco_Uat/001.gif";
 
 import Img2 from "../../img/Proyectos/Banco_Uat/01.jpg";
 import Img3 from "../../img/Proyectos/Banco_Uat/02.jpg";
@@ -31,6 +32,7 @@ const images = [
 function BancoUatPage() {
   const { setLogoColor, setTxtColor, setOpacidadColor } = useInsoel();
   const videoRef = useRef(null);
+  const [videoCargado, setVideoCargado] = useState(false);
 
   setLogoColor("amarilloBlanco");
   setTxtColor("black");
@@ -59,16 +61,28 @@ function BancoUatPage() {
     };
   }, []); // Asegúrate de pasar un array vacío como dependencia para que el efecto se ejecute solo una vez
 
+  const handleLoadedData = () => {
+    setVideoCargado(true);
+  };
+
   return (
     <>
       <div className="bg-bajo min-h-screen  flex flex-col">
         <div className=""></div>
         <div className="relative  w-full h-auto  md:h-screen">
+        {!videoCargado && ( // Mostrar el gif o video de carga mientras el video principal se está cargando
+        <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50">
+          {/*  gif de carga  */}
+          <img src={Carga} alt="Cargando..."  />
+        </div>
+      )}
+
           <video
             ref={videoRef}
             autoPlay // Inicia la reproducción automáticamente
             //controls
-            className="block h-5/6 w-full object-fill max-h-[80%] md:max-h-full  shadow-md mt-24"
+            className={`block h-5/6 w-full object-fill max-h-[80%] md:max-h-full shadow-md mt-24 ${videoCargado ? 'block' : 'hidden'}`}
+            onLoadedData={handleLoadedData}
             // block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md 
           >
             <source src={Uat} type="video/mp4" />

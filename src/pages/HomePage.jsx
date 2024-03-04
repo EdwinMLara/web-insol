@@ -26,7 +26,7 @@ function HomePage() {
         <Carrusel />
       </div>
       <div className="flex-grow bg-gradient-to-b from-tertiary via-tertiary to-black ">
-        <h1 className="text-2xl justify-center text-center text-white mt-5">
+        <h1 className="text-2xl justify-center text-center text-white mt-5 font-bold">
           Mapa de proyectos en el país
         </h1>
         <p className="justify-normal text-center text-white m-10">
