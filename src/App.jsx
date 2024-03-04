@@ -6,6 +6,7 @@ import Navbar_Tienda from "./Components/Navbar_Tienda";
 import Carrusel from "./Components/Carrusel";
 import InvernaderoPage from "./pages/InvernaderoPage";
 import { InsoelProvider } from "./Context/InsoelContext";
+import { AuthProvider } from "./Context/AuthContext";
 import ClientesPage from "./pages/ClientesPage";
 import NosotrosPage from "./pages/NosotrosPage";
 import ContactanosPage from "./pages/ContactanosPage";
@@ -21,14 +22,16 @@ import MapaPage from "./pages/MapaPage";
 import Login from "./Components_Panel/Login";
 import Registrarse from "./Components_Panel/Registrarse";
 import BlogPage from "./pages/BlogPage";
+import PanelControlPage from './pages/PanelControlPage'
+import ProtectedRoute from './ProtectedRoute'
 
 function App() {
   return (
     <InsoelProvider>
       <BrowserRouter>
         <main>
-          {/* Ruta para la tienda */}
-          <Routes>
+           {/* Ruta para la tienda */}
+           <Routes>
             <Route
               path="/web-insol/tienda/*"
               element={
@@ -83,6 +86,7 @@ function MainRoutes() {
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
       <Route path="/web-insol/blog" element={<BlogPage />} />
+      
     </Routes>
   );
 }
