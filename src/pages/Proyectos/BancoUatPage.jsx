@@ -71,7 +71,7 @@ function BancoUatPage() {
         <div className=""></div>
         <div className="relative  w-full h-auto  md:h-screen">
         {!videoCargado && ( // Mostrar el gif o video de carga mientras el video principal se está cargando
-        <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50">
+        <div className="absolute inset-y-0 inset-x-0 flex justify-center max-h-[80%] md:max-h-full items-center bg-black bg-opacity-50 mt-52 sm:mt-0">
           {/*  gif de carga  */}
           <img src={Carga} alt="Cargando..."  />
         </div>
@@ -91,7 +91,7 @@ function BancoUatPage() {
         </div>
         <div className="text-black m-3 bg-light p-6 rounded-md shadow-md space-y-4">
           <h1 className="text-4xl font-semibold text-accent">Dinamómetro</h1>
-          <h2 className="text-xl text-secondary">14 Diciembre, 2023</h2>
+          <h2 className="text-xl text-secondary">Junio, 2023</h2>
           <div className="text-justify ">
             <p>
               La Unidad de Alta Tecnología (UAT) de la Universidad Nacional

@@ -10,7 +10,7 @@ import Img from "../../img/Proyectos/TI/01.png";
 import Img1 from "../../img/Proyectos/TI/02.png";
 import Img2 from "../../img/Proyectos/TI/03.png";
 import Img3 from "../../img/Proyectos/TI/04.png";
-import Img4 from "../../img/Proyectos/TI/05.png";
+import Img4 from "../../img/Proyectos/TI/becas.png";
 import Img5 from "../../img/Proyectos/TI/06.png";
 import Img6 from "../../img/Proyectos/TI/07.png";
 import Img7 from "../../img/Proyectos/TI/09.png"; 
@@ -64,7 +64,7 @@ function SistemaDeConsultasPage() {
         <div className=""></div>
         <div className="relative  w-full h-auto  md:h-screen">
         {!videoCargado && ( // Mostrar el gif o video de carga mientras el video principal se está cargando
-        <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50">
+        <div className="absolute inset-y-0 inset-x-0 flex justify-center max-h-[80%] md:max-h-full items-center bg-black bg-opacity-50 mt-52 sm:mt-0">
           {/*  gif de carga  */}
           <img src={Carga} alt="Cargando..."  />
         </div>
@@ -86,7 +86,7 @@ function SistemaDeConsultasPage() {
           <h1 className="text-4xl font-semibold text-accent">
             Integración de Soluciones en Automatización y Control
           </h1>
-          <h2 className="text-xl text-secondary">14 Diciembre, 2023</h2>
+          <h2 className="text-xl text-secondary">Agosto, 2023</h2>
           <div className="text-justify ">
             <div className="highlight-box mt-4">
               <p>
