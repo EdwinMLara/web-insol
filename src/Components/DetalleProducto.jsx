@@ -26,7 +26,6 @@ function DetalleProducto() {
     return () => clearInterval(intervalId);
   }, []);
 
-  
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsVisible(false);
@@ -40,7 +39,6 @@ function DetalleProducto() {
     // Limpia el temporizador al desmontar el componente
     return () => clearTimeout(timeout);
   }, [isVisible]);
-
 
   return (
     <div className="flex  mt-24 relative">
@@ -76,19 +74,17 @@ function DetalleProducto() {
       {/* Derecho */}
       <div className="flex-1 flex flex-col relative">
         <img src={foset} alt="Logo" className="ml-auto mb-4 w-40 h-16" />
-        
-         {/* Mensaje de oferta especial */}
-    <div className="absolute mt-10 transform -translate-x-1/2">
-      <h1
-        className={`font-black text-2xl text-red-600 transition-transform transform ${
-          isVisible ? 'rotate-12 hover:rotate-12 scale-150' : 'opacity-0'
-        } mt-3`}
-      >
-        ¡Oferta especial por tiempo limitado!
-      </h1>
-    </div>
 
-
+        {/* Mensaje de oferta especial */}
+        <div className="absolute mt-10 transform -translate-x-1/2">
+          <h1
+            className={`font-black text-2xl text-red-600 transition-transform transform ${
+              isVisible ? "rotate-12 hover:rotate-12 scale-150" : "opacity-0"
+            } mt-3`}
+          >
+            ¡Oferta especial por tiempo limitado!
+          </h1>
+        </div>
 
         <div className="flex justify-around mt-10">
           <div className="flex mb-4">
@@ -118,12 +114,18 @@ function DetalleProducto() {
             </div>
           </div>
         </div>
-        
-        <span className="text-center text-gray-600 block text-lg mb-5">Ahorro del 10% del precio preferencial y un 25.77% del precio publico</span>
+
+        <span className="text-center text-gray-600 block text-lg mb-5">
+          Ahorro del 10% del precio preferencial y un 25.77% del precio publico
+        </span>
         <h1 className="mt-10 text-center text-2xl">¡Aprovecha ahora!</h1>
-        <a href={"https://wa.me/message/WAYW2ZY6BUU6G1?src=qr"} className="mt-3  mr-24 ml-24 flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">
-        <FaWhatsapp className='mr-2 text-2xl'/> 
-          Contáctanos por WhatsApp</a>
+        <a
+          href={"https://wa.me/message/WAYW2ZY6BUU6G1?src=qr"}
+          className="mt-3  mr-24 ml-24 flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
+        >
+          <FaWhatsapp className="mr-2 text-2xl" />
+          Contáctanos por WhatsApp
+        </a>
       </div>
     </div>
   );

@@ -14,9 +14,11 @@ function Blog({ noticia }) {
     </h2>
     <p className="text-gray-850 mb-4">{noticia.descripcion}</p>
     <div className="absolute bottom-4 right-4">
+      {/*
       <a href={noticia.enlace} className="text-secondary hover:text-black">
         Leer más
       </a>
+  */}
     </div>
   </div>
 </div>

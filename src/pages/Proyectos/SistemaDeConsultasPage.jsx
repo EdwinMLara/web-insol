@@ -1,15 +1,16 @@
 import React from "react";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { useInsoel } from "../../Context/InsoelContext";
 import Footer from "../../Components/Footer";
 
 import TI from "../../img/Proyectos/TI/000.mp4";
+import Carga from "../../img/Proyectos/Banco_Uat/001.gif";
 
 import Img from "../../img/Proyectos/TI/01.png";
 import Img1 from "../../img/Proyectos/TI/02.png";
 import Img2 from "../../img/Proyectos/TI/03.png";
 import Img3 from "../../img/Proyectos/TI/04.png";
-import Img4 from "../../img/Proyectos/TI/05.png";
+import Img4 from "../../img/Proyectos/TI/becas.png";
 import Img5 from "../../img/Proyectos/TI/06.png";
 import Img6 from "../../img/Proyectos/TI/07.png";
 import Img7 from "../../img/Proyectos/TI/09.png"; 
@@ -23,6 +24,7 @@ const images = [
 function SistemaDeConsultasPage() {
   const { setLogoColor, setTxtColor, setOpacidadColor } = useInsoel();
   const videoRef = useRef(null);
+  const [videoCargado, setVideoCargado] = useState(false);
 
   setLogoColor("amarilloBlanco");
   setTxtColor("black");
@@ -52,17 +54,28 @@ function SistemaDeConsultasPage() {
     };
   }, []); // Asegúrate de pasar un array vacío como dependencia para que el efecto se ejecute solo una vez
   
+  const handleLoadedData = () => {
+    setVideoCargado(true);
+  };
 
   return (
     <>
       <div className="bg-bajo min-h-screen  flex flex-col">
         <div className=""></div>
         <div className="relative  w-full h-auto  md:h-screen">
+        {!videoCargado && ( // Mostrar el gif o video de carga mientras el video principal se está cargando
+        <div className="absolute inset-y-0 inset-x-0 flex justify-center max-h-[80%] md:max-h-full items-center bg-black bg-opacity-50 mt-52 sm:mt-0">
+          {/*  gif de carga  */}
+          <img src={Carga} alt="Cargando..."  />
+        </div>
+      )}
+
           <video
             ref={videoRef}
             autoPlay // Inicia la reproducción automáticamente
             //controls
-            className="block h-5/6 w-full object-fill max-h-[80%] md:max-h-full  shadow-md mt-24"
+            className={`block h-5/6 w-full object-fill max-h-[80%] md:max-h-full shadow-md mt-24 ${videoCargado ? 'block' : 'hidden'}`}
+            onLoadedData={handleLoadedData}
             // block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md 
           >
             <source src={TI} type="video/mp4" />
@@ -73,7 +86,7 @@ function SistemaDeConsultasPage() {
           <h1 className="text-4xl font-semibold text-accent">
             Integración de Soluciones en Automatización y Control
           </h1>
-          <h2 className="text-xl text-secondary">14 Diciembre, 2023</h2>
+          <h2 className="text-xl text-secondary">Agosto, 2023</h2>
           <div className="text-justify ">
             <div className="highlight-box mt-4">
               <p>

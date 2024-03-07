@@ -5,6 +5,7 @@ import imgBiorreactor from "../../img/Proyectos/49.png";
 import Footer from "../../Components/Footer";
 
 import Bio from "../../img/Proyectos/Bio_Reactor/001.mp4";
+import Carga from "../../img/Proyectos/Banco_Uat/001.gif";
 
 import Img2 from "../../img/Proyectos/Bio_Reactor/02.jpg";
 import Img3 from "../../img/Proyectos/Bio_Reactor/03.jpg";
@@ -22,12 +23,11 @@ const images = [
 function BiorreactorPage() {
   const { setLogoColor, setTxtColor, setOpacidadColor } = useInsoel();
   const videoRef = useRef(null);
-  
+  const [videoCargado, setVideoCargado] = useState(false);
+
   setLogoColor("AmarilloBlanco");
   setTxtColor("black");
-  setOpacidadColor(
-    " bg-secondary h-24 "
-  );
+  setOpacidadColor(" bg-secondary h-24 ");
   useEffect(() => {
     document.title = "BIORREACTOR | INSOEL";
     return () => {
@@ -36,7 +36,6 @@ function BiorreactorPage() {
   }, []);
 
   useEffect(() => {
-    
     const videoElement = videoRef.current;
 
     const handleVideoEnd = () => {
@@ -50,29 +49,43 @@ function BiorreactorPage() {
       videoElement.removeEventListener("ended", handleVideoEnd);
     };
   }, []); // Asegúrate de pasar un array vacío como dependencia para que el efecto se ejecute solo una vez
-  
-  
+
+  const handleLoadedData = () => {
+    setVideoCargado(true);
+  };
+
   return (
     <>
       <div className="bg-bajo min-h-screen  flex flex-col">
         <div className=""></div>
-        <div className="relative  w-full h-auto  md:h-screen">
+        <div className="relative w-full h-auto md:h-screen">
+          {!videoCargado && ( // Mostrar el gif o video de carga mientras el video principal se está cargando
+            <div className="absolute inset-y-0 inset-x-0 flex justify-center max-h-[80%] md:max-h-full items-center bg-black bg-opacity-50 mt-52 sm:mt-0">
+              {/* gif de carga */}
+              <img src={Carga} alt="Cargando..." />
+            </div>
+          )}
+
           <video
             ref={videoRef}
             autoPlay // Inicia la reproducción automáticamente
             //controls
-            className="block h-5/6 w-full object-fill max-h-[80%] md:max-h-full  shadow-md mt-24"
-            // block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md 
+            className={`block h-5/6 w-full object-fill max-h-[80%] md:max-h-full shadow-md mt-24 ${
+              videoCargado ? "block" : "hidden"
+            }`}
+            onLoadedData={handleLoadedData}
+            // block w-full object-fill max-h-[80%] md:max-h-full rounded-lg shadow-md
           >
             <source src={Bio} type="video/mp4" />
             Tu navegador no soporta el elemento de video.
           </video>
         </div>
+        
         <div className="text-black m-3 bg-light p-6 rounded-md shadow-md space-y-4">
           <h1 className="text-4xl font-semibold text-accent">
             Integración de Soluciones en Automatización y Control
           </h1>
-          <h2 className="text-xl text-secondary">14 Diciembre, 2023</h2>
+          <h2 className="text-xl text-secondary">Marzo, 2023</h2>
           <div className="text-justify ">
             <p>
               Estamos comprometidos en brindar soluciones integrales y
@@ -113,7 +126,7 @@ function BiorreactorPage() {
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <p className="text-primary bg-secondary bg-opacity-75 p-2 text-lg font-bold">
-                     {image.description}
+                    {image.description}
                   </p>
                 </div>
               </div>

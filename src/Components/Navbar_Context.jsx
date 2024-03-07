@@ -18,16 +18,14 @@ import image3 from "../img/Submenu/TI.png";
 import image4 from "../img/Submenu/adquisicion.png";
 
 const Navbar_Context = () => {
-  
   const { logoColor, setLogoColor, txtColor } = useInsoel();
-  const {proyectColor, opacidadColor} = useInsoel(); 
+  const { proyectColor, opacidadColor } = useInsoel();
   const [activeInfo, setActiveInfo] = useState(null);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(0);
   const [mostrarContenido, setMostrarContenido] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isContentActive, setIsContentActive] = useState(false);
-  
 
   const handleInfoToggle = (info) => {
     setActiveInfo(activeInfo === info ? null : info);
@@ -72,7 +70,6 @@ const Navbar_Context = () => {
 
     "Descubre nuestra sección de adquisición de equipos y herramientas, donde nuestra tienda virtual te brinda acceso directo a los productos líderes de la industria. Descubre soluciones eficientes para impulsar tus proyectos con facilidad y confianza.",
   ];
-  
 
   const [imagen, setImagen] = useState(0);
 
@@ -82,27 +79,29 @@ const Navbar_Context = () => {
     setIsHovered(!isHovered); // Invertir el estado al hacer clic
   };
 
-
   const handleMouseLeave = () => {
-    if (activeInfo === "proyectos" && isContentActive){
-      setActiveInfo('bg-gradient-to-b from-secondary bottom-96');
+    if (activeInfo === "proyectos" && isContentActive) {
+      setActiveInfo("bg-gradient-to-b from-secondary bottom-96");
       setIsContentActive(false); // Desactiva el contenido al salir del recuadro
     }
   };
 
-  
   return (
     <div>
       <nav
         className={`${
-           activeInfo === "proyectos" && isContentActive
+          activeInfo === "proyectos" && isContentActive
             ? proyectColor
             : activeInfo === ""
             ? ""
             : opacidadColor
         } p-4 absolute top-0 left-0 right-0  z-10 `}
         //onMouseLeave={handleMouseLeave}
-        onMouseLeave={ activeInfo === "proyectos" && isContentActive ? handleMouseLeave : null}
+        onMouseLeave={
+          activeInfo === "proyectos" && isContentActive
+            ? handleMouseLeave
+            : null
+        }
       >
         {/* logos */}
         <div className="flex items-center justify-between">
@@ -116,7 +115,9 @@ const Navbar_Context = () => {
                 src={
                   logoColor === "amarilloNegro"
                     ? LogoAmarilloNegro
-                    : logoColor === "amarilloBlanco" && proyectColor && opacidadColor
+                    : logoColor === "amarilloBlanco" &&
+                      proyectColor &&
+                      opacidadColor
                     ? LogoAmarilloBlanco
                     : logoColor === "verdeBlanco" && opacidadColor
                     ? LogoVerdeBlanco
@@ -126,7 +127,9 @@ const Navbar_Context = () => {
                     ? LogoAzulBlanco
                     : logoColor === "azulNegro"
                     ? LogoAzulNegro
-                    : logoColor === "amarilloBlancoNosotros" && proyectColor && opacidadColor
+                    : logoColor === "amarilloBlancoNosotros" &&
+                      proyectColor &&
+                      opacidadColor
                     ? LogoAmarilloBlancoNosotros
                     : LogoAmarilloBlanco
                 }
@@ -167,7 +170,6 @@ const Navbar_Context = () => {
                 activeInfo === "proyectos"
                   ? "p-1 pr-2 pl-2 bg-darkPrimary  transform border-2 border-black/50 rounded-lg "
                   : "hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
-
               }`}
               onClick={() => handleInfoToggle("proyectos")}
             >
@@ -194,9 +196,9 @@ const Navbar_Context = () => {
               className={`text-${
                 activeInfo === "nosotros" ? "black" : "white"
               } cursor-pointer  ${
-                activeInfo === "nosotros" 
-                ? "p-1 pr-2 pl-2 bg-darkPrimary transform border-2 border-black/50 rounded-lg "
-                : " hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
+                activeInfo === "nosotros"
+                  ? "p-1 pr-2 pl-2 bg-darkPrimary transform border-2 border-black/50 rounded-lg "
+                  : " hover:text-black hover:bg-primary p-1 pr-2 pl-2 rounded-lg"
               }`}
               onClick={() => handleInfoToggle("nosotros")}
             >
@@ -206,10 +208,12 @@ const Navbar_Context = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                style={{
-                  //color: activeInfo === "nosotros" ? "black" : txtColor,
-                  // Ajusta según sea necesario
-                }}
+                style={
+                  {
+                    //color: activeInfo === "nosotros" ? "black" : txtColor,
+                    // Ajusta según sea necesario
+                  }
+                }
               >
                 ¿Quiénes Somos?
               </Link>
@@ -229,7 +233,7 @@ const Navbar_Context = () => {
                 }}
               ></Link>
             </div>
-            
+
             <div
               className={`text-${
                 activeInfo === "contactanos" ? "black" : "white"
@@ -242,17 +246,17 @@ const Navbar_Context = () => {
             >
               <Link
                 to="/web-insol/contactanos"
-                style={{
-                  //color: activeInfo === "contactanos" ? "black" : txtColor,
-                  // Ajusta según sea necesario
-                }}
+                style={
+                  {
+                    //color: activeInfo === "contactanos" ? "black" : txtColor,
+                    // Ajusta según sea necesario
+                  }
+                }
               >
                 Contactarnos
               </Link>
             </div>
-            
           </div>
-
         </div>
 
         {/* menu en pantallas pequeñas */}
@@ -290,7 +294,7 @@ const Navbar_Context = () => {
                           </Link>
                         </li>
                         <br />
-                        <li className="hover:bg-primary rounded"> 
+                        <li className="hover:bg-primary rounded">
                           <Link to={"/web-insol/tienda"}></Link>
                         </li>
                         <li className="hover:bg-primary rounded p-2">
@@ -303,7 +307,7 @@ const Navbar_Context = () => {
 
                     {/* Menú de "¿Qué hacemos?" */}
                     {mostrarContenido && (
-                        <aside className="bg-white p-4 absolute left-0 border-2 border-primary rounded-md shadow-md w-52 mt-52 ">
+                      <aside className="bg-white p-4 absolute left-0 border-2 border-primary rounded-md shadow-md w-52 mt-52 ">
                         <ul className="text-xl pl-2  ">
                           <li className="space-y-2 list-disc pt-2 pb-2">
                             <Link
@@ -312,24 +316,24 @@ const Navbar_Context = () => {
                             >
                               Desarrollo Tecnológico
                             </Link>
-                            </li>
-                            <li className="space-y-2 list-disc pt-2 pb-2">
+                          </li>
+                          <li className="space-y-2 list-disc pt-2 pb-2">
                             <Link
                               to="/proyectos/Biorreactor"
                               className="block text-black hover:bg-primary rounded p-2"
                             >
                               Soluciones de Integración
                             </Link>
-                            </li>
-                            <li className="space-y-2 list-disc pt-2 pb-2">
+                          </li>
+                          <li className="space-y-2 list-disc pt-2 pb-2">
                             <Link
                               to="/proyectos/Consultas"
                               className="block text-black hover:bg-primary rounded p-2"
                             >
                               Infraestructura TI
                             </Link>
-                            </li>
-                            <li className="space-y-2 list-disc pt-2 pb-2">
+                          </li>
+                          <li className="space-y-2 list-disc pt-2 pb-2">
                             <Link
                               to="/web-insol/tienda"
                               className="block text-black hover:bg-primary rounded p-2"
@@ -353,14 +357,12 @@ const Navbar_Context = () => {
             className={`bg-${
               activeInfo === "proyectos" ? "transparent" : "transparent"
             } bg-opacity-75 p-4 mt-2 w-full text-center text-black`}
-            
-          onMouseLeave={handleMouseLeave}
+            onMouseLeave={handleMouseLeave}
           >
             {activeInfo === "proyectos" && isContentActive && (
               <div className="flex items-center ">
-                <div className="text-right text-white text-2xl mr-5 w-1/3 ">
+                <div className="text-right text-white text-2xl mr-5 w-1/3">
                   <p
-                  
                     className={`cursor-pointer ${
                       selectedItem === 0
                         ? "hover:bg-primary hover:text-black p-1 pr-2 pl-2 rounded-lg text-black"
@@ -369,9 +371,10 @@ const Navbar_Context = () => {
                     onClick={() => handleClick(0)}
                     //onClick={() => handleInfoToggle("proyectos")}
                   >
-                    Desarrollo Tecnológico 
+                    Desarrollo Tecnológico
                     <br />
-                  </p><br/>
+                  </p>
+                  <br />
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 1
@@ -380,9 +383,10 @@ const Navbar_Context = () => {
                     }`}
                     onClick={() => handleClick(1)}
                   >
-                    Soluciones de Integración 
+                    Soluciones de Integración
                     <br />
-                  </p><br />
+                  </p>
+                  <br />
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 2
@@ -391,9 +395,10 @@ const Navbar_Context = () => {
                     }`}
                     onClick={() => handleClick(2)}
                   >
-                    Infraestructura TI 
+                    Infraestructura TI
                     <br />
-                  </p><br />
+                  </p>
+                  <br />
                   <p
                     className={`cursor-pointer ${
                       selectedItem === 3
@@ -440,9 +445,8 @@ const Navbar_Context = () => {
                     ))}
                   </div>
                 </div>
-                </div>
+              </div>
             )}
-
           </div>
         )}
       </nav>

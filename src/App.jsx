@@ -13,7 +13,6 @@ import ContactanosPage from "./pages/ContactanosPage";
 import BiorreactorPage from "./pages/Proyectos/BiorreactorPage";
 import BancoUatPage from "./pages/Proyectos/BancoUatPage";
 import SistemaDeConsultasPage from "./pages/Proyectos/SistemaDeConsultasPage";
-import ApkLectoraQrPage from "./pages/Proyectos/ApkLectoraQrPage";
 import HomePage from "./pages/HomePage";
 import Footer from "./Components/Footer";
 import TiendaPage from "./pages/TiendaPage";
@@ -26,6 +25,7 @@ import BlogPage from "./pages/BlogPage";
 import PanelControlPage from "./pages/PanelControlPage";
 import ProtectedRoute from "./ProtectedRoute";
 import ListaProyectosPage from "./pages/ListaProyectosPage";
+import FormProyectos from "./Components_Panel/FormProyectos";
 
 function App() {
   return (
@@ -64,6 +64,8 @@ function App() {
                 path="/web-insol/listaProyectos"
                 element={<ListaProyectosPage />}
               />
+              
+            <Route path="/web-insol/formularioProyectos" element={<FormProyectos />} />
 
               <Route element={<ProtectedRoute />}>
                 <Route
@@ -76,6 +78,7 @@ function App() {
         </BrowserRouter>
       </InsoelProvider>
     </AuthProvider>
+
   );
 }
 
@@ -103,9 +106,9 @@ function MainRoutes() {
       <Route path="/proyectos/Biorreactor" element={<BiorreactorPage />} />
       <Route path="/proyectos/BancoUAT" element={<BancoUatPage />} />
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
-      <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
       <Route path="/web-insol/blog" element={<BlogPage />} />
+      
     </Routes>
   );
 }

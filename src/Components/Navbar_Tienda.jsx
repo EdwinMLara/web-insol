@@ -173,7 +173,6 @@ function Navbar_Tienda() {
             </motion.div>
           )}
         </AnimatePresence>
-
       </nav>
     </div>
   );
