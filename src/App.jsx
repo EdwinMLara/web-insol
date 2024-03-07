@@ -24,6 +24,7 @@ import Registrarse from "./Components_Panel/Registrarse";
 import BlogPage from "./pages/BlogPage";
 import PanelControlPage from './pages/PanelControlPage'
 import ProtectedRoute from './ProtectedRoute'
+import FormProyectos from "./Components_Panel/FormProyectos";
 
 function App() {
   return (
@@ -53,6 +54,8 @@ function App() {
             />
             <Route path="/web-insol/login" element={<Login />} />
             <Route path="/web-insol/registrarse" element={<Registrarse />} />
+            <Route path="/web-insol/formularioProyectos" element={<FormProyectos />} />
+            <Route path="/web-insol/panel" element={<PanelControlPage />} />
           </Routes>
         </main>
       </BrowserRouter>

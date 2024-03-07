@@ -66,7 +66,7 @@ function Login() {
           <div className="flex justify-end mb-4 ">
             <button
               type="submit"
-              class="bg-primary text-black py-2 px-4 rounded-md hover:bg-darkPrimary hover:text-white ml-auto"
+              className="bg-primary text-black py-2 px-4 rounded-md hover:bg-darkPrimary hover:text-white ml-auto"
             >
               Iniciar sesión
             </button>
