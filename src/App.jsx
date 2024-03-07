@@ -23,8 +23,9 @@ import MapaPage from "./pages/MapaPage";
 import Login from "./Components_Panel/Login";
 import Registrarse from "./Components_Panel/Registrarse";
 import BlogPage from "./pages/BlogPage";
-import PanelControlPage from './pages/PanelControlPage'
-import ProtectedRoute from './ProtectedRoute'
+import PanelControlPage from "./pages/PanelControlPage";
+import ProtectedRoute from "./ProtectedRoute";
+import ListaProyectosPage from "./pages/ListaProyectosPage";
 
 function App() {
   return (
@@ -54,13 +55,22 @@ function App() {
                 }
               />
               <Route path="/web-insol/login" element={<Login />} />
-              <Route path="/web-insol/registrarse" element={<Registrarse />} />
               <Route
                 path="/web-insol/panelControl"
                 element={<PanelControlPage />}
               />
 
-              <Route element={<ProtectedRoute />}></Route>
+              <Route
+                path="/web-insol/listaProyectos"
+                element={<ListaProyectosPage />}
+              />
+
+              <Route element={<ProtectedRoute />}>
+                <Route
+                  path="/web-insol/registrarse"
+                  element={<Registrarse />}
+                />
+              </Route>
             </Routes>
           </main>
         </BrowserRouter>
@@ -96,8 +106,6 @@ function MainRoutes() {
       <Route path="/proyectos/ApkLectora" element={<ApkLectoraQrPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
       <Route path="/web-insol/blog" element={<BlogPage />} />
-     
-      
     </Routes>
   );
 }
