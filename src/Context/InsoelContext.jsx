@@ -1,6 +1,7 @@
 import { createContext, useState, useContext, useEffect } from "react";
 
 import { createSolicitudRequest, getSolicitudesRequest } from "../api/contactarnos";
+import {crearProyectoRequest, getProyectosRequest} from '../api/proyectos'
 
 const InsoelContext = createContext();
 
@@ -20,12 +21,26 @@ export function InsoelProvider({ children }) {
     "bg-opacity-75 bg-gradient-to-b from-secondary bottom-96"
   );
 
+  //----------------Proyectos--------------
+  const [proyectos, setProyectos] = useState([])
+
+
   // Funciones para la seccion de contactarnos
 
   const createSolicitud = async (solicitud) => {
     const res = await createSolicitudRequest(solicitud);
     console.log(res);
   };
+
+  /** ------------------Proyectos----------------------- */
+  const crearProyceto = async(proyecto) =>{
+    const res = await crearProyectoRequest(proyecto)
+    console.log(res)
+  }
+  const obtenerProyectos = async()=>{
+    const proyectos = await getProyectosRequest()
+    setProyectos(proyectos.data)
+  }
 
   return (
     <InsoelContext.Provider
@@ -38,7 +53,9 @@ export function InsoelProvider({ children }) {
         setProyectColor,
         opacidadColor,
         setOpacidadColor,
-        createSolicitud
+        createSolicitud,
+        obtenerProyectos,
+        proyectos
       }}
     >
       {children}

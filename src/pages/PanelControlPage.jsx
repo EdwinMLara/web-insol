@@ -1,16 +1,7 @@
-import React, { useState } from "react";
-import NavbarPanel from "../Components_Panel/NavbarPanel";
+import React, {useState} from 'react'
+import NavbarPanel from '../Components_Panel/NavbarPanel'
 import { HiOutlineViewList } from "react-icons/hi";
-import FormProyectos from "../Components_Panel/FormProyectos";
-import FormCarrusel from "../Components_Panel/FormCarrusel";
-import PanelPrincipal from "../Components_Panel/PanelPrincipal";
-import FormProductos from "../Components_Panel/FormProductos";
-import FormCategoria from "../Components_Panel/FormCategoria";
-import FormUbicacion from "../Components_Panel/FormUbicacion";
-import ProyectosPage from "../Pages_panel/ProyectosPage";
-import CarruselPage from "../Pages_panel/CarruselPage";
-import SubMenuPage from "../Pages_panel/SubMenuPage";
-import MapaUbicacionPage from "../Pages_panel/MapaUbicacionPage";
+import FormProyectos from '../Components_Panel/FormProyectos';
 
 function PanelControlPage() {
   const [activeTab, setActiveTab] = useState(null); // Estado para rastrear la pestaña activa
@@ -24,6 +15,15 @@ function PanelControlPage() {
   const toggleSubMenu = () => {
     setShowSubMenu(!showSubMenu);
   };
+  const { logout, isAuthenticated} = useAuth();
+  const navigate = useNavigate()
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/web-insol/panelControl");
+    } else {
+      navigate("/web-insol/login");
+    }
+  }, [isAuthenticated]);
 
   return (
     <div className="bg-darkPrimary bg-opacity-50">

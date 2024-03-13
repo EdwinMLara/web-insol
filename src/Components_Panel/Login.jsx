@@ -20,7 +20,6 @@ function Login() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      console.log("llegue estoy autenticado")
       navigate("/web-insol/panelControl");
     } else {
       navigate("/web-insol/login");
