@@ -1,7 +1,7 @@
 import React from "react";
 
 function Blog({ noticia }) {
-  return (
+  return ( 
     <div className="">
   <div className="bg-opacity-25 bg-darkPrimary  shadow-xl rounded-md p-4 relative">
     <img

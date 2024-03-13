@@ -9,7 +9,7 @@ function ListNoticia({ noticias }) {
         {noticias.map((noticia) => (
           <Blog key={noticia.id} noticia={noticia} />
         ))}
-      </div>
+      </div> 
     </div>
   );
 }

@@ -1,7 +1,16 @@
-import React, {useState} from 'react'
-import NavbarPanel from '../Components_Panel/NavbarPanel'
+import React, { useState } from "react";
+import NavbarPanel from "../Components_Panel/NavbarPanel";
 import { HiOutlineViewList } from "react-icons/hi";
-import FormProyectos from '../Components_Panel/FormProyectos';
+import FormProyectos from "../Components_Panel/FormProyectos";
+import FormCarrusel from "../Components_Panel/FormCarrusel";
+import PanelPrincipal from "../Components_Panel/PanelPrincipal";
+import FormProductos from "../Components_Panel/FormProductos";
+import FormCategoria from "../Components_Panel/FormCategoria";
+import FormUbicacion from "../Components_Panel/FormUbicacion";
+import ProyectosPage from "../Pages_panel/ProyectosPage";
+import CarruselPage from "../Pages_panel/CarruselPage";
+import SubMenuPage from "../Pages_panel/SubMenuPage";
+import MapaUbicacionPage from "../Pages_panel/MapaUbicacionPage";
 
 function PanelControlPage() {
   const [activeTab, setActiveTab] = useState(null); // Estado para rastrear la pestaña activa
@@ -13,133 +22,217 @@ function PanelControlPage() {
   };
 
   const toggleSubMenu = () => {
-    // Esta función cambiará el estado para mostrar u ocultar el submenú
     setShowSubMenu(!showSubMenu);
   };
 
   return (
-    <div className='bg-black'>
-    <NavbarPanel />
-    <div className='flex'>
-      {/* Barra lateral */}
-      <aside
-        id="logo-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen pt-16 transition-transform -translate-x-full sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
-        aria-label="Sidebar"
-      >
-        <div className="h-full px-3 pb-4 mt-1 overflow-y-auto bg-secondary  border-t-2 border-primary dark:bg-secondary">
-          <ul className="space-y-2 font-medium">
-            <li>
-              <a
-                href="#"
-                className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
-                  activeTab === "proyectos" ? "bg-darkPrimary" : ""
-                }`}
-                onClick={() => {
-                  handleTabClick("proyectos");
-                  toggleSubMenu(); // Toggle del submenú al hacer clic en "Proyectos"
-                }}
-              >
-                <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
-                <span className="p-2 font-bold">Proyectos</span>
-              </a>
-              {/* Submenú de Proyectos */}
-              {activeTab === "proyectos" && showSubMenu && (
-                <ul className="ml-6 space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white hover:text-black hover:bg-primary p-2 rounded-lg dark:text-white"
-                      onClick={() => handleTabClick("tabla")}
-                    >
-                      Tabla
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white hover:text-black hover:bg-primary p-2 rounded-lg dark:text-white"
-                      onClick={() => handleTabClick("nuevoProyecto")}
-                    >
-                      Nuevo Proyecto
-                    </a>
-                  </li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <a
-                href="#"
-                className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
-                  activeTab === "tienda" ? "" : ""
-                }`}
-                onClick={() => {
-                  handleTabClick("tienda");
-                  toggleSubMenu(); // Toggle del submenú al hacer clic en "tienda"
-                }}
-              >
-                <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
-                <span className="p-2 font-bold">Tienda</span>
-              </a>
-              {/* Submenú de tienda */}
-              {activeTab === "tienda" && showSubMenu && (
-                <ul className="ml-6 space-y-2">
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white hover:text-black hover:bg-primary p-2 rounded-lg dark:text-white"
-                      onClick={() => handleTabClick("tablaProductos")}
-                    >
-                      Tabla Productos
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-white hover:text-black hover:bg-primary p-2 rounded-lg dark:text-white"
-                      onClick={() => handleTabClick("nuevoProducto")}
-                    >
-                      Nuevo Producto
-                    </a>
-                  </li>
-                </ul>
-              )}
-            </li>
-          </ul>
-        </div>
-      </aside>
+    <div className="bg-darkPrimary bg-opacity-50">
+      <NavbarPanel />
+      <div className="flex ">
+        {/* Barra lateral */}
+        <aside
+          id="logo-sidebar"
+          className="fixed top-0 left-0 z-40 w-64 h-screen pt-16 transition-transform -translate-x-full sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+          aria-label="Sidebar"
+        >
+          <div className="h-full px-3 pb-4 mt-1 overflow-y-auto bg-secondary  border-t-2 border-primary dark:bg-secondary">
+            <ul className="space-y-2 font-medium">
+              {/* Proyectos */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "proyectos" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("proyectos")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Proyectos</span>
+                </a>
+              </li>
+              {/* Nuevo Proyecto */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "proyectos" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("nuevoProyecto")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Nuevo Proyecto</span>
+                </a>
+              </li>
+              {/* Mapa */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "mapa" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("mapa")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Mapa</span>
+                </a>
+              </li>
+              {/* Agregar Ubucacion */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "agregarUbicacion" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("agregarUbicacion")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Agregar Ubucacion</span>
+                </a>
+              </li>
+              {/* Carrusel */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "carrusel" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("carrusel")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Carrusel</span>
+                </a>
+              </li>
+              {/* Agregar Imagenes */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "agregarImg" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("agregarImg")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Agregar Imagenes</span>
+                </a>
+              </li>
+              {/* Tienda */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "tienda" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("tienda")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Tienda</span>
+                </a>
+              </li>
+              {/* Agregar Productos */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "agregarProducto" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("agregarProducto")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Agregar Productos</span>
+                </a>
+              </li>
+              {/* Agregar Categorias */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "agregarCategoria" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("agregarCategoria")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">Agregar Categoria</span>
+                </a>
+              </li>
+              {/* SubMenu */}
+              <li>
+                <a
+                  href="#"
+                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
+                    activeTab === "submenu" ? "" : ""
+                  }`}
+                  onClick={() => handleTabClick("submenu")}
+                >
+                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
+                  <span className="p-2 font-bold">SubMenu</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
 
-      {/* Contenido principal */}
-      <div className="mt-16 sm:ml-64">
-        {/* Contenido dinámico basado en la pestaña activa */}
-        {activeTab === "tabla" && (
-          <div>
-            {/* Aquí coloca el contenido específico de la tabla de proyectos */}
-            hola como estas proyecto
-          </div>
-        )}
-        {activeTab === "nuevoProyecto" && (
-          <div>
-            {/* Aquí coloca el contenido específico del formulario de nuevo proyecto */}
-            <FormProyectos />
-          </div>
-        )}
-        {activeTab === "tablaProductos" && (
-          <div>
-            {/* Aquí coloca el contenido específico del formulario de nuevo proyecto */}
-            hola como estas producto
-          </div>
-        )}
-        {activeTab === "nuevoProducto" && (
-          <div>
-            {/* Aquí coloca el contenido específico del formulario de nuevo proyecto */}
-            <FormProyectos />
-          </div>
-        )}
+        {/* Contenido principal */}
+        <div className="flex-1 xl:mt-0 sm:ml-64 ">
+          {/* Contenido dinámico basado en la pestaña activa */}
+          {!activeTab && (
+            <div>
+              <PanelPrincipal />
+            </div>
+          )}
+          {activeTab === "carrusel" && (
+            <div>
+              <CarruselPage />
+            </div>
+          )}
+          {activeTab === "proyectos" && (
+            <div>
+              <ProyectosPage />
+            </div>
+          )}
+          {activeTab === "tienda" && (
+            <div>
+              <PanelPrincipal />
+            </div>
+          )}
+          {activeTab === "submenu" && (
+            <div className="mb-20">
+              <SubMenuPage />
+            </div>
+          )}
+          {activeTab === "mapa" && (
+            <div>
+              <MapaUbicacionPage />
+            </div>
+          )}
+          {activeTab === "nuevoProyecto" && (
+            <div className="mt-24"> 
+              <FormProyectos />
+            </div>
+          )}
+          {activeTab === "agregarProducto" && (
+            <div className=""> 
+              <FormProductos />
+            </div>
+          )}
+          {activeTab === "agregarCategoria" && (
+            <div className="">
+              <FormCategoria />
+            </div>
+          )}
+          {activeTab === "agregarImg" && (
+            <div className=""> 
+              <FormCarrusel />
+            </div>
+          )}
+          {activeTab === "agregarUbicacion" && (
+            <div className=""> 
+              <FormUbicacion />
+            </div>
+          )}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
 }
 
-export default PanelControlPage
+export default PanelControlPage;
