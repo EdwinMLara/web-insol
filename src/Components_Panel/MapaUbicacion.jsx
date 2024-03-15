@@ -1,6 +1,9 @@
 import React from "react";
 
+
+
 function MapaUbicacion({ ubicacion }) {
+  
   return (
     <div className="m-5">
       <div className="bg-opacity-25 bg-gray-900 shadow-xl rounded-md p-4 relative">
@@ -56,7 +59,8 @@ function MapaUbicacion({ ubicacion }) {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> 
+      
     </div>
   );
 }

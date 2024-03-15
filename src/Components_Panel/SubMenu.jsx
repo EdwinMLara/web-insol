@@ -18,8 +18,8 @@ function SubMenu({ submenu }) {
   };
 
   return (
-    <div className="m-5">
-      <div className="bg-opacity-25 bg-gray-900 shadow-xl rounded-md p-4 relative">
+    <div className="h-64 mt-5 mr-5 ml-5">
+      <div className="bg-opacity-25 bg-gray-900  shadow-xl rounded-md p-4 relative">
         <div
           className={`grid grid-cols-1 ${
             editando ? "md:grid-cols-2" : ""
@@ -28,32 +28,48 @@ function SubMenu({ submenu }) {
           <div
             className={editando ? "" : "grid grid-cols-1 md:grid-cols-2 gap-6"}
           >
-            <div>
-              <h2 className="text-2xl text-center ml-10 font-semibold text-secondary m-4">
+            <div className={editando ? "grid grid-cols-2 mr-3" : " "}>
+              <div>
+              <h2 className="text-2xl text-center  font-semibold text-secondary m-2 ">
                 {submenu.area}
               </h2>
+              <p className="text-black ml-2 mt-5">{submenu.enlace}</p>
+              </div>
               <img
                 src={submenu.img1}
                 alt={submenu.area}
-                className="w-full h-40 object-cover rounded-md m-2"
+                className={editando ? "w-full h-40 object-cover rounded-md m-2" : "h-48 ml-28 mt-5  "}
               />
-              <p className="text-black m-2">{submenu.enlace}</p>
             </div>
-            <div className="">
-              <p className="text-black m-4 text-justify">
+            
+              <p className={editando ? "text-black m-4 text-justify " : "text-black m-4 text-justify  text-lg mt-10"}>
                 {submenu.descripcion}
               </p>
-            </div>
+            
           </div>
           <div className="">
             {editando && (
               <>
-                <input
+              <div className="grid grid-cols-2 ">
+              <input
                   type="text"
                   value={nuevoArea}
                   onChange={(e) => setNuevoArea(e.target.value)}
-                  className="mb-2 w-full border border-gray-400 rounded-md p-1"
+                  className="mb-2 w-full border border-gray-400 rounded-md p-1 mr-3"
                 />
+                 <select
+                  value={nuevoEnlace}
+                  onChange={(e) => setNuevoEnlace(e.target.value)}
+                  className="mb-4 w-full border border-gray-400 rounded-md p-2 ml-2 mr-2 mt-1"
+                >
+                  <option value="opcion1">Opción 1</option>
+                  <option value="opcion2">Opción 2</option>
+                  <option value="opcion3">Opción 3</option>
+                </select>
+
+              </div>
+                
+                <div className="grid grid-cols-2">
                 <input
                   type="file"
                   onChange={(e) => {
@@ -71,18 +87,11 @@ function SubMenu({ submenu }) {
                   <img
                     src={nuevaImagen}
                     alt="Imagen seleccionada"
-                    className="w-full h-auto rounded-md mb-4"
+                    className="w-56 rounded-md mb-4 text-center"
                   />
                 )}
-                <select
-                  value={nuevoEnlace}
-                  onChange={(e) => setNuevoEnlace(e.target.value)}
-                  className="mb-4 w-full border border-gray-400 rounded-md p-1"
-                >
-                  <option value="opcion1">Opción 1</option>
-                  <option value="opcion2">Opción 2</option>
-                  <option value="opcion3">Opción 3</option>
-                </select>
+                </div>
+                
                 <textarea
                   value={nuevaDescripcion}
                   onChange={(e) => setNuevaDescripcion(e.target.value)}
@@ -100,12 +109,12 @@ function SubMenu({ submenu }) {
             <>
               <button
                 onClick={handleGuardar}
-                className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md mr-2"
+                className="bg-green-500 hover:bg-green-600 text-white py-1 px-4 rounded-md mr-2"
               >
                 Guardar
               </button>
               <button
-                className="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded-md"
+                className="bg-gray-500 hover:bg-gray-600 text-white py-1 px-4 rounded-md"
                 onClick={() => setEditando(false)}
               >
                 Cancelar
@@ -115,11 +124,11 @@ function SubMenu({ submenu }) {
             <>
               <button
                 onClick={handleEditar}
-                className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md mr-2"
+                className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded-md mr-2"
               >
                 Editar
               </button>
-              <button className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-md">
+              <button className="bg-red-500 hover:bg-red-600 text-white py-1 px-4 rounded-md">
                 Eliminar
               </button>
             </>

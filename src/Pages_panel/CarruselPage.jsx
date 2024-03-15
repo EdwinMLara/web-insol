@@ -30,18 +30,18 @@ function CarruselPage() {
       };
     return (
         <div className="container mx-auto px-4 py-8 ">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center ">
       {!mostrarFormulario && (
-            <h1 className="mt-16 text-3xl font-bold">Carrusel</h1>
+            <h1 className="mt-10 text-3xl font-bold ml-5">Carrusel</h1>
           )}
         {mostrarFormulario ? (
-            <div className='ml-24'>
-                // Mostrar el formulario cuando mostrarFormulario es true
+            <div className='ml-24 mt-10'>
+                
             <FormCarrusel/>
             </div>
           ) : (
             // Mostrar el botón "Nuevo Proyecto" cuando mostrarFormulario es false
-            <button onClick={handleClickNuevoProyecto} className="mt-16 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Nuevo Carrusel</button>
+            <button onClick={handleClickNuevoProyecto} className="mt-14 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Nuevo Carrusel</button>
           )}
       </div>
       {!mostrarFormulario && (

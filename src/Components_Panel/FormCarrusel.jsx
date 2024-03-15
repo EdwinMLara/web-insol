@@ -4,15 +4,15 @@ import LogoAmarilloBlanco from "../img/Logos/AmarilloBlanco.png";
 function FormCarrusel() {
 
   return (
-    <div className='flex justify-center items-center h-screen '>
-      <div className=" border-2 border-primary relative">
-      <div className="bg-gradient-to-b from-secondary to-tertiary p-8 rounded shadow-md w-[56rem] ">
-        <div className="text-center">
-          <h1 className="font-bold text-2xl text-white">Agregar Imagenes para Carrusel </h1>
-        </div>
+    <div className='flex  mb-2'>
+      <div className="ml-2 ">
+      <div className="text-left mt-14 mb-5">
+            <h1 className="font-bold text-2xl text-secondary">Nuevas Imagenes para el Carrusel </h1>
+          </div>
+      <div className="my-12 ">
         <form>
           <div className="mb-4">
-            <label for="titulo" className="block text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+            <label for="titulo" className="block text-lg sm:text-base md:text-lg lg:text-xl font-semibold">
               Titulo
             </label>
             <input
@@ -25,7 +25,7 @@ function FormCarrusel() {
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div className="mb-4">
-            <label for="imagen1" className="block text-sm font-medium ">
+            <label for="imagen1" className="block text-lg font-semibold ">
                 Imagen 1
               </label>
               <input
@@ -37,7 +37,7 @@ function FormCarrusel() {
               />
             </div>
             <div className="mb-4">
-            <label for="imagen2" className="block text-sm font-medium ">
+            <label for="imagen2" className="block text-lg font-semibold ">
                 Imagen 2
               </label>
               <input
@@ -51,7 +51,7 @@ function FormCarrusel() {
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div className="mb-4">
-              <label for="imagen3" className="block text-sm font-medium ">
+              <label for="imagen3" className="block text-lg font-semibold ">
                 Imagen 3
               </label>
               <input
@@ -64,7 +64,7 @@ function FormCarrusel() {
               />
             </div>
             <div className="mb-4">
-              <label for="imagen4" className="block text-sm font-medium ">
+              <label for="imagen4" className="block text-lg font-semibold ">
                 Imagen 4
               </label>
               <input
@@ -79,7 +79,7 @@ function FormCarrusel() {
           <div className="mb-12">
             <button
               type="submit"
-              className="bg-primary text-black py-2 px-4 rounded-md hover:bg-darkPrimary hover:text-white absolute bottom-0 right-0 mb-7 mr-8"
+              className="bg-primary text-black py-2 px-4 rounded-md hover:bg-darkPrimary hover:text-white absolute right-64 "
             >
               Guardar
             </button>

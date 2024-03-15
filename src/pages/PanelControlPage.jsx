@@ -1,7 +1,18 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
+import { useAuth } from '../Context/AuthContext';
 import NavbarPanel from '../Components_Panel/NavbarPanel'
 import { HiOutlineViewList } from "react-icons/hi";
-import FormProyectos from '../Components_Panel/FormProyectos';
+import FormProyectos from "../Components_Panel/FormProyectos";
+import FormCarrusel from "../Components_Panel/FormCarrusel";
+import PanelPrincipal from "../Components_Panel/PanelPrincipal";
+import FormProductos from "../Components_Panel/FormProductos";
+import FormCategoria from "../Components_Panel/FormCategoria";
+import FormUbicacion from "../Components_Panel/FormUbicacion";
+import ProyectosPage from "../Pages_panel/ProyectosPage";
+import CarruselPage from "../Pages_panel/CarruselPage";
+import SubMenuPage from "../Pages_panel/SubMenuPage";
+import MapaUbicacionPage from "../Pages_panel/MapaUbicacionPage";
 
 function PanelControlPage() {
   const [activeTab, setActiveTab] = useState(null); // Estado para rastrear la pestaña activa
@@ -15,18 +26,19 @@ function PanelControlPage() {
   const toggleSubMenu = () => {
     setShowSubMenu(!showSubMenu);
   };
+
   const { logout, isAuthenticated} = useAuth();
   const navigate = useNavigate()
-  useEffect(() => {
+ /* useEffect(() => {
     if (isAuthenticated) {
-      navigate("/web-insol/panelControl");
+      navigate("/web-insol/panel");
     } else {
       navigate("/web-insol/login");
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated]);*/
 
   return (
-    <div className="bg-darkPrimary bg-opacity-50">
+    <div className="bg-darkPrimary bg-opacity-50 h-screen">
       <NavbarPanel />
       <div className="flex ">
         {/* Barra lateral */}
@@ -50,19 +62,7 @@ function PanelControlPage() {
                   <span className="p-2 font-bold">Proyectos</span>
                 </a>
               </li>
-              {/* Nuevo Proyecto */}
-              <li>
-                <a
-                  href="#"
-                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
-                    activeTab === "proyectos" ? "" : ""
-                  }`}
-                  onClick={() => handleTabClick("nuevoProyecto")}
-                >
-                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
-                  <span className="p-2 font-bold">Nuevo Proyecto</span>
-                </a>
-              </li>
+              
               {/* Mapa */}
               <li>
                 <a
@@ -76,19 +76,7 @@ function PanelControlPage() {
                   <span className="p-2 font-bold">Mapa</span>
                 </a>
               </li>
-              {/* Agregar Ubucacion */}
-              <li>
-                <a
-                  href="#"
-                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
-                    activeTab === "agregarUbicacion" ? "" : ""
-                  }`}
-                  onClick={() => handleTabClick("agregarUbicacion")}
-                >
-                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
-                  <span className="p-2 font-bold">Agregar Ubucacion</span>
-                </a>
-              </li>
+              
               {/* Carrusel */}
               <li>
                 <a
@@ -102,19 +90,21 @@ function PanelControlPage() {
                   <span className="p-2 font-bold">Carrusel</span>
                 </a>
               </li>
-              {/* Agregar Imagenes */}
+
+              {/* SubMenu */}
               <li>
                 <a
                   href="#"
                   className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
-                    activeTab === "agregarImg" ? "" : ""
+                    activeTab === "submenu" ? "" : ""
                   }`}
-                  onClick={() => handleTabClick("agregarImg")}
+                  onClick={() => handleTabClick("submenu")}
                 >
                   <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
-                  <span className="p-2 font-bold">Agregar Imagenes</span>
+                  <span className="p-2 font-bold">SubMenu</span>
                 </a>
               </li>
+              
               {/* Tienda */}
               <li>
                 <a
@@ -152,19 +142,6 @@ function PanelControlPage() {
                 >
                   <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
                   <span className="p-2 font-bold">Agregar Categoria</span>
-                </a>
-              </li>
-              {/* SubMenu */}
-              <li>
-                <a
-                  href="#"
-                  className={`flex items-center text-white hover:text-black hover:bg-primary p-2 mt-2 rounded-lg dark:text-white group ${
-                    activeTab === "submenu" ? "" : ""
-                  }`}
-                  onClick={() => handleTabClick("submenu")}
-                >
-                  <HiOutlineViewList className="flex-shrink-0 w-5 h-5  transition duration-75 dark:text-gray-400 group-hover:text-secondary text-primary" />
-                  <span className="p-2 font-bold">SubMenu</span>
                 </a>
               </li>
             </ul>

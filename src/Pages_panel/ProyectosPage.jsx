@@ -42,18 +42,18 @@ function ProyectosPage() {
       };
   return (
     <div className="container mx-auto px-4 py-8 ">
-  <div className="flex justify-between items-center mb-8">
+  <div className="flex justify-between items-center ">
   {!mostrarFormulario && (
-        <h1 className="mt-16 text-3xl font-bold">Proyectos</h1>
+        <h1 className="mt-10 text-3xl font-bold ml-5">Proyectos</h1>
       )}
     {mostrarFormulario ? (
-      <div className='ml-10'>
+      <div className=''>
 // Mostrar el formulario cuando mostrarFormulario es true
         <FormProyectos /> 
       </div>
       ) : (
         // Mostrar el botón "Nuevo Proyecto" cuando mostrarFormulario es false
-        <button onClick={handleClickNuevoProyecto} className="mt-16 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Nuevo Proyecto</button>
+        <button onClick={handleClickNuevoProyecto} className="mt-14 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">Nuevo Proyecto</button>
       )}
   </div>
   {!mostrarFormulario && (

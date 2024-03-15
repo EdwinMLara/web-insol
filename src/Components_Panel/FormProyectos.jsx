@@ -21,15 +21,18 @@ function FormProyectos() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen m-10">
-      <div className=" border-2 border-primary relative">
-        <div className="bg-gradient-to-b from-secondary to-tertiary p-8 rounded shadow-md w-[56rem] ">
-          <div className="text-center">
-            <h1 className="font-bold text-2xl text-white">Nuevo Proyecto </h1>
+    <div className="flex ">
+      <div className=" ml-10 mr-10">
+      <div className="text-left mt-4 mb-2">
+            <h1 className="font-bold text-2xl text-secondary">Nuevo Proyecto </h1>
           </div>
+        <div className=" ">
+          
           <form onSubmit={handleSubmit}>
-            <div className="mb-4 ">
-              <label for="titulo" className="block text-sm font-medium ">
+            
+              <div className="grid grid-cols-2 gap-4">
+              <div className="mb-4 ">
+              <label for="titulo" className="block text-lg font-bold ">
                 Titulo
               </label>
               <input
@@ -39,10 +42,23 @@ function FormProyectos() {
                 className="mt-1 p-2 w-full border rounded-md"
                 placeholder="Titulo del Proyecto"
               />
+              </div>
+              <div className="mb-4">
+              <label for="frase" className="block text-lg font-semibold ">
+                Frase
+              </label>
+              <input
+                type="text"
+                id="frase"
+                name="frase"
+                className="mt-1 p-2 w-full border rounded-md"
+                placeholder="Frase inspiradora"
+              />
+            </div>
             </div>
             <div class="grid grid-cols-3 gap-4">
               <div className="mb-4">
-                <label for="video" className="block text-sm font-medium">
+                <label for="video" className="block text-lg font-semibold">
                   Video
                 </label>
                 <input
@@ -55,7 +71,7 @@ function FormProyectos() {
                 />
               </div>
               <div className="mb-4">
-                <label for="fecha" className="block text-sm font-medium ">
+                <label for="fecha" className="block text-lg font-semibold ">
                   Fecha del Proyecto
                 </label>
                 <input
@@ -67,7 +83,7 @@ function FormProyectos() {
                 />
               </div>
               <div className="mb-4">
-              <label for="fecha" className="block text-sm font-medium ">
+              <label for="fecha" className="block text-lg font-semibold ">
                   Seleccionar
                 </label>
                 <select className=" mt-1 p-2 w-full border rounded-md">
@@ -82,7 +98,7 @@ function FormProyectos() {
               </div>
             </div>
             <div className="mb-4">
-              <label for="contenido" className="block text-sm font-medium ">
+              <label for="contenido" className="block text-lg font-semibold ">
                 Contenido
               </label>
               <textarea
@@ -96,7 +112,7 @@ function FormProyectos() {
             </div>
             <div class="grid grid-cols-3 gap-4">
               <div className="mb-4">
-                <label for="imagen1" className="block text-sm font-medium ">
+                <label for="imagen1" className="block text-lg font-semibold ">
                   Imagen 1
                 </label>
                 <input
@@ -109,7 +125,7 @@ function FormProyectos() {
                 />
               </div>
               <div className="mb-4">
-                <label for="imagen2" className="block text-sm font-medium ">
+                <label for="imagen2" className="block text-lg font-semibold ">
                   Imagen 2
                 </label>
                 <input
@@ -121,7 +137,7 @@ function FormProyectos() {
                 />
               </div>
               <div className="mb-4">
-                <label for="imagen3" className="block text-sm font-medium ">
+                <label for="imagen3" className="block text-lg font-semibold ">
                   Imagen 3
                 </label>
                 <input
@@ -133,22 +149,10 @@ function FormProyectos() {
                 />
               </div>
             </div>
-            <div className="mb-4">
-              <label for="frase" className="block text-sm font-medium ">
-                Frase
-              </label>
-              <input
-                type="text"
-                id="frase"
-                name="frase"
-                className="mt-1 p-2 w-full border rounded-md"
-                placeholder="Frase inspiradora"
-              />
-            </div>
             <div className="mb-12">
               <button
                 type="submit"
-                className="bg-primary text-black py-2 px-4 rounded-md hover:bg-darkPrimary hover:text-white absolute bottom-0 right-0 mb-5 mr-8"
+                className="bg-primary text-black py-2 px-4 rounded-md hover:bg-darkPrimary hover:text-white absolute right-14 "
               >
                 Guardar
               </button>
