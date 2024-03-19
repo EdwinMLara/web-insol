@@ -26,6 +26,7 @@ import PanelControlPage from "./pages/PanelControlPage";
 import ProtectedRoute from "./ProtectedRoute";
 import ListaProyectosPage from "./pages/ListaProyectosPage";
 import FormProyectos from "./Components_Panel/FormProyectos";
+import ProyectoPage from './pages/ProyectoPage'
 import FormCarrusel from "./Components_Panel/FormCarrusel";
 import FormProductos from "./Components_Panel/FormProductos";
 import PanelPrincipal from "./Components_Panel/PanelPrincipal";
@@ -117,6 +118,8 @@ function MainRoutes() {
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
       <Route path="/web-insol/blog" element={<BlogPage />} />
+      <Route path="/web-insol/proyecto/:id" element={<ProyectoPage/>} />
+
       
     </Routes>
   );
