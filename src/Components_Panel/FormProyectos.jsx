@@ -20,7 +20,7 @@ function FormProyectos() {
     
   };
 
-  return (
+  return ( 
     <div className="flex ">
       <div className=" ml-10 mr-10">
       <div className="text-left mt-4 mb-2">
