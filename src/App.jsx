@@ -27,6 +27,15 @@ import ProtectedRoute from "./ProtectedRoute";
 import ListaProyectosPage from "./pages/ListaProyectosPage";
 import FormProyectos from "./Components_Panel/FormProyectos";
 import ProyectoPage from './pages/ProyectoPage'
+import FormCarrusel from "./Components_Panel/FormCarrusel";
+import FormProductos from "./Components_Panel/FormProductos";
+import PanelPrincipal from "./Components_Panel/PanelPrincipal";
+import FormCategoria from "./Components_Panel/FormCategoria";
+import FormUbicacion from "./Components_Panel/FormUbicacion";
+import ProyectosPage from "./Pages_panel/ProyectosPage";
+import CarruselPage from "./Pages_panel/CarruselPage";
+import SubMenuPage from "./Pages_panel/SubMenuPage";
+import MapaUbicacionPage from "./Pages_panel/MapaUbicacionPage";
 
 function App() {
   return (
@@ -55,19 +64,19 @@ function App() {
                   </>
                 }
               />
-              <Route path="/web-insol/login" element={<Login />} />
-              <Route
-                path="/web-insol/panelControl"
-                element={<PanelControlPage />}
-              />
-
-              <Route
-                path="/web-insol/listaProyectos"
-                element={<ListaProyectosPage />}
-              />
-              
+            <Route path="/web-insol/login" element={<Login />} />
+            <Route path="/web-insol/registrarse" element={<Registrarse />} />
             <Route path="/web-insol/formularioProyectos" element={<FormProyectos />} />
-
+            <Route path="/web-insol/formularioCarrusel" element={<FormCarrusel />} />
+            <Route path="/web-insol/formularioProductos" element={<FormProductos />} />
+            <Route path="/web-insol/formularioCategorias" element={<FormCategoria />} />
+            <Route path="/web-insol/formularioCategorias" element={<FormUbicacion />} />
+            <Route pant="/web-insol/panel/panelPrincipal" element={<PanelPrincipal />} />
+            <Route pant="/web-insol/panel/proyectos" element={<ProyectosPage/>} /> 
+            <Route pant="/web-insol/panel/carrusel" element={<CarruselPage />} />
+            <Route pant="/web-insol/panel/subMenu" element={<SubMenuPage />} />
+            <Route pant="/web-insol/panel/mapa" element={<MapaUbicacionPage />} /> 
+            <Route path="/web-insol/panel" element={<PanelControlPage />} />
               <Route element={<ProtectedRoute />}>
                 <Route
                   path="/web-insol/registrarse"
