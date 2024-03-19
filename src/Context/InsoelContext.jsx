@@ -1,7 +1,14 @@
 import { createContext, useState, useContext, useEffect } from "react";
 
-import { createSolicitudRequest, getSolicitudesRequest } from "../api/contactarnos";
-import {crearProyectoRequest, getProyectosRequest} from '../api/proyectos'
+import {
+  createSolicitudRequest,
+  getSolicitudesRequest,
+} from "../api/contactarnos";
+import {
+  crearProyectoRequest,
+  getProyectoRequest,
+  getProyectosRequest,
+} from "../api/proyectos";
 
 const InsoelContext = createContext();
 
@@ -22,7 +29,8 @@ export function InsoelProvider({ children }) {
   );
 
   //----------------Proyectos--------------
-  const [proyectos, setProyectos] = useState([])
+  const [proyectos, setProyectos] = useState([]);
+  const [proyecto, setProyecto] = useState([]);
 
 
   // Funciones para la seccion de contactarnos
@@ -33,14 +41,24 @@ export function InsoelProvider({ children }) {
   };
 
   /** ------------------Proyectos----------------------- */
-  const crearProyceto = async(proyecto) =>{
-    const res = await crearProyectoRequest(proyecto)
-    console.log(res)
-  }
-  const obtenerProyectos = async()=>{
-    const proyectos = await getProyectosRequest()
-    setProyectos(proyectos.data)
-  }
+  const crearProyecto = async (proyecto) => {
+    const res = await crearProyectoRequest(proyecto);
+    console.log(res);
+  };
+  const obtenerProyectos = async () => {
+    const proyectos = await getProyectosRequest();
+    setProyectos(proyectos.data);
+  };
+  const getProyecto = async (id) => {
+    console.log(id)
+    try {
+      const proyecto = await getProyectoRequest(id);
+      setProyecto(proyecto.data)
+      return proyecto.data
+    } catch (error) {
+      console.error(error)
+    }
+  };
 
   return (
     <InsoelContext.Provider
@@ -53,9 +71,12 @@ export function InsoelProvider({ children }) {
         setProyectColor,
         opacidadColor,
         setOpacidadColor,
-        createSolicitud,
+        createSolicitud,// Proyectos
+        crearProyecto,
         obtenerProyectos,
-        proyectos
+        getProyecto,
+        proyectos,
+        proyecto,
       }}
     >
       {children}
