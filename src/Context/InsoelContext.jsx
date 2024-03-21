@@ -50,10 +50,11 @@ export function InsoelProvider({ children }) {
     setProyectos(proyectos.data);
   };
   const getProyecto = async (id) => {
-    console.log(id)
+    //console.log(id)
     try {
       const proyecto = await getProyectoRequest(id);
       setProyecto(proyecto.data)
+      //console.log(proyecto.data)
       return proyecto.data
     } catch (error) {
       console.error(error)
