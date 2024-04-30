@@ -26,7 +26,7 @@ import PanelControlPage from "./pages/PanelControlPage";
 import ProtectedRoute from "./ProtectedRoute";
 import ListaProyectosPage from "./pages/ListaProyectosPage";
 import FormProyectos from "./Components_Panel/FormProyectos";
-import ProyectoPage from './pages/ProyectoPage'
+import ProyectoPage from "./pages/ProyectoPage";
 import FormCarrusel from "./Components_Panel/FormCarrusel";
 import FormProductos from "./Components_Panel/FormProductos";
 import PanelPrincipal from "./Components_Panel/PanelPrincipal";
@@ -64,19 +64,49 @@ function App() {
                   </>
                 }
               />
-            <Route path="/web-insol/login" element={<Login />} />
-            <Route path="/web-insol/registrarse" element={<Registrarse />} />
-            <Route path="/web-insol/formularioProyectos" element={<FormProyectos />} />
-            <Route path="/web-insol/formularioCarrusel" element={<FormCarrusel />} />
-            <Route path="/web-insol/formularioProductos" element={<FormProductos />} />
-            <Route path="/web-insol/formularioCategorias" element={<FormCategoria />} />
-            <Route path="/web-insol/formularioCategorias" element={<FormUbicacion />} />
-            <Route pant="/web-insol/panel/panelPrincipal" element={<PanelPrincipal />} />
-            <Route pant="/web-insol/panel/proyectos" element={<ProyectosPage/>} /> 
-            <Route pant="/web-insol/panel/carrusel" element={<CarruselPage />} />
-            <Route pant="/web-insol/panel/subMenu" element={<SubMenuPage />} />
-            <Route pant="/web-insol/panel/mapa" element={<MapaUbicacionPage />} /> 
-            <Route path="/web-insol/panel" element={<PanelControlPage />} />
+              <Route path="/web-insol/login" element={<Login />} />
+              <Route path="/web-insol/registrarse" element={<Registrarse />} />
+              <Route
+                path="/web-insol/formularioProyectos"
+                element={<FormProyectos />}
+              />
+              <Route
+                path="/web-insol/formularioCarrusel"
+                element={<FormCarrusel />}
+              />
+              <Route
+                path="/web-insol/formularioProductos"
+                element={<FormProductos />}
+              />
+              <Route
+                path="/web-insol/formularioCategorias"
+                element={<FormCategoria />}
+              />
+              <Route
+                path="/web-insol/formularioCategorias"
+                element={<FormUbicacion />}
+              />
+              <Route
+                pant="/web-insol/panel/panelPrincipal"
+                element={<PanelPrincipal />}
+              />
+              <Route
+                pant="/web-insol/panel/proyectos"
+                element={<ProyectosPage />}
+              />
+              <Route
+                pant="/web-insol/panel/carrusel"
+                element={<CarruselPage />}
+              />
+              <Route
+                pant="/web-insol/panel/subMenu"
+                element={<SubMenuPage />}
+              />
+              <Route
+                pant="/web-insol/panel/mapa"
+                element={<MapaUbicacionPage />}
+              />
+              <Route path="/web-insol/panel" element={<PanelControlPage />} />
               <Route element={<ProtectedRoute />}>
                 <Route
                   path="/web-insol/registrarse"
@@ -88,7 +118,6 @@ function App() {
         </BrowserRouter>
       </InsoelProvider>
     </AuthProvider>
-
   );
 }
 
@@ -107,20 +136,18 @@ function TiendaRoutes() {
 function MainRoutes() {
   return (
     <Routes>
-      <Route path="/web-insol" element={<HomePage />} />
-      <Route path="/web-insol/tecnologias" element={<TecnologiasPage />} />
-      <Route path="/web-insol/invernadero" element={<InvernaderoPage />} />
-      <Route path="/web-insol/clientes" element={<ClientesPage />} />
-      <Route path="/web-insol/nosotros" element={<NosotrosPage />} />
-      <Route path="/web-insol/contactanos" element={<ContactanosPage />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="/tecnologias" element={<TecnologiasPage />} />
+      <Route path="/invernadero" element={<InvernaderoPage />} />
+      <Route path="/clientes" element={<ClientesPage />} />
+      <Route path="/nosotros" element={<NosotrosPage />} />
+      <Route path="/contactanos" element={<ContactanosPage />} />
       <Route path="/proyectos/Biorreactor" element={<BiorreactorPage />} />
       <Route path="/proyectos/BancoUAT" element={<BancoUatPage />} />
       <Route path="/proyectos/Consultas" element={<SistemaDeConsultasPage />} />
       <Route path="/web-insol/mapa" element={<MapaPage />} />
       <Route path="/web-insol/blog" element={<BlogPage />} />
-      <Route path="/web-insol/proyecto/:id" element={<ProyectoPage/>} />
-
-      
+      <Route path="/web-insol/proyecto/:id" element={<ProyectoPage />} />
     </Routes>
   );
 }

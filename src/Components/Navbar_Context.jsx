@@ -106,7 +106,7 @@ const Navbar_Context = () => {
         {/* logos */}
         <div className="flex items-center justify-between">
           <div className="bg-transparent ">
-            <Link to={"/web-insol/"} onClick={handleLogoClick}>
+            <Link to={"/"} onClick={handleLogoClick}>
               <motion.img
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -161,7 +161,7 @@ const Navbar_Context = () => {
             </button>
           </div>
 
-          {/*Navavar */}
+          {/*Navbar */}
           <div className="hidden lg:flex space-x-5 relative mx-auto text-[22px] mr-10">
             <div
               className={`text-${
@@ -203,7 +203,7 @@ const Navbar_Context = () => {
               onClick={() => handleInfoToggle("nosotros")}
             >
               <Link
-                to="/web-insol/nosotros"
+                to="/nosotros"
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -226,7 +226,7 @@ const Navbar_Context = () => {
               onClick={() => handleInfoToggle("clientes")}
             >
               <Link
-                to="/web-insol/tienda"
+                to="/tienda"
                 style={{
                   color: activeInfo === "clientes" ? "black" : txtColor,
                   // Ajusta según sea necesario
@@ -245,7 +245,7 @@ const Navbar_Context = () => {
               onClick={() => handleInfoToggle("contactanos")}
             >
               <Link
-                to="/web-insol/contactanos"
+                to="/contactanos"
                 style={
                   {
                     //color: activeInfo === "contactanos" ? "black" : txtColor,
@@ -259,7 +259,7 @@ const Navbar_Context = () => {
           </div>
         </div>
 
-        {/* menu en pantallas pequeñas */}
+        {/* Menu en pantallas pequeñas */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -276,7 +276,7 @@ const Navbar_Context = () => {
                     <div className="bg-white p-4 rounded-md shadow-md ">
                       <ul className="text-xl">
                         <li className="hover:bg-primary rounded p-2">
-                          <Link to={"/web-insol/"}>Inicio</Link>
+                          <Link to={"/"}>Inicio</Link>
                         </li>
                         <br />
                         <li
@@ -289,18 +289,14 @@ const Navbar_Context = () => {
                         </li>
                         <br />
                         <li className="hover:bg-primary rounded p-2">
-                          <Link to={"/web-insol/nosotros"}>
-                            ¿Quiénes Somos?
-                          </Link>
+                          <Link to={"/nosotros"}>¿Quiénes Somos?</Link>
                         </li>
                         <br />
                         <li className="hover:bg-primary rounded">
                           <Link to={"/web-insol/tienda"}></Link>
                         </li>
                         <li className="hover:bg-primary rounded p-2">
-                          <Link to={"/web-insol/contactanos"}>
-                            Contactarnos
-                          </Link>
+                          <Link to={"/contactanos"}>Contactarnos</Link>
                         </li>
                       </ul>
                     </div>
