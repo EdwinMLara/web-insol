@@ -70,15 +70,15 @@ function Carrusel() {
                     <Link to="/web-insol/invernadero">CONOCE MÁS</Link>
                   </button>
             </div> */}
-                <div className="hidden md:block xl:flex xl:justify-center xl:items-center  absolute bg-gray-600 top-1/3 bottom-0 right-0 w-1/3 shadow-lg p-10 mr-5 mb-36 ">
+                <div className="hidden md:block xl:flex xl:justify-center xl:items-center  absolute bg-gray-600  bottom-0 right-0 shadow-lg p-10 mr-5 mb-36 ">
                   <div className="space-y-4 ">
+                    <h2 className="font-bold text-white md:mb-1 transform md:mt-0 ">
+                      Materializamos tus ideas
+                    </h2>
                     <h1 className="text-2xl font-bold text-wi transform md:text-2xl lg:text-3xl xl:text-4xl text-white">
                       AUTOMATIZACIÓN Y <br className="lg:hidden xl:block" />{" "}
                       CONTROL
                     </h1>
-                    <h3 className="font-bold text-white md:mb-1 transform md:mt-0 ">
-                      Materializamos tus ideas
-                    </h3>
                     <button className="bg-primary  text-black py-3 px-8 bottom-16 mt-2 transform border-2 border-black/50 bg-gradient-to-r hover:text-white hover:bg-darkPrimary">
                       <Link to="/web-insol/blog">CONOCE MÁS</Link>
                     </button>
