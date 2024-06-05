@@ -18,24 +18,23 @@ function Nosotros() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      
+    <div className="flex flex-col ">
       {/* Section: NosotrosInformacion */}
-      <div className="min-h-screen bg-gradient-to-b from-black via-black to-black ">
+      <div className="bg-gradient-to-b from-black via-black to-black pt-10">
         <NosotrosInformacion />
       </div>
 
       {/* Section: Fundadores */}
       <div
-        className="min-h-screen bg-gradient-to-b from-black via-black to-quaternary"
-        id="nosotrosSeccionFundadores" 
+        className=" bg-gradient-to-b from-black via-black to-quaternary pt-10"
+        id="nosotrosSeccionFundadores"
       >
         <Fundadores id="nosotrosSeccionFundadores" />
       </div>
 
       {/* section: Clientes */}
       <div
-        className="bg-gradient-to-b from-quaternary  to-secondary"
+        className="bg-gradient-to-b from-quaternary  to-secondary pt-10"
         id="nosotrosSeccionClientes"
       >
         <Clientes id="nosotrosSeccionClientes" />
